@@ -13,6 +13,5 @@ public class RichardLy extends Student {
 //	}
 	public void act(){
 		stateName();
-		stateStatus();
 	}
 }
