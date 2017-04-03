@@ -2,11 +2,11 @@ package inheritance;
 
 public class Hao extends Student {
 
-	public Hao() {
+	public Hao(String name, String surname, int gradClass, Major major) {
 		super("Hao", "Yuan", 2017, Main.COMP_SCI_MAJOR);
 	}
 	
 	public void act() {
-		System.out.println("I am Hao Yuan");
+		super.stateName();
 	}
 }
