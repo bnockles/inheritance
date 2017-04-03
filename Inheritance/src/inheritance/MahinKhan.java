@@ -1,9 +1,9 @@
 package inheritance;
 
-public class MahinKhan extends Student{
+public class MahinKhan extends ClubMember{
 
 	public MahinKhan() {
-		super("Mahin", "Khan", 2017, Main.COMP_SCI_MAJOR);
+		super("Mahin", "Khan", 2017, Main.COMP_SCI_MAJOR, "tcg");
 	}
 	
 	@Override
