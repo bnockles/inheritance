@@ -10,4 +10,4 @@ public class FultonLin extends ClubMember{
 		super.act();
 	}
 }
- 
+  
