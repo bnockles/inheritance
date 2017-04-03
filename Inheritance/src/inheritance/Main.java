@@ -12,7 +12,9 @@ import java.util.ArrayList;
 public class Main {
 
 	private final static ArrayList<Student> students= new ArrayList<Student>();
-
+	public static final Major COMP_SCI_MAJOR = new Major("Computer Science","AP Java");
+	
+	
 	/**
 	 * @param args
 	 */
