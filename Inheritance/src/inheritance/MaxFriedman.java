@@ -3,7 +3,7 @@ package inheritance;
 public class MaxFriedman extends Student {
 
 	public MaxFriedman() {
-		// TODO Auto-generated constructor stub
+		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR);
 	}
 
 	public MaxFriedman(String name, String surname, int gradClass, Major major) {
@@ -18,7 +18,6 @@ public class MaxFriedman extends Student {
 		}
 		System.err.print("Max Friedman");
 		System.out.println(str);
-		
 	}
 
 }

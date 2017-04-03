@@ -7,6 +7,6 @@ public class SimonKahn extends Student {
 
 	}
 public void act(){
-	System.err.println("Simon Kahn");
+	System.out.println("Simon Kahn");
 }
 }
