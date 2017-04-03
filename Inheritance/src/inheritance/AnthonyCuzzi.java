@@ -8,8 +8,8 @@ public class AnthonyCuzzi extends Student{
 	private Major major;
 
 	public AnthonyCuzzi() {
-		firstname = "Joe";
-		lastname = "Schmoe";
+		firstname = "Anthony";
+		lastname = "Cuzzi";
 		gradYear= 2021;
 		major = new Major();
 	}
@@ -22,7 +22,8 @@ public class AnthonyCuzzi extends Student{
 	}
 	
 	public void act(){
-		System.out.println("My name is"+firstname+""+lastname);
+		System.out.println("");
+		System.out.print("My name is "+firstname+" "+lastname+".");
 	}
 
 }
