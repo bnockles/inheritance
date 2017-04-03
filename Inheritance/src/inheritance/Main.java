@@ -61,7 +61,7 @@ public class Main {
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
 //		students.add(new VictorChen());
 //		students.add(new KatherineCheng());
-//		students.add(new AnthonyCuzzi());
+		students.add(new AnthonyCuzzi());
 //		students.add(new JoyceFeng());
 //		students.add(new JenniberFranco());
 //		students.add(new MaxFriedman());
