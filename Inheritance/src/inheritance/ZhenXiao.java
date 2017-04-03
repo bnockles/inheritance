@@ -17,4 +17,9 @@ public class ZhenXiao extends Student {
 	public void stateName(){
 		System.out.print("\nMy name is "+getFirstName()+" "+getLastName()+" but you can call me Alan! ");
 	}
+	
+	@Override
+	public void stateStatus(){
+		System.out.print("After I complete "+getMajor().getCulminatingCourse()+" and Oracle Database Development, I'll graduate in "+getGraduatingClass()+". ");
+	}
 }
