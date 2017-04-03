@@ -1,26 +1,21 @@
 package inheritance;
 
-public class ZhengLu extends Student {
+public class ZhengLu extends ClubMember {
 	
 	private String food;
 	
 	public ZhengLu() {
-		super("Zheng", "Lu", 2017, Main.COMP_SCI_MAJOR);
-		food = "potatoes";
-	}
-
-	public ZhengLu(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
+		super("Zheng", "Lu", 2017, Main.COMP_SCI_MAJOR, "anime");
 		food = "potatoes";
 	}
 	
 	public void act()
 	{
 		super.act();
-		stateClub();
+		stateFood();
 	}
 	
-	public void stateClub() {
+	public void stateFood() {
 		System.out.print("I also like " + food + ".");
 	}
 
