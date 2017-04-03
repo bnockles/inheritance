@@ -1,12 +1,12 @@
 package inheritance;
 
-public class Joey extends Student {
+public class JoeyLeung extends Student {
 
-	public Joey() {
+	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Joey(String name, String surname, int gradClass, Major major) {
+	public JoeyLeung(String name, String surname, int gradClass, Major major) {
 		super(name, surname, gradClass, major);
 		// TODO Auto-generated constructor stub
 	}
