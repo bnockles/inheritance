@@ -1,14 +1,9 @@
 package inheritance;
 
-public class JoyceFeng extends Student {
+public class JoyceFeng extends ClubMember {
 
 	public JoyceFeng() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public JoyceFeng(String name, String surname, int gradClass, Major major) {
-		super("Joyce", "Feng", 2021, Main.COMP_SCI_MAJOR);
-		// TODO Auto-generated constructor stub
+		super("Joyce", "Feng", 2021, Main.COMP_SCI_MAJOR, "k-drama");
 	}
 
 	public void act(){
