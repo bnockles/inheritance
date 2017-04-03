@@ -9,7 +9,7 @@ public class TraceyKong extends Student {
 	public TraceyKong(String name, String surname, int gradClass, Major major){
 		super(name, surname, gradClass, major);
 	}
-	 
+	
 	public void act(){
 		super.act();
 	}
