@@ -1,6 +1,6 @@
 package inheritance;
 
-public class AnthonyCuzzi extends Student{
+public class AnthonyCuzzi extends ClubMember{
 	
 	private String firstname;
 	private String lastname;
@@ -8,22 +8,14 @@ public class AnthonyCuzzi extends Student{
 	private Major major;
 
 	public AnthonyCuzzi() {
-		firstname = "Anthony";
-		lastname = "Cuzzi";
-		gradYear= 2021;
-		major = new Major();
+		super("Anthony","Cuzzi",2017,new Major("Software","Computer Science"),"K-Drama");
 	}
 	
-	public AnthonyCuzzi(String name, String surname, int gradClass, Major major) {
-		firstname = name;
-		lastname = surname;
-		gradYear= gradClass;
-		this.major = major;
-	}
 	
 	public void act(){
-		System.out.println("");
-		System.out.print("My name is "+firstname+" "+lastname+".");
+		super.stateName();
+		super.stateMajor();
+		super.stateStatus();
 	}
 
 }
