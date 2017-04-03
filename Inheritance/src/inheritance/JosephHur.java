@@ -7,7 +7,7 @@ public class JosephHur extends Student {
 	}
 	
 	@Override
-	public void act(){
+	public void act(){ 
 		stateName();
 	}
 }
