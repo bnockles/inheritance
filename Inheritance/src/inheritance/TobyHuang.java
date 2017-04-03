@@ -7,7 +7,7 @@ public class TobyHuang extends Student {
 	}
 	
 	public void act(){
-		super.act();
+		System.out.println("Toby Huang");
 	}
 
 }
