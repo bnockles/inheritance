@@ -3,7 +3,7 @@ package inheritance;
 public class SimonKahn extends Student {
 
 	public SimonKahn() {
-		super("Simon", "Kahn", 2003, Main.COMP_SCI_MAJOR);
+		super("Simon", "Kahn", 6666, Main.COMP_SCI_MAJOR);
 
 	}
 public void act(){
