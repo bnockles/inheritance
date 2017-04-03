@@ -3,13 +3,10 @@ package inheritance;
 public class IvanZhen extends Student {
 
 	public IvanZhen() {
-		// TODO Auto-generated constructor stub
+		super("Ivan" ,"Zhen", 2017, Main.COMP_SCI_MAJOR);
 	}
 
-	public IvanZhen(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-		// TODO Auto-generated constructor stub
-	}
+
 	@Override
 	public void act(){
 		stateName();
