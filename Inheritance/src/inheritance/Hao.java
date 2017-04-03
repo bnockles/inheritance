@@ -7,6 +7,6 @@ public class Hao extends Student {
 	}
 	
 	public void act() {
-		System.out.println("I am Hao Yuan");
+		super.stateName();
 	}
 }
