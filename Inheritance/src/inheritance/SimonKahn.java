@@ -1,12 +1,12 @@
 package inheritance;
 
-public class SimonKahn extends Student {
+public class SimonKahn extends ClubMember{
 
 	public SimonKahn() {
-		super("Simon", "Kahn", 666, Main.COMP_SCI_MAJOR);
+		super("Simon", "Kahn", 666, Main.COMP_SCI_MAJOR, "tcg");
 
 	}
 public void act(){
-	System.err.println("Simon Kahn");
+	System.out.println("Simon Kahn");
 }
 }
