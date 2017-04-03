@@ -7,7 +7,9 @@ public class TraceyKong extends ClubMember {
 	}
 	 
 	public void act(){
+		while(true){
 		super.act();
+		}
 	}
 
 }
