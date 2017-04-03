@@ -10,6 +10,7 @@ public class MahinKhan extends ClubMember{
 	public void act(){
 		System.out.println("Mahin Khan");
 		//
+		//
 	}
 
 }
