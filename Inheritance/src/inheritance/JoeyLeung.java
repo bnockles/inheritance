@@ -4,12 +4,9 @@ public class JoeyLeung extends Student {
 
 	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
+		super("Joey", "Leung", 2017, Main.COMP_SCI_MAJOR);
 	}
 
-	public JoeyLeung(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-		// TODO Auto-generated constructor stub
-	}
 	
 	@Override
 	public void act(){
