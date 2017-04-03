@@ -1,22 +1,19 @@
 package inheritance;
 
-public class MaxFriedman extends Student {
+public class MaxFriedman extends ClubMember {
 
 	public MaxFriedman() {
-		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR);
+		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR, "k-pop is too expensive");
 	}
 
-	public MaxFriedman(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	public void act() {
 		String str = " says ";
 		for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
 			str += (char) (33 + (int)(Math.random() * (125-33)));
 		}
-		System.err.print("Max Friedman");
+		System.err.print("\nMax Friedman");
 		System.out.println(str);
 	}
 
