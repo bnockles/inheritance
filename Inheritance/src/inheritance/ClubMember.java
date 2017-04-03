@@ -2,13 +2,24 @@ package inheritance;
 
 public class ClubMember extends Student{
 
-	String club;
+	private String club;
+
 
 	public ClubMember() {
 		super();
 		club = "unaffiliated";
 	}
+	
+	public ClubMember(String name, String surname, int gradClass, Major major, String club) {
+		super(name, surname, gradClass, major);
+		this.club = club;
+	}
 
+	
+	public final String getClub(){
+		return club;
+	}
+	
 	public void act(){
 		super.act();
 		stateClub();

@@ -25,7 +25,34 @@ public class Student {
 		major = new Major();
 	}
 	
+	public Student(String name, String surname, int gradClass, Major major) {
+		firstName = name;
+		lastName = surname;
+		graduatingClass= gradClass;
+		this.major = major;
+	}
 	
+	
+	public final String getFirstName() {
+		return firstName;
+	}
+
+
+	public final String getLastName() {
+		return lastName;
+	}
+
+
+	public final int getGraduatingClass() {
+		return graduatingClass;
+	}
+
+
+	public final  Major getMajor() {
+		return major;
+	}
+
+
 	public void act(){
 		stateName();
 		stateMajor();
