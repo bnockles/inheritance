@@ -8,7 +8,7 @@ public class ViolettaJusiega extends ClubMember{
 	
 	@Override
 	public void act(){
-		System.out.println("My name is Violetta Jusiega..");
+		System.out.println("My name is Violetta Jusiega...");
 	}
 	
 }
