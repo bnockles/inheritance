@@ -11,6 +11,7 @@ public class ZhenXiao extends ClubMember {
 		stateName();
 		stateMajor();
 		stateStatus();
+		stateClub();
 	}
 	
 	@Override

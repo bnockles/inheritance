@@ -1,9 +1,9 @@
 package inheritance;
 
-public class SamSagawa extends Student {
+public class SamSagawa extends ClubMember {
 
 	public SamSagawa() {
-		super("Sam", "Sagawa", 2021, Main.COMP_SCI_MAJOR);
+		super("Sam", "Sagawa", 2021, Main.COMP_SCI_MAJOR, "esports");
 	}
 	
 	@Override
