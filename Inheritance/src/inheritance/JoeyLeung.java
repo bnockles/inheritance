@@ -1,10 +1,10 @@
 package inheritance;
 
-public class JoeyLeung extends Student {
+public class JoeyLeung extends ClubMember {
 
 	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
-		super("Joey", "Leung", 2017, Main.COMP_SCI_MAJOR);
+		super("Joey", "Leung", 2017, Main.COMP_SCI_MAJOR, "anime");
 	}
 
 	
