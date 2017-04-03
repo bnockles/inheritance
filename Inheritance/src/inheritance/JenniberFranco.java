@@ -13,9 +13,6 @@ public class JenniberFranco extends Student {
 	
 	public void act(){
 		super.act();
-		stateName();
-		stateMajor();
-		stateStatus();
 		System.out.print("I am in class right now.");
 	}
 }
