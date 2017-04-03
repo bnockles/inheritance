@@ -16,6 +16,7 @@ public class AnthonyCuzzi extends ClubMember{
 		super.stateName();
 		super.stateMajor();
 		super.stateStatus();
+		super.stateClub();
 	}
 
 }
