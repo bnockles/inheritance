@@ -15,7 +15,8 @@ public class VictorChen extends Student {
 	}
 	
 	public void act(){
-		System.out.println(this.getFirstName() + " " + this.getLastName());
+//		System.out.println(this.getFirstName() + " " + this.getLastName());
+		super.act();
 	}
 
 }
