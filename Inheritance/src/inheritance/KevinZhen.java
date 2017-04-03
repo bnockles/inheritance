@@ -1,10 +1,10 @@
 package inheritance;
 
-public class KevinZhen extends Student{
+public class KevinZhen extends ClubMember{
 
 	public KevinZhen() 
 	{
-		super("Kevin", "Zhen", 2017, Main.COMP_SCI_MAJOR);
+		super("Kevin", "Zhen", 2017, Main.COMP_SCI_MAJOR, "esports");
 		//testing
 	}
 	
