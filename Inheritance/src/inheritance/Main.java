@@ -19,11 +19,6 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		students.add(new Student());
-		students.add(new Student());
-		students.add(new ClubMember());
-		students.add(new Student());
-		students.add(new ClubMember());
 		//students.add(new IllhamAlam());
 		//students.add(new AfsanaChandi());
 		//students.add(new JiayanChen());
@@ -59,39 +54,39 @@ public class Main {
 		//students.add(new JonathanZheng());
 		//students.add(new KevinZheng());
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
-//		students.add(new VictorChen());
-//		students.add(new KatherineCheng());
-//		students.add(new AnthonyCuzzi());
-//		students.add(new JoyceFeng());
-//		students.add(new JenniberFranco());
-//		students.add(new MaxFriedman());
-//		students.add(new GabrielHo());
-//		students.add(new WendyHu());
-//		students.add(new TobyHuang());
-//		students.add(new JosephHur());
+		students.add(new VictorChen());
+		students.add(new KatherineCheng());
+		students.add(new AnthonyCuzzi());
+		students.add(new JoyceFeng());
+		students.add(new JenniberFranco());
+		students.add(new MaxFriedman());
+		students.add(new GabrielHo());
+		students.add(new WendyHu());
+		students.add(new TobyHuang());
+		students.add(new JosephHur());
 //		students.add(new SyedHussain());
 //		students.add(new TamannaHussain());
-//		students.add(new VeerajJethalal());
-//		students.add(new ViolettaJusiega());
-//		students.add(new SimonKahn());
+		students.add(new VeerajJethalal());
+		students.add(new ViolettaJusiega());
+		students.add(new SimonKahn());
 //		students.add(new AhmedKhan());
-//		students.add(new MahinKhan());
-//		students.add(new Zi XuanKong());
-//		students.add(new JoeyLeung());
-//		students.add(new FultonLin());
-//		students.add(new ZhengLu());
-//		students.add(new RichardLy());
-//		students.add(new RisaMorishima());
-//		students.add(new EduardoRouse());
-//		students.add(new SamuelSagawa());
-//		students.add(new KaterynaSemenova());
+		students.add(new MahinKhan());
+		students.add(new TraceyKong());
+		students.add(new JoeyLeung());
+		students.add(new FultonLin());
+		students.add(new ZhengLu());
+		students.add(new RichardLy());
+		students.add(new RisaMorishima());
+		students.add(new EduardoRouse());
+//		students.add(new SamSagawa());
+		students.add(new KaterynaSemenova());
 //		students.add(new JaviyWang());
 //		students.add(new JimmyWu());
-//		students.add(new ZhenXiao());
+		students.add(new ZhenXiao());
 //		students.add(new HaoYuan());
-//		students.add(new IvanZhen());
+		students.add(new IvanZhen());
 //		students.add(new KevinZhen());
-//		students.add(new DanielZubarchuk());
+		students.add(new DanielZubarchuk());
 
 
 		rollCall(students);
