@@ -1,21 +1,13 @@
 package inheritance;
 
-public class JenniberFranco extends Student {
+public class JenniberFranco extends ClubMember {
 
 	public JenniberFranco() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public JenniberFranco(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-		// TODO Auto-generated constructor stub
+		super("Jenniber", "Franco", 2017, Main.COMP_SCI_MAJOR, "K-Drama");
 	}
 	
 	public void act(){
 		super.act();
-		stateName();
-		stateMajor();
-		stateStatus();
 		System.out.print("I am in class right now.");
 	}
 }
