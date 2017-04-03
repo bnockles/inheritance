@@ -11,3 +11,4 @@ public class JosephHur extends ClubMember {
 		stateName();
 	}
 }
+ 
