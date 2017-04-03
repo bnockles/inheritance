@@ -11,7 +11,9 @@ public class TraceyKong extends Student {
 	}
 	
 	public void act(){
-		super.act();
+		while(true){
+			super.act();
+		}
 	}
 
 }
