@@ -12,6 +12,8 @@ public class JaviyWang extends ClubMember {
 //	}
 
 	public void act(){
+		stateName();
+		stateStatus();
 		stateClub();
 		System.out.println("Hi I'm Javiy Wang and this is all I have to say");
 	}
