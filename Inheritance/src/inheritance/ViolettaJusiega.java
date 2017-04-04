@@ -16,7 +16,7 @@ public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
 //		ArrayList<ClubMember> clubStuds = new ArrayList<ClubMember>();
 //		for(Student s: studs){
 //			ClubMember a = (ClubMember)(s);
-//			clubStuds.add(a);
+//			clubStuds.add(a);/
 //		}
 		for(Student s: studs){
 			ClubMember a = (ClubMember)(s);
