@@ -7,6 +7,6 @@ public class JiaMingMa extends Student {
 	}
 	
 	public void act() {
-		
+		stateName();
 	}
 }
