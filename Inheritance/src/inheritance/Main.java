@@ -95,6 +95,10 @@ public class Main {
 		System.out.println("");
 		//checkCompliance();
 	}
+	
+	public final ArrayList<Student> getAllStudents(){
+		return students;
+	}
 
 	public static void rollCall(ArrayList<Student> students) {
 		for(Student s: students){
