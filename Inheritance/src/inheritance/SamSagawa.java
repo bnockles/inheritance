@@ -1,6 +1,6 @@
 package inheritance;
 
-public class SamSagawa extends ClubMember {
+public class SamSagawa extends ClubMember implements NetworkAdministrator{
 
 	public SamSagawa() {
 		super("Sam", "Sagawa", 2021, Main.COMP_SCI_MAJOR, "esports");
