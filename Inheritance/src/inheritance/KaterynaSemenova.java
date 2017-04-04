@@ -7,7 +7,6 @@ public class KaterynaSemenova extends ClubMember {
 	}
 	
 	public void act(){
-		stateName();
-		stateStatus();
+		System.out.println("Hi, I'm " + this.getFirstName()+" "+this.getLastName());
 	}
 }
