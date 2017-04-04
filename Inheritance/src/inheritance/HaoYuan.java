@@ -7,6 +7,6 @@ public class HaoYuan extends ClubMember {
 	}
 	
 	public void act() {
-		super.act();
+		System.out.println("Hao Yuan");
 	}
 }
