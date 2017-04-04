@@ -7,7 +7,6 @@ public class JenniberFranco extends ClubMember {
 	}
 	
 	public void act(){
-		super.act();
-		System.out.print("I am in class right now.");
+		System.out.print("I am "+this.getFirstName()+".");
 	}
 }
