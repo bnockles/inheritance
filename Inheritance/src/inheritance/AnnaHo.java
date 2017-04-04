@@ -6,7 +6,7 @@ public class AnnaHo extends ClubMember{
 		super("Anna", "Ho", 2017, Main.COMP_SCI_MAJOR, "supergirl");
 
 	}
-	
+	 
 	public void act(){
 		super.act();
 	}
