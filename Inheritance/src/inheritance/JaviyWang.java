@@ -16,7 +16,7 @@ public class JaviyWang extends ClubMember {
 	
 	private void addFriendsInTheSameClub(ArrayList<Student> s){
 		for(int i = 0;i < s.size();i++){
-			if(((ClubMember) s.get(i)).getClub().equals("anime")){
+			if(((ClubMember) s.get(i)).getClub().equals("anime")&& !s.get(i).getFirstName().equals("Javiy")){
 				shakeHandsWith(s.get(i));
 			}
 		}
