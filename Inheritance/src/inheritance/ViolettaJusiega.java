@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ViolettaJusiega extends ClubMember{
+public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
 	
 	public ViolettaJusiega(){
 		super("Violetta", "Jusiega", 2017, Main.COMP_SCI_MAJOR, "music");
@@ -27,6 +27,19 @@ public class ViolettaJusiega extends ClubMember{
 			}
 		}
 		
+	}
+	
+	public void run(){
+		while(true){
+			try{
+				mutate();
+				createPatch();
+				createPatch();
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	
