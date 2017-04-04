@@ -8,7 +8,7 @@ public class AfsanaChadni extends ClubMember {
 	
 	public void act(){
 		super.act();
-		System.out.print("Afsana Chadni");
+		System.out.print("Afsana Chadni ");
 	}
 	
 	
