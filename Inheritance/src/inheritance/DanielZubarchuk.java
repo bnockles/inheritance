@@ -7,8 +7,11 @@ public class DanielZubarchuk extends ClubMember{
 	}
 
 	public void act(){
-		stateName();
-		stateStatus();
-		stateClub();
+		System.out.println("Ben Nockles is the teacher!");
+		
+		//super.act();
+//		stateName();
+//		stateStatus();
+//		stateClub();
 	}
 }
