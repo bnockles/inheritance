@@ -7,6 +7,6 @@ public class HunterZhao extends Student {
 	}
 	
 	public void act(){
-		stateName();
+		System.out.print("\nMy name is Hunter Zhao. ");
 	}
 }
