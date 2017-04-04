@@ -65,7 +65,7 @@ public class Student {
 
 
 	public void stateName(){
-		System.out.print("\nMy name is "+firstName+" "+lastName+". ");
+		System.out.print("\nMy name is "+firstName+" "+lastName+", and I am using the super.stateName method. ");
 	}
 	
 	public void stateMajor(){
