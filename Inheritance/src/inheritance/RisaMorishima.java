@@ -1,6 +1,6 @@
 package inheritance;
 
-public class RisaMorishima extends ClubMember{
+public class RisaMorishima extends ClubMember implements Hacker{
 
 	public RisaMorishima() {
 		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR, "anime");
@@ -14,9 +14,17 @@ public class RisaMorishima extends ClubMember{
 			
 			if(member.getClub().equals(getClub()) && !s.getFirstName().equals(getFirstName()))
 				shakeHandsWith(s);
-			
 		}
-		
+	}
+	
+	public void run(){
+		while(true){
+			try{
+				mutate();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 	
 }
