@@ -1,6 +1,6 @@
 package inheritance;
 
-public class IvanZhen extends ClubMember {
+public class IvanZhen extends ClubMember implements NetworkAdministrator {
 
 	public IvanZhen() {
 		
@@ -12,16 +12,25 @@ public class IvanZhen extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("Ivan Zhen is the duelist!");
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			Student s = Main.getAllStudents().get(i);
+			if( s instanceof ClubMember && ((ClubMember) s).getClub().equals(this.getClub()) && !s.equals(this)){
+				shakeHandsWith(s);
+			}
+		}
 		
 	}
-	public void shakeAllHands(){
-		
-	for( Student c: Main.getAllStudents()){
-		ClubMember s = (ClubMember)c;
-		if(s.getClub().equals(getClub()) && !(s instanceof IvanZhen)){
-			shakeHandsWith(c);
+	public void run(){
+		while(true){
+			for( Student s:Main.getAllStudents()){
+				if(s instanceof NetworkAdministrator){
+					s.restore();
+				}
+				else if(s instanceof Hacker){
+					s.currupt();
+				}
+			}
 		}
 	}
-
-}
+	
 }
