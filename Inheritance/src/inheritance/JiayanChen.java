@@ -10,8 +10,8 @@ public class JiayanChen extends ClubMember {
 
 	public void act()
 	{
-		
-		System.out.println("hi its jiayan");
+		stateName();
+		System.out.println("hiiii");
 	}  
 
 }
