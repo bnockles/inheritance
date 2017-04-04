@@ -9,8 +9,11 @@ public class SimonKahn extends ClubMember implements Hacker{
 public void act(){
 	//System.out.println("Simon Kahn");
 	//System.out.println("");
-//
-	for(Student i: Main.getAllStudents()){
+
+	run();
+}
+	public void run(){
+		for(Student i: Main.getAllStudents()){
 		if (i.getFirstName()!="Simon"){
 			i.corrupt();
 		}
@@ -22,6 +25,5 @@ public void act(){
 		//for(Student i: getHandshakes()){
 		//System.out.print(" "+i.getFirstName());
 	}
-}
-
+	}
 }
