@@ -8,7 +8,7 @@ public class JonathanZheng extends Student {
 	}
 	
 	public void act(){
-		stateName();
+		System.out.println("Jonathan Zheng");
 	}
 
 }
