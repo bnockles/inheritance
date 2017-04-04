@@ -1,6 +1,6 @@
 package inheritance;
 
-public class JoeyLeung extends ClubMember {
+public class JoeyLeung extends ClubMember implements Hacker{
 
 	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
