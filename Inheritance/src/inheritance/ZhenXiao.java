@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ZhenXiao extends ClubMember {
+public class ZhenXiao extends ClubMember implements Network{
 	
 	private ArrayList<Student> metStudents;
 
