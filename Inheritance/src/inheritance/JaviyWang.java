@@ -1,0 +1,17 @@
+package inheritance;
+
+public class JaviyWang extends Student {
+
+	public JaviyWang() {
+		super("Javiy", "Wang", 2017, Main.COMP_SCI_MAJOR);
+	}
+
+//	public JaviyWang(String name, String surname, int gradClass, Major major) {
+//		super(name, surname, gradClass, major);
+//		// TODO Auto-generated constructor stub
+//	}
+
+	public void act(){
+		System.out.println("Hi I'm Javiy Wang and this is all I have to say");
+	}
+}
