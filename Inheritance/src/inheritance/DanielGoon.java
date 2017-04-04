@@ -6,7 +6,7 @@ public class DanielGoon extends Student{
 	}
 	public void act(){
 		stateName();
-		System.out.println("Hi I did stuff!");
+		System.out.println("stuff");
 	}
 	
 }
