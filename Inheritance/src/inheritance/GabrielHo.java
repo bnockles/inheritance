@@ -7,9 +7,7 @@ public class GabrielHo extends ClubMember {
 	}
 	
 	public void act(){
-		stateName();
-		stateStatus();
-		stateClub();
+		System.out.println("Hi, my name is Gabriel Ho.");
 	}
 
 }
