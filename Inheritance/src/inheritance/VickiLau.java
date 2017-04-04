@@ -6,7 +6,6 @@ public class VickiLau extends Student {
 	}
 	
 	public void act() {
-		System.out.println("Heyo this is an override");
 		stateName();
 	}
 }
