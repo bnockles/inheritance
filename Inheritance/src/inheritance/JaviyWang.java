@@ -8,14 +8,10 @@ public class JaviyWang extends ClubMember {
 		super("Javiy", "Wang", 2017, Main.COMP_SCI_MAJOR,"anime");
 	}
 
-//	public JaviyWang(String name, String surname, int gradClass, Major major) {
-//		super(name, surname, gradClass, major);
-//		// TODO Auto-generated constructor stub
-//	}
-
 	public void act(){
-		System.out.println("Hi I'm Javiy Wang and this is all I have to say");
+		System.out.println("Javiy Wang, this is all I have to say");
 		addFriendsInTheSameClub(Main.getAllStudents());
+		System.out.println(getHandshakes());
 	}
 	
 	private void addFriendsInTheSameClub(ArrayList<Student> s){
