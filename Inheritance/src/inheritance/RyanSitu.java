@@ -10,5 +10,6 @@ public class RyanSitu extends Student{
 		super.act();
 		System.out.println("Why was the computer cold? Because it left its Windows open!");
 	}
+	
 
 }
