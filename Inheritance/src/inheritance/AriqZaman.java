@@ -1,10 +1,10 @@
 package inheritance;
 
-public class AriqZaman extends Student {
+public class AriqZaman extends ClubMember {
 
 
 	public AriqZaman() {
-		super("Ariq", "Zaman", 2021, Main.COMP_SCI_MAJOR);
+		super("Ariq", "Zaman", 2021, Main.COMP_SCI_MAJOR, "roblox");
 		// TODO Auto-generated constructor stub
 	}
 	
