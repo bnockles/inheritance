@@ -7,6 +7,6 @@ public class JasonLau extends Student{
 	}
 	
 	public void act(){
-		System.out.println("heyyyyyy");
+		System.out.println("JLau");
 	}
 }
