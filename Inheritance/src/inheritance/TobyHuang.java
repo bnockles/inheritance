@@ -7,7 +7,7 @@ public class TobyHuang extends ClubMember {
 	}
 	
 	public void act(){
-		System.out.println("Toby Huang");
+		System.out.println("Toby Huang is alive");
 	}
 
 }
