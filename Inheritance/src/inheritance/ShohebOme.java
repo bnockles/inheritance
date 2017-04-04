@@ -9,5 +9,5 @@ public class ShohebOme extends Student {
 	public void act(){
 		System.out.println("Shoheb Ome reporting for duty! XDDD");
 	}
-	//lol
+	//loll
 }
