@@ -25,7 +25,7 @@ public class TamannaHussain extends ClubMember implements Hacker{
 				corrupt();
 			}
 			else{
-				restore();
+				mutate();
 			}
 	}
 }
