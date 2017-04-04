@@ -1,7 +1,5 @@
 package inheritance;
 
-import java.util.ArrayList;
-
 public class JoeyLeung extends ClubMember {
 
 	public JoeyLeung() {
@@ -18,6 +16,9 @@ public class JoeyLeung extends ClubMember {
 				shakeHandsWith(a);
 			}
 		}
+//		for(Student b: getHandshakes()){
+//			System.out.print(b.getFirstName());
+//		}
 	}
 
 }
