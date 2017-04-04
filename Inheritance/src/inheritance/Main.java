@@ -40,7 +40,7 @@ public class Main {
 		//students.add(new KristyLo());
 		//students.add(new BillyLuy());
 		//students.add(new EdwinMa());
-		//students.add(new Jia MingMa());
+		//students.add(new JiaMingMa());
 		//students.add(new DavidMedina());
 		//students.add(new HansMontero());
 		//students.add(new MatthewNguyen());
