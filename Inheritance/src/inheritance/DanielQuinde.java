@@ -1,8 +1,8 @@
 package inheritance;
 
-public class DanielQuinde extends Student {
+public class DanielQuinde extends ClubMember {
 	public DanielQuinde(){
-		super("Daniel", "Quinde", 2017, Main.COMP_SCI_MAJOR);
+		super("Daniel", "Quinde", 2017, Main.COMP_SCI_MAJOR,"batman");
 
 	}
 	
