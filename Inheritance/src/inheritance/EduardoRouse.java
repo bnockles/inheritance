@@ -7,7 +7,7 @@ public class EduardoRouse extends ClubMember {
 	}
 	
 	public void act(){
-		System.out.print("My name is"+getFirstName()+getLastName()+". What are you?");
+		System.out.print("My name is"+getFirstName()+" "+getLastName()+". What are you?");
 	}
 
 }
