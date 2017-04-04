@@ -33,7 +33,7 @@ public class FultonLin extends ClubMember implements Hacker{
 	
 	public void run(){
 		c = Main.getAllStudents();
-		while(isAlive()){
+		while(true){
 			for(int i = 0; i < c.size(); i++){
 				if(c.get(i) instanceof Hacker){
 					c.get(i).mutate();
