@@ -13,11 +13,10 @@ public class SamSagawa extends ClubMember {
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof ClubMember){
 				ClubMember clubbie = (ClubMember)s;
-				if (clubbie.getClub().equalsIgnoreCase(this.getClub())){
+				if (!(clubbie.getLastName().equals(this.getLastName())) && clubbie.getClub().equalsIgnoreCase(this.getClub())){
 					this.shakeHandsWith(s);
 				}
 			}
 		}
 	}	
-
 }
