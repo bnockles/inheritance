@@ -11,7 +11,6 @@ public class KristyLo extends ClubMember {
 		System.out.println("Kristy Here");
 		
 		
-		
 	}
 
 }
