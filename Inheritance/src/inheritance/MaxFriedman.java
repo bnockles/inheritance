@@ -14,8 +14,10 @@ public class MaxFriedman extends ClubMember implements Hacker {
 
 		
 		System.err.println("\nMax Friedman\n");
-		
+		this.getPlay().resume();
 		shakeClubHands();
+		
+		
 		
 		run();
 		
