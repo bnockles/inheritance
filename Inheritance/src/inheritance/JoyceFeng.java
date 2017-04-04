@@ -7,7 +7,8 @@ public class JoyceFeng extends ClubMember {
 	}
 
 	public void act(){
-		stateName();
+
+		System.out.print("Joyce Feng");
 		System.out.print("I'm having a blast.");
 	}
 }
