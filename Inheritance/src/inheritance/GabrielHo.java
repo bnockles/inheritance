@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class GabrielHo extends ClubMember {
 
 	public GabrielHo() {
@@ -7,7 +9,18 @@ public class GabrielHo extends ClubMember {
 	}
 	
 	public void act(){
-		System.out.println("Hi, my name is Gabriel Ho.");
+		System.out.print("Hi, my name is Gabriel Ho.");
+		stateClub();
+		shakeHands(Main.getAllStudents());
+		getHandshakes();
+	}
+	
+	public void shakeHands(ArrayList<Student> s){
+		for(int i = 0; i < s.size(); i++){
+			if(((ClubMember) s.get(i)).getClub().equals("anime")){
+				shakeHandsWith(s.get(i));
+			}
+		}
 	}
 
 }
