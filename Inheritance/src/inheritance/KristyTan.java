@@ -8,6 +8,6 @@ public class KristyTan extends Student {
 	
 	 public void act(){
 		 
-	 }
+	 } 
 
 }
