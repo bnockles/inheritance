@@ -19,7 +19,7 @@ public class HaoYuan extends ClubMember implements Hacker{
 	}
 	
 	public void run() {
-		while(isAlive()){
+		while(true){
 			for(Student s: Main.getAllStudents()) {
 				mutate();
 				if (s instanceof NetworkAdministrator){
