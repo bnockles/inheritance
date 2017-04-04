@@ -32,21 +32,33 @@ public class KevinZhen extends ClubMember implements NetworkAdministrator
 	
 	public void run()
 	{
-		while(isAlive() == true)
+		while(true)
 		{
-			for(int i = 0; i < Main.getAllStudents().size();i++)
+			try
 			{
-				if(Main.getAllStudents().get(i)instanceof Hacker)
-				{
-					Main.getAllStudents().get(i).createPatch();
-				}
-				if(Main.getAllStudents().get(i)instanceof NetworkAdministrator)
-				{
-					Main.getAllStudents().get(i).restore();
-				}
+				Thread.sleep(0);
+				createPatch();
 			}
-			createPatch();
-			restore();
+			catch(InterruptedException e)
+			{
+				e.printStackTrace();
+			}
 		}
+//		while(isAlive() == true)
+//		{
+//			for(int i = 0; i < Main.getAllStudents().size();i++)
+//			{
+//				if(Main.getAllStudents().get(i)instanceof Hacker)
+//				{
+//					Main.getAllStudents().get(i).createPatch();
+//				}
+//				if(Main.getAllStudents().get(i)instanceof NetworkAdministrator)
+//				{
+//					Main.getAllStudents().get(i).restore();
+//				}
+//			}
+//			createPatch();
+//			restore();
+//		}
 	}
 }
