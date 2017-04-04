@@ -13,6 +13,7 @@ public class ZhengLu extends ClubMember {
 	{
 		System.out.print("\nMy name is "+getFirstName()+" "+getLastName()+". ");
 		stateFood();
+		shakeHands();
 	}
 	
 	public void stateFood() {
@@ -22,8 +23,8 @@ public class ZhengLu extends ClubMember {
 	public void shakeHands()
 	{
 		for(Student s : Main.getAllStudents())
-			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
-					shakeHandsWith(s);
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()) && !s.equals(this))
+				shakeHandsWith(s);
 	}
 
 }
