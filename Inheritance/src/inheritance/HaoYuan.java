@@ -13,7 +13,7 @@ public class HaoYuan extends ClubMember {
 	public void act() {
 		System.out.println("Hao Yuan");
 		for(Student s : Main.getAllStudents()){
-			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
+			if(s != this && s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
 				shakeHandsWith(s);
 		}
 	}
