@@ -1,14 +1,14 @@
 package inheritance;
 
-public class RisaMorishima extends Student{
+public class RisaMorishima extends ClubMember{
 
 	public RisaMorishima() {
-		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR);
+		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR, "break dance");
 	}
 
 	public void act(){
-		System.out.println("Risa Morishima");
-		
+		stateName();
+		stateClub();
 	}
 	
 }
