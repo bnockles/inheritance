@@ -56,15 +56,30 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 		while(i < 10){
 			new Thread(){
 				public void run(){
-					for (Student student : admins) {
-						student.restore();
+					for (int i = admins.size()-1/2; i >= 0; i--) {
+						admins.get(i).restore();
 					}
 				}
 			}.start();
 			new Thread(){
 				public void run(){
-					for (Student student : hackers) {
-						student.mutate();
+					for (int i = hackers.size()-1/2; i >= 0; i--) {
+						hackers.get(i).createPatch();
+					}
+				}
+			}.start();
+			i++;
+			new Thread(){
+				public void run(){
+					for (int i = admins.size()-1/2; i < admins.size(); i++) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = hackers.size()-1/2; i < admins.size(); i++) {
+						hackers.get(i).createPatch();
 					}
 				}
 			}.start();
