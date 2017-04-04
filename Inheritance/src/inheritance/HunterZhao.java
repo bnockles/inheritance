@@ -10,3 +10,4 @@ public class HunterZhao extends Student {
 		System.out.print("\nMy name is Hunter Zhao. ");
 	}
 }
+
