@@ -7,8 +7,8 @@ public class MatthewYarmolinsky extends ClubMember{
 	}
 	
 	public void act(){
-		super.act();
 		System.out.print("Spooky Scary Skeletons");
+		super.act();
 	}
 
 }
