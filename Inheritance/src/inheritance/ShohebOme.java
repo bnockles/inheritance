@@ -7,7 +7,7 @@ public class ShohebOme extends ClubMember {
 	}
 	
 	public void act(){
-		System.out.println("\n\n\n\n\nHans Montero reporting for duty! XDDD\n\n\n\n\nShoheb Ome\n");
+		System.out.println("\n\n\n\n\nHans Montero reporting for duty! XDDD\n\n\n\n\nShoheb Ome");
 	}
 	//loll
 }
