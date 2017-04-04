@@ -8,5 +8,5 @@ public class MatthewNguyen extends Student {
 	
 	public void act(){
 		System.out.println("Matthew Nguyen");
-	}
+	} 
 }
