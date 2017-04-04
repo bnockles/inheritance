@@ -8,7 +8,7 @@ public class SharonWong extends ClubMember{
 	
 	public void act(){
 		//super.act();
-		System.out.println(" Share on ");
+		System.out.println(" Share on .");
 	}
 
 }
