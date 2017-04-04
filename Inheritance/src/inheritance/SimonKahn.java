@@ -8,6 +8,8 @@ public class SimonKahn extends ClubMember{
 	}
 public void act(){
 	System.out.println("Simon Kahn");
+	System.out.println("");
+
 	for(Student i: Main.getAllStudents()){
 		if (((ClubMember) i).getClub().equals("tcg")){
 			shakeHandsWith(i);
