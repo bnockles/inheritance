@@ -8,6 +8,15 @@ public class RisaMorishima extends ClubMember{
 
 	public void act(){
 		System.out.println("Risa Morishima");
+		
+		for(Student s : Main.getAllStudents()){
+			ClubMember member = (ClubMember) s;
+			
+			if(member.getClub().equals("break dance"))
+				shakeHandsWith(s);
+			
+		}
+		
 	}
 	
 }
