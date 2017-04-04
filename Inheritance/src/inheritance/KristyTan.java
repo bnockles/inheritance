@@ -7,7 +7,7 @@ public class KristyTan extends Student {
 	}
 	
 	 public void act(){
-		 
+		 System.out.println("Kristy");
 	 } 
 
 }
