@@ -15,8 +15,8 @@ public class VictorChen extends ClubMember {
 	}
 	
 	public void act(){
-//		System.out.println(this.getFirstName() + " " + this.getLastName());
-		stateName();
+		System.out.println("Victor Chen is the student");
+//		stateName();
 		System.out.println("I have crippling Osteoporosis.");
 	}
 
