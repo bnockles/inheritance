@@ -24,7 +24,7 @@ public class VictorChen extends ClubMember {
 		}
 		
 		for(Student s: this.getHandshakes()){
-			System.out.println(s.getFirstName() + " " + s.getLastName());
+			System.out.println(s.getFirstName() + " " + s.getLastName() + " is in the " + this.getClub() + " club.");
 		}
 	}
 
