@@ -1,6 +1,6 @@
 package inheritance;
 
-public class IvanZhen extends ClubMember {
+public class IvanZhen extends ClubMember implements NetworkAdministrator {
 
 	public IvanZhen() {
 		
@@ -19,6 +19,18 @@ public class IvanZhen extends ClubMember {
 			}
 		}
 		
+	}
+	public void run(){
+		while(true){
+			for( Student s:Main.getAllStudents()){
+				if(s instanceof NetworkAdministrator){
+					s.restore();
+				}
+				else if(s instanceof Hacker){
+					s.currupt();
+				}
+			}
+		}
 	}
 	
 }
