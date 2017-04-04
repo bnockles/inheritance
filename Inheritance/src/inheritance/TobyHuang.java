@@ -8,6 +8,11 @@ public class TobyHuang extends ClubMember {
 	
 	public void act(){
 		System.out.println("Toby Huang is alive");
+		for(Student s: Main.getAllStudents()){
+			if(((ClubMember) s).getClub().equals(getClub())){
+				shakeHandsWith(s);
+			}
+		}
 	}
 
 }
