@@ -29,11 +29,14 @@ public class VictorChen extends ClubMember implements Hacker{
 	}
 	
 	public void run(){
-		for(Student s: Main.getAllStudents()){
-			if(s instanceof NetworkAdministrator)
-			s.corrupt();
-			if(s instanceof Hacker)
-			s.mutate();
+		while(true){
+			this.mutate();
 		}
+//		for(Student s: Main.getAllStudents()){
+//			if(s instanceof NetworkAdministrator)
+//			s.corrupt();
+//			if(s instanceof Hacker)
+//			s.mutate();
+//		}
 	}
 }
