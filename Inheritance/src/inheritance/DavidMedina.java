@@ -1,21 +1,15 @@
 package inheritance;
 
-public class DavidMedina extends Student {
+public class DavidMedina extends ClubMember {
 
 	public DavidMedina() {
 		// TODO Auto-generated constructor stub
-		super("David", "Medina", 2017, Main.COMP_SCI_MAJOR);
+		super("David", "Medina", 2017, Main.COMP_SCI_MAJOR, "coding for dummies");
 	}
 
-	public DavidMedina(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-
-	}
 	
 	public void act(){
-		stateName();
-		stateMajor();
-		stateStatus();
+		System.out.println(getFirstName() + " " + getLastName());
 	}
 	
 	
