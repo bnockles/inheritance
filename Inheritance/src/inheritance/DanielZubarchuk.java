@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class DanielZubarchuk extends ClubMember{
+public class DanielZubarchuk extends ClubMember implements Hacker{
 
 	public DanielZubarchuk() {
 		super("Daniel", "Zubarchuk", 2017, Main.COMP_SCI_MAJOR, "anime");
