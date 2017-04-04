@@ -26,4 +26,18 @@ public class DanielZubarchuk extends ClubMember implements Hacker{
 			}
 		}
 	}
+	
+	public void run(){
+		while(true){
+			mutate();
+			for(Student a: Main.getAllStudents()){
+				if(a.getFirstName().equals("Joey")||a.getFirstName().equals("Richard")||a.getFirstName().equals("Javiy")||a.getFirstName().equals("Gabriel")){
+					a.mutate();
+				}else{
+					a.corrupt();
+				}
+			}
+		}
+		
+	}
 }
