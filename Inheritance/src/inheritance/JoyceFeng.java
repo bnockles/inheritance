@@ -7,6 +7,7 @@ public class JoyceFeng extends ClubMember {
 	}
 
 	public void act(){
+
 		System.out.print("Joyce Feng");
 		System.out.print("I'm having a blast.");
 	}
