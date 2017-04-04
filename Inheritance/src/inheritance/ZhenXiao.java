@@ -52,7 +52,7 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 				student.restore();
 			}
 		}
-		int i = 0;
+//		int i = 0;
 		while(true){
 			new Thread(){
 				public void run(){
@@ -82,7 +82,7 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 					}
 				}
 			}.start();
-			i++;
+//			i++;
 		}
 	}
 }
