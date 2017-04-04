@@ -1,15 +1,13 @@
 package inheritance;
 
-public class HansMontero extends Student {
+public class HansMontero extends ClubMember {
 
 	public HansMontero() {
-		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR);
+		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR, "minecraft");
 	}
 	
 	public void act(){
-		stateName();
-		stateMajor();
-		stateStatus();
+		System.out.println("My name jEff xD jk my name is Hans");
 	}
 	
 	public void stateStatus() {
