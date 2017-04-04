@@ -7,7 +7,7 @@ public class HunterZhao extends Student {
 	}
 	
 	public void act(){
-		System.out.print("\nMy name is Hunter Zhao.");
+		System.out.println("Hunter Zhao");
 	}
 }
 
