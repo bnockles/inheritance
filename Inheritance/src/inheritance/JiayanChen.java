@@ -11,6 +11,7 @@ public class JiayanChen extends ClubMember {
 	public void act()
 	{
 		stateName();
+		stateClub();
 		System.out.println("hiiii");
 	}  
 
