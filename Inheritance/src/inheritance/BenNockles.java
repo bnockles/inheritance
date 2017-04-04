@@ -3,13 +3,11 @@ package inheritance;
 public class BenNockles extends ClubMember {
 
 	public BenNockles() {
-		super("Ben", "Nockles", 2003, Main.COMP_SCI_MAJOR, "pokemon");
+		super("Ben", "Nockles", 2003, Main.COMP_SCI_MAJOR, "k-pop");
 
 	}
 	
 	public void act(){
-//		super.act();
-		System.out.println("Ben Nockles");
+		System.out.println("Ben Nockles is the teacher!");
 	}
-
 }
