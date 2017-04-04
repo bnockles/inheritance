@@ -1,6 +1,6 @@
 package inheritance;
 
-public class TraceyKong extends ClubMember implements NetworkAdministrator{
+public class TraceyKong extends ClubMember implements Hacker{
 
 	public TraceyKong() {
 		super("Tracey", "Kong", 2017, Main.COMP_SCI_MAJOR, "k-drama");
@@ -24,9 +24,9 @@ public class TraceyKong extends ClubMember implements NetworkAdministrator{
 		while(true){
 			for(Student s: Main.getAllStudents()){
 				if(s instanceof Hacker){
-					((Hacker)s).createPatch();
+					s.createPatch();
 				}else if(s instanceof NetworkAdministrator){
-					((NetworkAdministrator)s).restore();
+					s.restore();
 				}
 			}
 			
