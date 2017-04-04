@@ -10,13 +10,6 @@ public class FultonLin extends ClubMember implements Hacker{
 		super("Fulton", "Lin", 2017, Main.COMP_SCI_MAJOR, "anime");
 		Thread app = new Thread(this);
 		app.start();
-		while(true){
-			for(int i = 0; i < c.size(); i++){
-				if((((ClubMember) c.get(i)).getFirstName().equals(getFirstName()))){
-					c.get(i).mutate();
-				}
-			}
-		}
 	}
 
 	public void act(){ 
@@ -33,7 +26,7 @@ public class FultonLin extends ClubMember implements Hacker{
 	
 	public void run(){
 		c = Main.getAllStudents();
-		while(true){
+		while(isAlive()){
 			for(int i = 0; i < c.size(); i++){
 				if(c.get(i) instanceof Hacker){
 					c.get(i).mutate();
