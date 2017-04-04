@@ -9,4 +9,5 @@ public class KristyLo extends ClubMember {
 	public void act() {
 		super.act();
 	}
+
 }
