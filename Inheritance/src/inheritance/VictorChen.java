@@ -10,13 +10,11 @@ package inheritance;
 public class VictorChen extends ClubMember {
 
 	public VictorChen() {
-		// TODO Auto-generated constructor stub
 		super("Victor", "Chen", 2017, Main.COMP_SCI_MAJOR, "anime");
 	}
 	
 	public void act(){
 		System.out.println("Victor Chen is the student");
-//		stateName();
 		System.out.println("I have crippling Osteoporosis.");
 	}
 
