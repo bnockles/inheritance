@@ -15,7 +15,7 @@ public class KaterynaSemenova extends ClubMember implements  Hacker{
 	}
 	public void run(){
 		ArrayList<Student> studentList =  Main.getAllStudents();
-		
+		this.mutate();
 		for(int i=0;i<studentList.size();i++){
 			if((studentList.get(i) instanceof Hacker)){
 				studentList.get(i).mutate();
