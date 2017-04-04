@@ -11,4 +11,3 @@ public class DanielQuinde extends ClubMember {
 	}
 
 }
-
