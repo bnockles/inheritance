@@ -10,9 +10,7 @@ public class JiayanChen extends Student {
 
 	public void act()
 	{
-		stateName();
-		stateMajor();
-		stateStatus();
+		System.out.println("hi its jiayan");
 	} 
 
 }
