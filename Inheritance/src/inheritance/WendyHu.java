@@ -16,11 +16,13 @@ public class WendyHu extends ClubMember {
 		ArrayList<Student> Students = Main.getAllStudents();
 		for(Student s: Students)
 		{
-			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(this.getClub()))
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(this.getClub()) && !s.getFirstName().equals(this.getFirstName()))
 			{
-					shakeHandsWith(s);
+				shakeHandsWith(s);
 			}
 		}
+		
+		
 	}
 
 }

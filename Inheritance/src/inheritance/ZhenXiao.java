@@ -7,7 +7,7 @@ public class ZhenXiao extends ClubMember {
 	private ArrayList<Student> metStudents;
 
 	public ZhenXiao() {
-		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "TCG");
+		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "tcg");
 	}
 
 	@Override
