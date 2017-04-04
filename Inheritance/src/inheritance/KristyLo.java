@@ -7,8 +7,8 @@ public class KristyLo extends ClubMember {
 	}
 	
 	public void act() {
-		super.act();
-		System.out.println("hi");
+//		super.act();
+		System.out.println("Kristy Here");
 		
 		
 	}
