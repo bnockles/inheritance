@@ -8,7 +8,14 @@ public class JosephHur extends ClubMember {
 	
 	@Override
 	public void act(){ 
-		stateName();
-	}
+		System.out.println("My name is Joseph Hur");
+		
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			Student s = Main.getAllStudents().get(i);
+			if( s instanceof ClubMember && ((ClubMember) s).getClub().equals(this.getClub()) && !s.equals(this)){
+				shakeHandsWith(s);
+			}
+		}
+	} 
 }
   
