@@ -10,7 +10,7 @@ public class JoeyLeung extends ClubMember {
 	
 	@Override
 	public void act(){
-		System.out.print("Joey Leung. ");
+		System.out.print(getFirstName() + " "+getLastName());
 		for(Student a: Main.getAllStudents()){
 			if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
 				shakeHandsWith(a);
