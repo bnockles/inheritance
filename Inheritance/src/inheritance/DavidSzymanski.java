@@ -24,6 +24,6 @@ public class DavidSzymanski extends Student {
 	}
 	
 	public void stateMajor(){
-		System.out.print("Mayonaise "+getMajor().getName()+" major. ");
+		System.out.print("Mayonaise "+getMajor().getName()+" waaaaaoooo. ");
 	}
 }
