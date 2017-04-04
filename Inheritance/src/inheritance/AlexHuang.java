@@ -7,5 +7,6 @@ public class AlexHuang extends Student{
 	}
 	public void act(){
 		System.out.println("Alex Huang");
+		//
 	}
 }
