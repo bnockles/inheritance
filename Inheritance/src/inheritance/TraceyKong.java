@@ -1,6 +1,6 @@
 package inheritance;
 
-public class TraceyKong extends ClubMember implements Hacker{
+public class TraceyKong extends ClubMember implements Hacker, NetworkAdministrator{
 
 	public TraceyKong() {
 		super("Tracey", "Kong", 2017, Main.COMP_SCI_MAJOR, "k-drama");
