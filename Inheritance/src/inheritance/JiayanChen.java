@@ -16,6 +16,6 @@ public class JiayanChen extends Student {
 		stateName();
 		stateMajor();
 		stateStatus();
-	}
+	} 
 
 }
