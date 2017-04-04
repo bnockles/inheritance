@@ -45,7 +45,7 @@ public class Main {
 //		students.add(new IramShahed());
 		students.add(new RyanSitu());
 		students.add(new NikitaSmirnov());
-//		students.add(new DavidSzymanski());
+		students.add(new DavidSzymanski());
 		students.add(new KristyTan());
 		students.add(new SharonWong());
 		students.add(new MatthewYarmolinsky());
@@ -53,6 +53,7 @@ public class Main {
 		students.add(new HunterZhao());
 		students.add(new JonathanZheng());
 		students.add(new KevinZheng());
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
 
 //		students.add(new VictorChen());

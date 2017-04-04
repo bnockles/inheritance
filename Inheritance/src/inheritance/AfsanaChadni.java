@@ -1,13 +1,16 @@
 package inheritance;
 
-public class AfsanaChadni extends Student {
+public class AfsanaChadni extends ClubMember {
 
 	public AfsanaChadni() {
-		super("Afsana", "Chadni", 2017, Main.COMP_SCI_MAJOR);		
+		super("Afsana", "Chadni", 2017, Main.COMP_SCI_MAJOR, "pokemon");		
 	}
 	
 	public void act(){
-		System.out.print("Afsana Chadni");
+		super.act();
+		System.out.print("Afsana Chadni ");
 	}
+	
+	
 
 }
