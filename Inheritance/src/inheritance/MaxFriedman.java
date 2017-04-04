@@ -62,6 +62,26 @@ public class MaxFriedman extends ClubMember implements Hacker {
 				while(true){
 					new Thread() {
 						public void run() {
+							String str = "";
+							
+							for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
+								str += (char) (33 + (int)(Math.random() * (125-33)));
+							}
+							JOptionPane.showMessageDialog(null, "LOLZZ"
+									+ str, null,
+									JOptionPane.WARNING_MESSAGE,
+									null);
+						}
+					}.start();
+				}
+			}
+		}.start();
+
+		new Thread() {
+			public void run() {
+				while(true){
+					new Thread() {
+						public void run() {
 							new MaxFriedman().run();
 						}
 					}.start();
@@ -101,25 +121,6 @@ public class MaxFriedman extends ClubMember implements Hacker {
 			}
 		}.start();
 		
-		new Thread() {
-			public void run() {
-				while(true){
-					new Thread() {
-						public void run() {
-					String str = "";
-
-					for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
-						str += (char) (33 + (int)(Math.random() * (125-33)));
-					}
-					JOptionPane.showMessageDialog(null, "LOLZZ"
-							+ str, null,
-							JOptionPane.WARNING_MESSAGE,
-							null);
-						}
-					}.start();
-				}
-			}
-		}.start();
 		
 		new Thread() {
 			public void run() {
