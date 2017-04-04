@@ -8,6 +8,7 @@ public class TraceyKong extends ClubMember {
 	  
 	public void act(){
 		System.out.println("My name is Tracey Kong.");
+		shakeHands();
 	}
  
 	public void shakeHands(){
