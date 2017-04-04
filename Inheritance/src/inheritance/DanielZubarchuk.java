@@ -9,5 +9,6 @@ public class DanielZubarchuk extends ClubMember{
 	public void act(){
 		stateName();
 		stateStatus();
+		stateClub();
 	}
 }
