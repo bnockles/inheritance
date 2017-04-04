@@ -1,9 +1,13 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class ZhenXiao extends ClubMember {
+	
+	private ArrayList<Student> metStudents;
 
 	public ZhenXiao() {
-		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "TCG");
+		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "tcg");
 	}
 
 	@Override
@@ -12,6 +16,16 @@ public class ZhenXiao extends ClubMember {
 		stateMajor();
 		stateStatus();
 		stateClub();
+		for (Student student : Main.getAllStudents()) {
+			ClubMember clubStudent = (ClubMember)student;
+			if (clubStudent.getClub().equalsIgnoreCase(this.getClub()) && student != this) {
+				shakeHandsWith(student);
+			}
+		}
+//		System.out.println("\nI am in the same club as ");
+//		for (Student student : getHandshakes()) {
+//			System.out.print(student.getFirstName() + ", ");
+//		}
 	}
 	
 	@Override
