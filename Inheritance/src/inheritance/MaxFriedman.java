@@ -2,7 +2,7 @@ package inheritance;
 
 import javax.swing.JOptionPane;
 
-public class MaxFriedman extends ClubMember implements Hacker {
+public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministrator {
 
 	public MaxFriedman() {
 		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR, "k-pop");
