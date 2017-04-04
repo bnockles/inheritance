@@ -19,40 +19,40 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//students.add(new IllhamAlam());
-		//students.add(new AfsanaChandi());
-		//students.add(new JiayanChen());
-		//students.add(new RayChen());
-		//students.add(new MatthewChu());
-		//students.add(new AliEldeeb());
-		//students.add(new DanielGoon());
-		//students.add(new AnnaHo());
-		//students.add(new AlexHuang());
-		//students.add(new SammyajitKapuria());
-		//students.add(new JasonLau());
-		//students.add(new VickiLau());
-		//students.add(new MichaelLi());
-		//students.add(new KristyLo());
-		//students.add(new BillyLuy());
-		//students.add(new EdwinMa());
-		//students.add(new Jia MingMa());
-		//students.add(new DavidMedina());
-		//students.add(new HansMontero());
-		//students.add(new MatthewNguyen());
-		//students.add(new ShohebOme());
-		//students.add(new DanielQuinde());
-		//students.add(new MakinoonSami());
-		//students.add(new IramShahed());
-		//students.add(new RyanSitu());
-		//students.add(new NikitaSmirnov());
-		//students.add(new DavidSzymanski());
-		//students.add(new KristyTan());
-		//students.add(new SharonWong());
-		//students.add(new MatthewYarmolinsky());
-		//students.add(new AriqZaman());
-		//students.add(new HunterZhao());
-		//students.add(new JonathanZheng());
-		//students.add(new KevinZheng());
+//		students.add(new IllhamAlam());
+		students.add(new AfsanaChadni());
+		students.add(new JiayanChen());
+		students.add(new RayChen());
+		students.add(new MatthewChu());
+		students.add(new AliEldeeb());
+		students.add(new DanielGoon());
+		students.add(new AnnaHo());
+		students.add(new AlexHuang());
+		students.add(new SammyajitKapuria());
+		students.add(new JasonLau());
+		students.add(new VickiLau());
+		students.add(new MichaelLi());
+		students.add(new KristyLo());
+		students.add(new BillyLuy());
+		students.add(new EdwinMa());
+		students.add(new JiaMingMa());
+		students.add(new DavidMedina());
+		students.add(new HansMontero());
+		students.add(new MatthewNguyen());
+		students.add(new ShohebOme());
+		students.add(new DanielQuinde());
+//		students.add(new MakinoonSami());
+//		students.add(new IramShahed());
+		students.add(new RyanSitu());
+		students.add(new NikitaSmirnov());
+//		students.add(new DavidSzymanski());
+		students.add(new KristyTan());
+		students.add(new SharonWong());
+		students.add(new MatthewYarmolinsky());
+		students.add(new AriqZaman());
+		students.add(new HunterZhao());
+		students.add(new JonathanZheng());
+		students.add(new KevinZheng());
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
 
 //		students.add(new VictorChen());
@@ -98,6 +98,11 @@ public class Main {
 	public static void rollCall(ArrayList<Student> students) {
 		for(Student s: students){
 			s.act();
+			if(s instanceof ClubMember){
+				System.out.println(s.getFirstName()+" is in the "+((ClubMember)s).getClub()+" club.");
+			}else{
+				System.out.println(s.getFirstName()+" is not in a club.");
+			}
 		}
 	}
 
