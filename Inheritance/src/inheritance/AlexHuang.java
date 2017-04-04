@@ -7,6 +7,6 @@ public class AlexHuang extends ClubMember{
 	}
 	public void act(){
 		System.out.println("Alex Huang");
-		
+		//
 	}
 }
