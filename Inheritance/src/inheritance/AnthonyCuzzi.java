@@ -18,10 +18,12 @@ public class AnthonyCuzzi extends ClubMember implements NetworkAdministrator{
 	public void run(){
 		while(super.isAlive()){
 			int randInt= (int) (Math.random()*Main.getAllStudents().size());
-			if(Main.getAllStudents().get(randInt).isAlive() == false){
-				Main.getAllStudents().get(randInt).mutate();
-			}else{
-				Main.getAllStudents().get(randInt).corrupt();
+			if(Main.getAllStudents().get(randInt) instanceof Hacker){	
+				if(Main.getAllStudents().get(randInt).isAlive() == false){
+					Main.getAllStudents().get(randInt).mutate();
+				}else{
+					Main.getAllStudents().get(randInt).corrupt();
+				}
 			}
 		}
 	}
