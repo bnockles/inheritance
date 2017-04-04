@@ -9,10 +9,14 @@ public class SamSagawa extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("Sam Sagawa does, in fact, know what he's doing.");
-		stateName();
-		stateMajor();
-		stateStatus();
 		stateClub();
-	}
-
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof ClubMember){
+				ClubMember clubbie = (ClubMember)s;
+				if (!(clubbie.getLastName().equals(this.getLastName())) && clubbie.getClub().equalsIgnoreCase(this.getClub())){
+					this.shakeHandsWith(s);
+				}
+			}
+		}
+	}	
 }
