@@ -21,6 +21,8 @@ public class JoeyLeung extends ClubMember implements Hacker{
 //		}
 	}
 	
+	//instanceof is for checking interface
+	
 	public void run(){
 		while(true){
 			mutate();
