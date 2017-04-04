@@ -10,7 +10,7 @@ public class AnthonyCuzzi extends ClubMember{
 	public void act(){
 		System.out.println("Anthony Cuzzi a student");
 		for(Student s :  Main.getAllStudents()){
-			if(((ClubMember) s).getClub() == "anime")
+			if(((ClubMember) s).getClub().equals("anime"))
 			shakeHandsWith(s);
 		}
 	}
