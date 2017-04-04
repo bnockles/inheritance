@@ -18,5 +18,12 @@ public class ZhengLu extends ClubMember {
 	public void stateFood() {
 		System.out.print("I like " + food + ".");
 	}
+	
+	public void shakeHands()
+	{
+		for(Student s : Main.getAllStudents())
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
+					shakeHandsWith(s);
+	}
 
 }
