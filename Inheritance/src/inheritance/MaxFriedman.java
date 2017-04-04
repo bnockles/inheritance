@@ -9,14 +9,25 @@ public class MaxFriedman extends ClubMember {
 	
 	
 	public void act() {
-		System.err.print("\nMax Friedman");
-		String str = " says ";
-		for (int h = 0; h < 10; h++) {
+		for (int h = 0; h < 30; h++) {
+			String str = "";
 
 			for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
 				str += (char) (33 + (int)(Math.random() * (125-33)));
 			}
 			System.out.println(str);
+		}
+		
+		System.out.println("\nMax Friedman");
+		
+		shakeClubHands();
+	}
+	
+	private void shakeClubHands(){
+		for (int i = 0; i < Main.getAllStudents().size(); i++) {
+			if (((ClubMember) (Main.getAllStudents().get(i))).getClub() == this.getClub()) {
+				shakeHandsWith(Main.getAllStudents().get(i));
+			}
 		}
 	}
 
