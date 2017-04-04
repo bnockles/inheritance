@@ -13,6 +13,7 @@ public class ZhengLu extends ClubMember {
 	{
 		System.out.print("\nMy name is "+getFirstName()+" "+getLastName()+". ");
 		stateFood();
+		shakeHands();
 	}
 	
 	public void stateFood() {
