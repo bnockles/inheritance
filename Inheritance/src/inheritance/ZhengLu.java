@@ -23,7 +23,7 @@ public class ZhengLu extends ClubMember {
 	{
 		for(Student s : Main.getAllStudents())
 			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
-					shakeHandsWith(s);
+				shakeHandsWith(s);
 	}
 
 }
