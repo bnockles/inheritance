@@ -7,6 +7,7 @@ public class DanielGoon extends ClubMember{
 	public void act(){
 		System.out.println(getFirstName() +" "+ getLastName());
 		
+		
 	}
 	
 }
