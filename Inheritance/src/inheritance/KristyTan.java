@@ -10,4 +10,4 @@ public class KristyTan extends ClubMember {
 		 System.out.println("Kristy Tan");
 	 }  
 
-}
+} 
