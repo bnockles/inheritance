@@ -12,13 +12,13 @@ public class JoeyLeung extends ClubMember {
 	public void act(){
 		System.out.print("Joey Leung. ");
 		for(Student a: Main.getAllStudents()){
-			if(((ClubMember) a).getClub().equals(getClub())){
+			if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
 				shakeHandsWith(a);
 			}
 		}
-//		for(Student b: getHandshakes()){
+		for(Student b: getHandshakes()){
 //			System.out.print(b.getFirstName());
-//		}
+		}
 	}
 
 }
