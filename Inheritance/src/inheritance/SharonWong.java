@@ -1,14 +1,14 @@
 package inheritance;
 
-public class SharonWong extends Student{
+public class SharonWong extends ClubMember{
 
 	public SharonWong() {
-		super("Sharon", "Wong", 2017, Main.COMP_SCI_MAJOR);
+		super("Sharon", "Wong", 2017, Main.COMP_SCI_MAJOR,"pokemon");
 	}
 	
 	public void act(){
-		super.act();
-		System.out.println("sssssshhhhh");
+		//super.act();
+		System.out.println(" Share on .");
 	}
 
 }
