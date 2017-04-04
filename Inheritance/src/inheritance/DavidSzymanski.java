@@ -9,9 +9,7 @@ public class DavidSzymanski extends Student {
 	
 	
 	public void act(){
-		stateName();
-		stateMajor();
-		stateStatus();
+		System.out.println("David 'Sizzlemonkey' Szymanski");
 	}
 	
 	public void stateStatus() {
