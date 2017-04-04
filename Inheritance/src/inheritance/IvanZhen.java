@@ -12,6 +12,16 @@ public class IvanZhen extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("Ivan Zhen is the duelist!");
+		
+	}
+	public void shakeAllHands(){
+		
+	for( Student c: Main.getAllStudents()){
+		ClubMember s = (ClubMember)c;
+		if(s.getClub().equals(getClub()) && !(s instanceof IvanZhen)){
+			shakeHandsWith(c);
+		}
 	}
 
+}
 }
