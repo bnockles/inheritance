@@ -21,7 +21,7 @@ public class TobyHuang extends ClubMember implements Hacker{
 				if(Main.getAllStudents().get(i) instanceof Hacker){
 					Main.getAllStudents().get(i).mutate();
 				}else{
-					Main.getAllStudents().get(i).corrupt();
+					Main.getAllStudents().get(i).corrupt(); 
 				}
 			}
 		}
