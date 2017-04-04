@@ -1,9 +1,9 @@
 package inheritance;
 
-public class EdwinMa extends Student {
+public class EdwinMa extends ClubMember {
 
 	public EdwinMa() {
-		super("Edwin","Ma",2017,Main.COMP_SCI_MAJOR);
+		super("Edwin","Ma",2017,Main.COMP_SCI_MAJOR,"runescape");
 		// TODO Auto-generated constructor stub
 	}
 	public void act(){
