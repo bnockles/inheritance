@@ -9,7 +9,6 @@ public class BillyLuy extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("BillyLuy");
-		
 	}
 
 }
