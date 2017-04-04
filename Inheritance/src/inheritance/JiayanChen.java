@@ -11,6 +11,6 @@ public class JiayanChen extends Student {
 	public void act()
 	{
 		System.out.println("hi its jiayan");
-	} 
+	}  
 
 }
