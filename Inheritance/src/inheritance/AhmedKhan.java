@@ -12,7 +12,7 @@ public class AhmedKhan extends ClubMember implements NetworkAdministrator{
 				if(s instanceof NetworkAdministrator){
 					s.restore();
 				}else if(s instanceof Hacker){
-					s.currupt();
+					s.createPatch();
 				}
 			}
 		}
