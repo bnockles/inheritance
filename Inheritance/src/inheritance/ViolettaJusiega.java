@@ -20,8 +20,10 @@ public class ViolettaJusiega extends ClubMember{
 //		}
 		for(Student s: studs){
 			ClubMember a = (ClubMember)(s);
-			if(a.getClub() == this.getClub()){
-				shakeHandsWith(s);
+			if(a.getClub() == "music" || a.getClub() == "Music"){
+				if(a.getFirstName() != "Violetta"){
+					shakeHandsWith(s);
+				}
 			}
 		}
 		
