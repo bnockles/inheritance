@@ -11,8 +11,7 @@ public class IvanZhen extends ClubMember {
 
 	@Override
 	public void act(){
-		stateName();
-		super.act();
+		System.out.println("Ivan Zhen is the duelist!");
 	}
 
 }
