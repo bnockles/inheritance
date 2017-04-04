@@ -8,6 +8,7 @@ public class KristyLo extends Student {
 	
 	public void act() {
 		super.act();
+		
 	}
 
 }
