@@ -18,7 +18,7 @@ public class VictorChen extends ClubMember {
 		System.out.println("I have crippling Osteoporosis.");
 		
 		for(Student s: Main.getAllStudents()){
-			if(((ClubMember) s).getClub().equals(this.getClub())){
+			if(s != this && ((ClubMember) s).getClub().equals(this.getClub())){
 				shakeHandsWith(s);
 			}
 		}
