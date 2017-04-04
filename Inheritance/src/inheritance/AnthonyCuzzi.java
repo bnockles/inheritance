@@ -13,7 +13,7 @@ public class AnthonyCuzzi extends ClubMember{
 	
 	
 	public void act(){
-		System.out.println("Anthiny Cuzziis a student");
+		System.out.println("Anthony Cuzzi a student");
 	}
 
 }
