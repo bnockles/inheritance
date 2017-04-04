@@ -7,7 +7,7 @@ public class DanielQuinde extends Student {
 	}
 	
 	public void act(){
-		System.out.println("hi");
+		System.out.println("Daniel Quinde");
 	}
 
 }
