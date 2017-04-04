@@ -13,10 +13,7 @@ public class AnthonyCuzzi extends ClubMember{
 	
 	
 	public void act(){
-		super.stateName();
-		super.stateMajor();
-		super.stateStatus();
-		super.stateClub();
+		System.out.println("Anthiny Cuzziis a student");
 	}
 
 }

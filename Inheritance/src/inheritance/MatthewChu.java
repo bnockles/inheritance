@@ -1,10 +1,9 @@
 package inheritance;
 
-public class MatthewChu extends Student {
+public class MatthewChu extends ClubMember {
 
 	public MatthewChu() {
-		super("Matthew", "Chu", 2017, Main.COMP_SCI_MAJOR);
-
+		super("Matthew", "Chu", 2017, Main.COMP_SCI_MAJOR, "batman");
 	}
 	
 	public void act(){

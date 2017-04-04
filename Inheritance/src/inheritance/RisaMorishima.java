@@ -7,8 +7,7 @@ public class RisaMorishima extends ClubMember{
 	}
 
 	public void act(){
-		stateName();
-		stateClub();
+		System.out.println("Risa Morishima");
 	}
 	
 }
