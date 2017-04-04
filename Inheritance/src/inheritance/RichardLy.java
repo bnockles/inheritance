@@ -14,5 +14,6 @@ public class RichardLy extends ClubMember {
 	public void act(){
 		stateName();
 		stateStatus();
+		stateClub();
 	}
 }
