@@ -5,7 +5,8 @@ public class DanielGoon extends ClubMember{
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
 	}
 	public void act(){
-		System.out.println(getFirstName() + getLastName());
+		System.out.println(getFirstName() +" "+ getLastName());
+		
 	}
 	
 }
