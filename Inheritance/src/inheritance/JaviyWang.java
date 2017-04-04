@@ -21,4 +21,15 @@ public class JaviyWang extends ClubMember implements Hacker{
 			}
 		}
 	}
+	
+	public void run(){
+		while(true){
+			try {
+				Thread.sleep(2);
+				mutate();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
