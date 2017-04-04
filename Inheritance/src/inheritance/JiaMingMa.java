@@ -7,6 +7,6 @@ public class JiaMingMa extends ClubMember {
 	}
 	
 	public void act() {
-		System.out.println("JiaMingMa");
+		System.out.println("JiaMingMa ");
 	}
 }
