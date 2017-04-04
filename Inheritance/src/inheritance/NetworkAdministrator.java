@@ -3,7 +3,7 @@ package inheritance;
 public interface NetworkAdministrator {
 
 
-	public void currupt();
+	public void corrupt();
 	
 	public void restore();
 	
