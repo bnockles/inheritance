@@ -8,6 +8,7 @@ public class SharonWong extends Student{
 	
 	public void act(){
 		super.act();
+		System.out.println("sssssshhhhh");
 	}
 
 }
