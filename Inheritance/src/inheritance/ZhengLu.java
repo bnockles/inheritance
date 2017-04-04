@@ -23,7 +23,7 @@ public class ZhengLu extends ClubMember {
 	public void shakeHands()
 	{
 		for(Student s : Main.getAllStudents())
-			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()))
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()) && !s.equals(this))
 				shakeHandsWith(s);
 	}
 
