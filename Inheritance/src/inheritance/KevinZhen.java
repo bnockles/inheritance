@@ -11,5 +11,6 @@ public class KevinZhen extends ClubMember{
 	public void act()
 	{
 		System.out.println("I'm Kevin Zhen... I'm in the esport club.");
+		//testing
 	}
 }
