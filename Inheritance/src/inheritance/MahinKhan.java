@@ -17,7 +17,7 @@ public class MahinKhan extends ClubMember{
 		ArrayList <Student> hands = new ArrayList<Student>();
 		hands = Main.getAllStudents();
 		for(Student s:hands){
-			ClubMember c = (ClubMember)s;
+			ClubMember c = (ClubMember)(s);
 			//clubmem.add(c);
 			if(c.getClub() == this.getClub()){
 				shakeHandsWith(s);
