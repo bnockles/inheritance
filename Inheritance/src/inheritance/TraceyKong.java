@@ -28,7 +28,7 @@ public class TraceyKong extends ClubMember implements Hacker{
 				}else if(s instanceof NetworkAdministrator){
 					s.restore();
 				}
-			}
+			} 
 			
 		} 
 	}
