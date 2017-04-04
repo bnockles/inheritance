@@ -13,7 +13,7 @@ public class FultonLin extends ClubMember{
 		stateClub();
 		ArrayList<Student> c = Main.getAllStudents();
 		for(int i = 0; i < c.size(); i++){
-			if(((ClubMember) c.get(i)).getClub() == getClub()){
+			if(((ClubMember) c.get(i)).getClub() == getClub() && !(((ClubMember) c.get(i)).getFirstName().equals(getFirstName()))){
 				shakeHandsWith(c.get(i));
 			}
 		}
