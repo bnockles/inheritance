@@ -26,7 +26,7 @@ public class JosephHur extends ClubMember implements NetworkAdministrator{
 					s.restore();
 				}
 				else if(s instanceof Hacker){
-					s.currupt();
+					s.createPatch();
 				}
 			}
 		}
