@@ -3,12 +3,7 @@ package inheritance;
 public class HansMontero extends Student {
 
 	public HansMontero() {
-		super();
-	}
-
-	public HansMontero(String name, String surname, int gradClass, Major major) {
-		super(name, surname, gradClass, major);
-		
+		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR);
 	}
 	
 	public void act(){
