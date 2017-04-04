@@ -1,14 +1,15 @@
 package inheritance;
 
-public class BillyLuy extends Student {
+public class BillyLuy extends ClubMember {
 	
 	public BillyLuy() {
-		super("Billy", "Luy", 2017, Main.COMP_SCI_MAJOR);
+		super("Billy", "Luy", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
 	
 	@Override
 	public void act(){
-		stateName();
+		System.out.println("BillyLuy");
+		
 	}
 
 }
