@@ -30,9 +30,9 @@ public class WendyHu extends ClubMember implements NetworkAdministrator{
 		
 		ArrayList<Student> Students = Main.getAllStudents();
 		int i = 0;
+		this.restore();
 		while(isAlive())
 		{
-			this.restore();
 			Student s = Students.get(i);
 			if(s instanceof Hacker)
 			{
