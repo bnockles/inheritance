@@ -23,9 +23,12 @@ public class JoeyLeung extends ClubMember implements Hacker{
 	
 	public void run(){
 		while(true){
+			mutate();
 			for(Student a: Main.getAllStudents()){
-				if(a.getFirstName().equals("Daniel")||a.getFirstName().equals("Richard")||a.getFirstName().equals("Javiy")){
+				if(a.getFirstName().equals("Daniel")||a.getFirstName().equals("Richard")||a.getFirstName().equals("Javiy")||a.getFirstName().equals("Gabriel")||a.getFirstName().equals("Hao")){
 					a.mutate();
+				}else{
+					a.corrupt();
 				}
 			}
 		}
