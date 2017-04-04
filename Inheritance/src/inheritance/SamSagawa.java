@@ -9,10 +9,6 @@ public class SamSagawa extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("Sam Sagawa does, in fact, know what he's doing.");
-		stateName();
-		stateMajor();
-		stateStatus();
-		stateClub();
 	}
 
 }

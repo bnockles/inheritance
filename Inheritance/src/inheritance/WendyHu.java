@@ -9,7 +9,7 @@ public class WendyHu extends ClubMember {
 	
 	@Override 
 	public void act(){
-		stateName();
+		System.out.println("My name is Wendy Hu");
 	}
 
 }
