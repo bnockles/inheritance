@@ -71,7 +71,7 @@ public class Main {
 		students.add(new VeerajJethalal());
 		students.add(new ViolettaJusiega());
 		students.add(new SimonKahn());
-//		students.add(new AhmedKhan());
+		students.add(new AhmedKhan());
 		students.add(new MahinKhan());
 		students.add(new TraceyKong());
 		students.add(new JoeyLeung());
@@ -85,7 +85,7 @@ public class Main {
 		students.add(new JaviyWang());
 //		students.add(new JimmyWu());
 		students.add(new ZhenXiao());
-//		students.add(new HaoYuan());
+		students.add(new HaoYuan());
 		students.add(new IvanZhen());
 		students.add(new KevinZhen());
 		students.add(new DanielZubarchuk());
@@ -100,6 +100,28 @@ public class Main {
 		return students;
 	}
 
+	private final static void play(){
+		
+		for(Student s: students){
+			Thread t = new Thread(s);
+			s.setPlay(t);
+			t.start();
+		}
+		Thread checkForDead = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				for(Student s: students){
+					if(!s.isAlive()){
+						s.getPlay().interrupt();
+					}
+				}
+			}
+		});
+		checkForDead.start();
+		
+	}
+	
 	public static void rollCall(ArrayList<Student> students) {
 		for(Student s: students){
 			s.act();
