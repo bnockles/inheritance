@@ -7,6 +7,7 @@ public class JiaMingMa extends Student {
 	}
 	
 	public void act() {
-		stateName();
+		super.act();
+		System.out.print("I'm 12 btw");
 	}
 }
