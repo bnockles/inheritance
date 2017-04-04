@@ -8,7 +8,9 @@ public class TraceyKong extends ClubMember implements NetworkAdministrator{
 	  
 	public void act(){
 		System.out.println("My name is Tracey Kong.");
+		run();
 		shakeHands();
+		
 	}
    
 	public void shakeHands(){
