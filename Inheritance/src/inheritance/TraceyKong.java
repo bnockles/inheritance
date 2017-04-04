@@ -20,7 +20,7 @@ public class TraceyKong extends ClubMember implements NetworkAdministrator{
 			}
 		}
 	}
-	
+	 
 	public void run(){
 		while(true){
 			for(Student s: Main.getAllStudents()){
