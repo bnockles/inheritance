@@ -1,14 +1,13 @@
 package inheritance;
 
-public class EduardoRouse extends Student {
+public class EduardoRouse extends ClubMember {
 
 	public EduardoRouse() {
-		super("Eduardo", "Rouse", 2017, Main.COMP_SCI_MAJOR);
+		super("Eduardo", "Rouse", 2017, Main.COMP_SCI_MAJOR, "esports");
 	}
 	
 	public void act(){
-		stateName();
-		System.out.print("Who were you? Who are you?");
+		System.out.print("My name is"+getFirstName()+" "+getLastName()+". What are you?");
 	}
 
 }
