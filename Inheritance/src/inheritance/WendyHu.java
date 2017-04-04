@@ -29,8 +29,11 @@ public class WendyHu extends ClubMember implements NetworkAdministrator{
 	public void run(){
 		
 		ArrayList<Student> Students = Main.getAllStudents();
-		for(Student s: Students)
+		int i = 0;
+		while(isAlive())
 		{
+			this.restore();
+			Student s = Students.get(i);
 			if(s instanceof Hacker)
 			{
 				s.createPatch();
@@ -38,6 +41,14 @@ public class WendyHu extends ClubMember implements NetworkAdministrator{
 			else if (s instanceof NetworkAdministrator)
 			{
 				s.restore();
+			}
+			if(i<Students.size())
+			{
+				i++;
+			}
+			else
+			{
+				i = 0;
 			}
 		}
 		
