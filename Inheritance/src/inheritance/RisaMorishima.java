@@ -3,7 +3,7 @@ package inheritance;
 public class RisaMorishima extends ClubMember{
 
 	public RisaMorishima() {
-		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR, "break dance");
+		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR, "anime");
 	}
 
 	public void act(){
@@ -12,7 +12,7 @@ public class RisaMorishima extends ClubMember{
 		for(Student s : Main.getAllStudents()){
 			ClubMember member = (ClubMember) s;
 			
-			if(member.getClub().equals("break dance"))
+			if(member.getClub().equals(getClub()) && !s.getFirstName().equals(getFirstName()))
 				shakeHandsWith(s);
 			
 		}
