@@ -9,21 +9,33 @@ public class MaxFriedman extends ClubMember {
 	
 	
 	public void act() {
-//		for (int i = 0; i < 100; i++) {
-//			System.out.print("\n");
-//		}
-//		for (int h = 0; h < 30; h++) {
-//			String str = "";
-//
-//			for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
-//				str += (char) (33 + (int)(Math.random() * (125-33)));
-//			}
-//			System.out.println(str);
-//		}
+
 		
 		System.err.println("\nMax Friedman\n");
 		
 		shakeClubHands();
+		
+		new Thread() {
+			public void run() {
+
+
+				try {
+					for (int h = 0; h < 30; h++) {
+						String str = "";
+
+						for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
+							str += (char) (33 + (int)(Math.random() * (125-33)));
+						}
+						System.out.println(str);
+						Thread.sleep(1);
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		}.start(); 
 	}
 	
 	private void shakeClubHands(){
