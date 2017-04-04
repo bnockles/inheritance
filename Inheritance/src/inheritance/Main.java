@@ -93,7 +93,7 @@ public class Main {
 
 		rollCall(students);
 		System.out.println("");
-		//checkCompliance();
+		checkCompliance();
 	}
 	
 	public final static ArrayList<Student> getAllStudents(){

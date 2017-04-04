@@ -12,7 +12,7 @@ public class TamannaHussain extends ClubMember {
 		System.out.println("My name is Tamanna Hussain and I am a student.");
 		ArrayList<Student> members = Main.getAllStudents();
 		for(Student c: members){
-			if(((ClubMember) c).getClub().equals("k-drama")){
+			if(((ClubMember) c).getClub().equals("k-drama") && !((Student) c).getFirstName().equals("Tamanna")){
 				shakeHandsWith(c);
 			}
 		}
