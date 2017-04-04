@@ -1,20 +1,11 @@
 package inheritance;
 
-public class DanielGoon extends Student{
-	private String firstName;
-	private String lastName;
-	private String stuff;
-	private int graduatingClass;
-	private Major major;
+public class DanielGoon extends ClubMember{
 	public DanielGoon(){
-		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR);
+		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
+	}
+	public void act(){
+		System.out.println(getFirstName() + getLastName());
 	}
 	
-	public void act(){
-		stateName();
-		stateStuff();
-	}
-	public void stateStuff(){
-		System.out.println("Hi I did stuff!");
-	}
 }
