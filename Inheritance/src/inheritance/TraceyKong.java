@@ -7,7 +7,15 @@ public class TraceyKong extends ClubMember {
 	}
 	  
 	public void act(){
-		super.act();
+		System.out.println("My name is Tracey Kong.");
+		shakeHands();
 	}
-
+   
+	public void shakeHands(){
+		for(Student s: Main.getAllStudents()){
+			if(((ClubMember) s).getClub().equals(getClub()) && !(s.equals(this))){
+				shakeHandsWith(s);
+			}
+		}
+	}
 }
