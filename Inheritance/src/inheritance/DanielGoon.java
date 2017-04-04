@@ -15,6 +15,7 @@ public class DanielGoon extends Student{
 		stateStuff();
 	}
 	public void stateStuff(){
+		
 		System.out.println("Hi I did stuff!");
 	}
 }
