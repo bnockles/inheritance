@@ -96,7 +96,7 @@ public class Main {
 		//checkCompliance();
 	}
 	
-	public final ArrayList<Student> getAllStudents(){
+	public final static ArrayList<Student> getAllStudents(){
 		return students;
 	}
 
