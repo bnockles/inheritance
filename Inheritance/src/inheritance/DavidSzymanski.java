@@ -1,12 +1,11 @@
 package inheritance;
 
-public class DavidSzymanski extends Student {
+public class DavidSzymanski extends ClubMember {
 	
 	
 	public DavidSzymanski(){
-		super("David", "Szymanski", 2017, Main.COMP_SCI_MAJOR);
+		super("David", "Szymanski", 2017, Main.COMP_SCI_MAJOR,"minecraft");
 	}
-	
 	
 	public void act(){
 		System.out.println("David 'Sizzlemonkey' Szymanski");
