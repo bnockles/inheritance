@@ -8,6 +8,12 @@ public class KatherineCheng extends ClubMember {
 	
 	public void act(){
 		System.out.println("Katherine Cheng");
+		for(Student s : Main.getAllStudents()){
+			ClubMember c = (ClubMember) s;
+			if(c.getClub().equals("k-drama") && !s.getFirstName().equals("Katherine")){
+				shakeHandsWith(s);
+			}
+		}
 	}
 
 }
