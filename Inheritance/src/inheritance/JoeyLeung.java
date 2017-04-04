@@ -16,9 +16,9 @@ public class JoeyLeung extends ClubMember {
 				shakeHandsWith(a);
 			}
 		}
-		for(Student b: getHandshakes()){
+//		for(Student b: getHandshakes()){
 //			System.out.print(b.getFirstName());
-		}
+//		}
 	}
 
 }
