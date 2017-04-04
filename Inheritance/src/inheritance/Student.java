@@ -100,7 +100,7 @@ public class Student implements Runnable{
 		alive = false;
 	}
 	
-	public final void currupt(){
+	public final void corrupt(){
 		alive = false;
 	}
 	
