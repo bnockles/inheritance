@@ -13,13 +13,14 @@ public class ViolettaJusiega extends ClubMember{
 		System.out.println("My name is Violetta Jusiega...");
 		
 		ArrayList<Student> studs = Main.getAllStudents();
-		ArrayList<ClubMember> clubStuds = new ArrayList<ClubMember>();
+//		ArrayList<ClubMember> clubStuds = new ArrayList<ClubMember>();
+//		for(Student s: studs){
+//			ClubMember a = (ClubMember)(s);
+//			clubStuds.add(a);
+//		}
 		for(Student s: studs){
 			ClubMember a = (ClubMember)(s);
-			clubStuds.add(a);
-		}
-		for(ClubMember s: clubStuds){
-			if(s.getClub() == this.getClub()){
+			if(a.getClub() == this.getClub()){
 				shakeHandsWith(s);
 			}
 		}
