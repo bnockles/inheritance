@@ -10,6 +10,7 @@ public class KristyLo extends ClubMember {
 		super.act();
 		System.out.println("hi");
 		
+		
 	}
 
 }
