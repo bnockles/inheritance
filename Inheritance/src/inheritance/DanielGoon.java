@@ -6,7 +6,7 @@ public class DanielGoon extends Student{
 	private String stuff;
 	private int graduatingClass;
 	private Major major;
-	public DanielGoon(String name, String surname, int gradClass, Major major, String stuff){
+	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR);
 	}
 	
