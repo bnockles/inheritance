@@ -14,7 +14,7 @@ public class FultonLin extends ClubMember implements Hacker{
 
 	public void act(){ 
 		System.out.print("My name is Fulton Lin. ");
-		stateClub();
+		stateClub(); 
 		c = Main.getAllStudents();
 		for(int i = 0; i < c.size(); i++){
 			if(((ClubMember) c.get(i)).getClub() == getClub() && !(((ClubMember) c.get(i)).getFirstName().equals(getFirstName()))){
