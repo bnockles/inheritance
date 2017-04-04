@@ -1,8 +1,8 @@
 package inheritance;
 
-public class Hao extends ClubMember {
+public class HaoYuan extends ClubMember {
 
-	public Hao() {
+	public HaoYuan() {
 		super("Hao", "Yuan", 2017, Main.COMP_SCI_MAJOR, "music");
 	}
 	
