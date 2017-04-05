@@ -35,6 +35,7 @@ public class JasonLau extends ClubMember implements Hacker{
 						if(a % 4 == 0){
 							arr.get(b).corrupt();
 							a+=4;
+							System.out.println("no hard feeeligns maaaathew");
 						}
 					}
 				}
