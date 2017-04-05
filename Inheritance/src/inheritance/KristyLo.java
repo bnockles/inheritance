@@ -30,6 +30,7 @@ public class KristyLo extends ClubMember {
 		{
 			for (int i=0;i<students.size();i++)
 			{
+				
 				if(students.get(i) instanceof Hacker)
 				{
 					students.get(i).corrupt();
