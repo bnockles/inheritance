@@ -11,7 +11,7 @@ public class DanielQuinde extends ClubMember {
 		ArrayList<Student> studentList =  Main.getAllStudents();
 		
 		for(int i =0; i<studentList.size();i++){
-			if(((ClubMember) studentList.get(i)).getClub().equals("batman")){
+			if(((ClubMember) studentList.get(i)).getClub().equals("batman")&&studentList.get(i).getFirstName()!=getFirstName()){
 				shakeHandsWith(studentList.get(i));
 
 			}
