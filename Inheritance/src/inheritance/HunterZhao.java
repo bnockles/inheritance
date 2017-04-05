@@ -10,7 +10,9 @@ public class HunterZhao extends ClubMember {
 		System.out.println("Hunter Zhao");
 		for(int i = 0; i < Main.getAllStudents().size(); i++){
 			if(Main.getAllStudents().get(i) instanceof ClubMember && ((ClubMember)Main.getAllStudents().get(i)).getClub().equals("roblox")){
-				shakeHandsWith(Main.getAllStudents().get(i));
+				if(!Main.getAllStudents().get(i).getFirstName().equals("Hunter")){
+					shakeHandsWith(Main.getAllStudents().get(i));
+				}
 			}
 		}
 	}
