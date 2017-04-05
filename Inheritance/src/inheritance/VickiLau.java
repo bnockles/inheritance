@@ -16,4 +16,11 @@ public class VickiLau extends ClubMember {
 			}
 		}
 	}
+	
+	public void run() {
+		ArrayList<Student> array = Main.getAllStudents();
+		for (int i = 0; i < array.size(); i++) {
+			array.get(i).currupt();
+		}
+	}
 }
