@@ -12,10 +12,11 @@ public class MatthewChu extends ClubMember {
 		System.out.println("Matthew Chu");
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
-			if(((ClubMember) s).getClub().equals("batman")){
-				shakeHandsWith(s);
+			if(((ClubMember) s).getClub().equals("batman") && !((ClubMember) s).getLastName().equals("Chu")){
+					shakeHandsWith(s);
+				}
 			}
 		}
 	}
 
-}
+
