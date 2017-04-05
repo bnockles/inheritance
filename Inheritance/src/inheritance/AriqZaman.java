@@ -1,6 +1,6 @@
 package inheritance;
 
-public class AriqZaman extends ClubMember {
+public class AriqZaman extends ClubMember implements NetworkAdministrator {
 
 	public AriqZaman() {
 		super("Ariq", "Zaman", 2021, Main.COMP_SCI_MAJOR, "roblox");
@@ -19,6 +19,23 @@ public class AriqZaman extends ClubMember {
 				ClubMember c = (ClubMember) s;
 				if (c.getClub().equals(this.getClub()) && !this.equals(s)) {
 					shakeHandsWith(s);
+				}
+			}
+		}
+ 
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			for (Student s : Main.getAllStudents()) {
+				if (s instanceof NetworkAdministrator) {
+					s.restore();
+				}
+
+				if (s instanceof Hacker) {
+					s.createPatch();
+					
 				}
 			}
 		}
