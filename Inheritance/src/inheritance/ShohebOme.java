@@ -9,7 +9,7 @@ public class ShohebOme extends ClubMember {
 	public void act(){
 		for(Student s: Main.getAllStudents()){
 			ClubMember c = (ClubMember) s;
-			if(c.getClub() == this.getClub()){
+			if(c.getClub().equals(this.getClub())){
 				shakeHandsWith(s);
 			}
 		}
