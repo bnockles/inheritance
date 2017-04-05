@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class HansMontero extends ClubMember {
+public class HansMontero extends ClubMember implements NetworkAdministrator{
 
 	public HansMontero() {
 		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR, "minecraft");
@@ -18,6 +18,29 @@ public class HansMontero extends ClubMember {
 			}
 		}
 		System.out.println("I dapped up "+getHandshakes().size()+" Minecraft homies!!1");
+		
+	}
+	
+	public void run(){
+		ArrayList<Student> players = Main.getAllStudents();
+		while(true){
+			while(isAlive()){
+				int random = (int) (Math.random()*players.size());
+				Student player = players.get(random);
+				if(player!=this){
+					if(player.isAlive()){
+						if(player instanceof Hacker)
+							System.out.println("*Teleports behind you* nothing personal kid");
+							player.createPatch();
+					}
+					else{
+						if(player instanceof NetworkAdministrator)
+							player.restore();
+					}
+				}
+			
+			}
+		}
 		
 	}
 	
