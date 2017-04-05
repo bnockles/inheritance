@@ -8,7 +8,7 @@ public class DanielGoon extends ClubMember{
 		System.out.println(getFirstName() +" "+ getLastName());
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()) 
-					&& this.getLastName() != s.getLastName()){
+					&& s != this){
 				shakeHandsWith(s);
 			}
 		}
