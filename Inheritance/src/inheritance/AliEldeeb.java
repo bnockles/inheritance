@@ -1,6 +1,6 @@
 package inheritance;
 
-public class AliEldeeb extends ClubMember {
+public class AliEldeeb extends ClubMember implements Hacker {
 	private String firstName;
 	private String lastName;
 
@@ -15,5 +15,10 @@ public class AliEldeeb extends ClubMember {
 			}
 		}
 	}
+	public void run(){
+		while(true){
+			mutate();
+		}
+	}
+
 }
-//
