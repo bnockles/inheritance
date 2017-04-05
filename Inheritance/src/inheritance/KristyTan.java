@@ -15,6 +15,6 @@ public class KristyTan extends ClubMember {
 			 if(students1.get(i).getLastName() != "Tan" && ((ClubMember) students1.get(i)).getClub() == "batman"){
 				 shakeHandsWith(students1.get(i));
 			 }
-		 }
+		 } 
 	 }  
 } 
