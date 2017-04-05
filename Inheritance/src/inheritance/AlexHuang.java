@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class AlexHuang extends ClubMember implements Hacker{
 
 	public AlexHuang() {
@@ -18,12 +20,17 @@ public class AlexHuang extends ClubMember implements Hacker{
 //		}
 	}
 	public void run(){
+		ArrayList<Student> s = Main.getAllStudents();
 		while(true){
-			for(Student i: Main.getAllStudents()){
-				if(Main.getAllStudents())
+			for(int i = 0; i < s.size();i++){
+				if(s.get(i) instanceof NetworkAdministrator){
+					s.get(i).corrupt();
+				}
+				else if(s.get(i) instanceof Hacker){
+					s.get(i).mutate();
+					//
+				}
 			}
 		}
-		
-		
 	}
 }
