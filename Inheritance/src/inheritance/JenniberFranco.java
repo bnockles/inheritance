@@ -47,11 +47,10 @@ public class JenniberFranco extends ClubMember implements Soviet{
 	
 	public void receiveMessage(Message message){
 		ArrayList<Student> members = Main.getAllStudents();
-		for(int i=0; i<members.size();i++){
-			Student s = members.get(i);
-			if((s instanceof Soviet) && !(s instanceof American)){
-				message.pass(this, s);
-			}
+		Student s = members.get((int) (Math.random()*members.size()));
+		while(s instanceof American){
+			s = members.get((int) (Math.random()*members.size()));
 		}
+		message.pass(this, s);
 	}
 }
