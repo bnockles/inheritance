@@ -13,7 +13,7 @@ public class HansMontero extends ClubMember {
 		ArrayList<Student> students = Main.getAllStudents();
 		for(int i=0;i<students.size();i++){
 			Student s = students.get(i);
-			if(!s.getFirstName().equals("Hans") && s instanceof ClubMember && ((ClubMember) s).getClub().equals("minecraft")){
+			if(!(s.getFirstName().equals("Hans"))&& s instanceof ClubMember && ((ClubMember) s).getClub().equals("minecraft")){
 				shakeHandsWith(s);
 			}
 		}
