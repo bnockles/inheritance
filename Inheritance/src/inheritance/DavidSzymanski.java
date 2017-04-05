@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class DavidSzymanski extends ClubMember {
 	
 	
@@ -9,6 +11,13 @@ public class DavidSzymanski extends ClubMember {
 	
 	public void act(){
 		System.out.println("David 'Sizzlemonkey' Szymanski");
+		ArrayList<Student> shaking = Main.getAllStudents();
+		for(Student s: shaking){
+			if(!(s.getLastName().equals("Szymanski")) 
+					&& (s instanceof ClubMember) && ((ClubMember)s).getClub().equals("minecraft")){
+				shakeHandsWith(s);
+			}
+		}
 	}
 	
 	public void stateStatus() {
@@ -17,7 +26,7 @@ public class DavidSzymanski extends ClubMember {
 
 
 	public void stateName(){
-		System.out.print("\nMy name is babi"+getFirstName()+" "+getLastName()+". ");
+		System.out.print("\nMy name is bhabhi"+getFirstName()+" "+getLastName()+". ");
 	}
 	
 	public void stateMajor(){

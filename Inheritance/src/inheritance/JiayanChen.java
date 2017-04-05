@@ -11,8 +11,12 @@ public class JiayanChen extends ClubMember {
 	public void act()
 	{
 		stateName();
-		stateClub();
 		System.out.println("hiiii");
+		for(Student s : Main.getAllStudents()){
+			ClubMember member = (ClubMember) s;
+			if(member.getClub().equals(this.getClub())&& !s.getFirstName().equals("Jiayan") )
+				shakeHandsWith(s);
+		}
 	}  
 
 }
