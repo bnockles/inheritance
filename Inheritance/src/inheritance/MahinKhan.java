@@ -2,8 +2,12 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class MahinKhan extends ClubMember implements Hacker{
+import inheritance.Main.Message;
 
+public class MahinKhan extends ClubMember implements Hacker, American{
+
+	ArrayList <Student> hands = new ArrayList<Student>();
+	
 	public MahinKhan() {
 		super("Mahin", "Khan", 2017, Main.COMP_SCI_MAJOR, "tcg");
 	}
@@ -36,4 +40,22 @@ public class MahinKhan extends ClubMember implements Hacker{
 	//
 	//
 	//
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void receiveMessage(Message message){
+		for(int i = 0; i < hands.size(); i++){
+			if(hands.get(i) instanceof American && !(hands.get(i) instanceof Spy)){
+				message.pass(this, hands.get(i));
+			}
+		}
+	}
 }
