@@ -23,19 +23,20 @@ public class DanielQuinde extends ClubMember implements Hacker{
 
 	public void run(){
 		ArrayList<Student> studentList =  Main.getAllStudents();
-		for(Student s: studentList){
-			if(s instanceof Hacker && s!=this){
-				s.mutate();
+		while(this.isAlive()){
+			for(Student s: studentList){
+				if(s instanceof Hacker && s!=this){
+					s.mutate();
 
+				}
+
+				if(s instanceof NetworkAdministrator){
+					s.corrupt();
+				}
 			}
-			
-			if(s instanceof NetworkAdministrator){
-				s.corrupt();
-			}
+
 		}
-	
-		
-	}
 
+	}
 }
 
