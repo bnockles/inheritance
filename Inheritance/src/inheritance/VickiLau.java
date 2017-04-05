@@ -21,7 +21,7 @@ public class VickiLau extends ClubMember implements Hacker {
 		ArrayList<Student> array = Main.getAllStudents();
 		for (int i = 0; i < array.size(); i++) {
 			if (array.get(i) instanceof NetworkAdministrator) {
-				array.get(i).currupt();
+				array.get(i).corrupt();
 			}
 		}
 	}
