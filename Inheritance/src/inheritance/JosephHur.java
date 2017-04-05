@@ -33,7 +33,7 @@ public class JosephHur extends ClubMember implements NetworkAdministrator, Sovie
 			}
 		}
 	}
-	
+	 
 	@Override
 	public void receiveMessage(Message message){
 		for(Student s: Main.getAllStudents()){
