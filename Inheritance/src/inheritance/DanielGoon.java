@@ -1,6 +1,6 @@
 package inheritance;
 
-public class DanielGoon extends ClubMember{
+public class DanielGoon extends ClubMember implements Hacker{
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
 	}
@@ -10,6 +10,16 @@ public class DanielGoon extends ClubMember{
 			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()) 
 					&& s != this){
 				shakeHandsWith(s);
+			}
+		}
+	}
+	public void run(){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Hacker){
+				s.mutate();
+			}
+			else{
+				s.corrupt();
 			}
 		}
 	}
