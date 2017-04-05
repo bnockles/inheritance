@@ -8,8 +8,10 @@ public class RayChen extends ClubMember {
 	public void act(){
 		System.out.println(getFirstName()+" "+getLastName());
 		for(Student s: Main.getAllStudents()){
-			if(((ClubMember) s).getClub().equals(getClub()))
-				shakeHandsWith(s);
+			if(s instanceof ClubMember){
+				if(((ClubMember) s).getClub().equals(getClub()))
+					shakeHandsWith(s);
+			}
 		}
 	}
 }
