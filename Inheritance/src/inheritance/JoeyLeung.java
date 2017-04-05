@@ -1,6 +1,8 @@
 package inheritance;
 
-public class JoeyLeung extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class JoeyLeung extends ClubMember implements Spy{
 
 	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
@@ -24,8 +26,18 @@ public class JoeyLeung extends ClubMember implements Hacker{
 	//instanceof is for checking interface
 	
 	public void run(){
-		while(true){
-			mutate();
-		}
 	}
+	
+//	spy
+	public void receiveMessage(Message message){
+		message.pass((Student)this,Main.getAllStudents().get((int) (Math.random()*Main.getAllStudents().size())));
+	}
+	
+//	Soviet
+//	public void receiveMessage(Message message){
+//	for(Student s:Main.getAllStudents()){
+//		if(s.instanceof American
+//		message.pass((Student)this,
+//	}
+	
 }
