@@ -11,7 +11,7 @@ public class RayChen extends ClubMember {
 		System.out.println("Hi I'm "+getFirstName()+" "+getLastName()+".");
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
-			if(s instanceof ClubMember){
+			if(s instanceof ClubMember && s.getFirstName() != getFirstName() && s.getLastName() != getLastName()){
 				if(((ClubMember) s).getClub().equals(getClub()))
 					shakeHandsWith(s);
 			}
