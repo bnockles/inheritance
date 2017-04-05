@@ -37,6 +37,7 @@ public class KristyLo extends ClubMember {
 				else
 				{
 					students.get(i).mutate();
+					
 				}
 			}
 		}
