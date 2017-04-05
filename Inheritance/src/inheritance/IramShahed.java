@@ -6,6 +6,11 @@ public class IramShahed extends ClubMember {
 		super("Iram", "Shahed", 2017, Main.COMP_SCI_MAJOR, "runescape");
 	}
 	public void act(){
-		System.out.println("TROLOLOLOLOLLLLLOOOOOLLLLOOOOOOLLLLLOOOLahahhahhahahahahjhahahahah");
+		for(Student s: Main.getAllStudents()){
+			ClubMember c = (ClubMember) s;
+			if(c.getClub() == this.getClub()){
+				shakeHandsWith(s);
+			}
+		}
 	}
 }
