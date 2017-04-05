@@ -14,7 +14,7 @@ public class JiaMingMa extends ClubMember {
 		for(int i = 0; i < stus.size(); i ++) {
 			if(stus.get(i) instanceof ClubMember && stus.get(i) != this && ((ClubMember) stus.get(i)).getClub() == "roblox") {
 				shakeHandsWith(stus.get(i));
-				System.out.println("I shoke hands with " + stus.get(i).getFirstName());
+				System.out.println("I shook hands with " + stus.get(i).getFirstName());
 			}
 		}
 	}
