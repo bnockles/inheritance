@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class KristyTan extends ClubMember {
+public class KristyTan extends ClubMember implements NetworkAdministrator {
 
 	public KristyTan() {
 		super("Kristy", "Tan", 2017, Main.COMP_SCI_MAJOR, "batman");
@@ -17,4 +17,18 @@ public class KristyTan extends ClubMember {
 			 }
 		 } 
 	 }   
+	 
+	 public void run(){
+		 ArrayList<Student> students2 = Main.getAllStudents();
+		// while(this.isAlive() == true){
+			 for(int i = 0; i < students2.size(); i++){
+				 if(students2.get(i) instanceof NetworkAdministrator && isAlive() == false && students2.get(i).getLastName() != "Tan"){
+					students2.get(i).restore(); 
+				 }
+				 else if(students2.get(i) instanceof Hacker){
+					 students2.get(i).createPatch();
+				 }
+			 } 
+		// }
+	 }
 } 
