@@ -21,8 +21,7 @@ public class AfsanaChadni extends ClubMember {
 		while(true){
 			for(Student s: Main.getAllStudents()){
 				if(s instanceof NetworkAdministrator){
-					NetworkAdministrator na = (NetworkAdministrator) s;
-					na.restore();
+					s.restore();
 				}
 				
 				if(s  instanceof Hacker){
