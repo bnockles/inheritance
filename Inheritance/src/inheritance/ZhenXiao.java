@@ -42,6 +42,8 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 	public void run(){
 		ArrayList<Student> hackers = new ArrayList<Student>();
 		ArrayList<Student> admins = new ArrayList<Student>();
+		
+		
 		for (Student student : Main.getAllStudents()) {
 			if (student instanceof Hacker){
 				hackers.add(student);
@@ -52,37 +54,60 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 				student.restore();
 			}
 		}
+		
+		new Thread(){
+			public void run(){
+				for (Student student : admins) {
+					student.restore();
+				}
+			}
+		}.start();
+		new Thread(){
+			public void run(){
+				for (Student student : hackers) {
+					student.createPatch();
+				}
+			}
+		}.run();
+		
+		new Thread(){
+			public void run(){
+				for (int i = admins.size()-1/2; i < admins.size(); i++) {
+					admins.get(i).restore();
+				}
+			}
+		}.start();
 //		int i = 0;
-		while(true){
-			new Thread(){
-				public void run(){
-					for (int i = admins.size()-1/2; i < admins.size(); i++) {
-						admins.get(i).restore();
-					}
-				}
-			}.start();
-			new Thread(){
-				public void run(){
-					for (int i = hackers.size()-1/2; i < admins.size(); i++) {
-						hackers.get(i).createPatch();
-					}
-				}
-			}.start();
-			new Thread(){
-				public void run(){
-					for (int i = admins.size()-1/2; i >= 0; i--) {
-						admins.get(i).restore();
-					}
-				}
-			}.start();
-			new Thread(){
-				public void run(){
-					for (int i = hackers.size()-1/2; i >= 0; i--) {
-						hackers.get(i).createPatch();
-					}
-				}
-			}.start();
+//		while(true){
+//			new Thread(){
+//				public void run(){
+//					for (int i = admins.size()-1/2; i < admins.size(); i++) {
+//						admins.get(i).restore();
+//					}
+//				}
+//			}.start();
+//			new Thread(){
+//				public void run(){
+//					for (int i = hackers.size()-1/2; i < admins.size(); i++) {
+//						hackers.get(i).createPatch();
+//					}
+//				}
+//			}.start();
+//			new Thread(){
+//				public void run(){
+//					for (int i = admins.size()-1/2; i >= 0; i--) {
+//						admins.get(i).restore();
+//					}
+//				}
+//			}.start();
+//			new Thread(){
+//				public void run(){
+//					for (int i = hackers.size()-1/2; i >= 0; i--) {
+//						hackers.get(i).createPatch();
+//					}
+//				}
+//			}.start();
 //			i++;
-		}
+//		}
 	}
 }
