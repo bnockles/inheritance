@@ -17,12 +17,17 @@ public class ShohebOme extends ClubMember implements Hacker{
 	
 	public void run(){
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Hacker && !s.isAlive() && !s.getFirstName().equals(this.getFirstName())){
+			if(s instanceof Hacker && !s.isAlive()){
 				s.mutate();
 				shakeHandsWith(s);
+				this.mutate();
+				System.out.println("i got u brodie");
 			} else{
 				if(s instanceof NetworkAdministrator)
+					shakeHandsWith(s);
 					s.corrupt();
+					this.mutate();
+					System.out.println("damn my guy got madddddddddd roblox vi***es");
 			}
 		}
 			
