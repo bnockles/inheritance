@@ -24,7 +24,7 @@ public class RayChen extends ClubMember implements NetworkAdministrator{
 			if(s instanceof Hacker && s.isAlive()){
 				s.createPatch();
 			}
-			else if(!s.equals(this) && s instanceof NetworkAdministrator && !s.isAlive()){
+			else if(s instanceof NetworkAdministrator && !s.isAlive()){
 				s.restore();
 			}
 		}
