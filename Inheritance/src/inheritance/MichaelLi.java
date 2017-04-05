@@ -12,7 +12,7 @@ public class MichaelLi extends ClubMember {
 		System.out.println("Hi. My name is Michael. I think penguins are cool.");
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
-			if(s instanceof ClubMember && ((ClubMember)s).getClub() == "pokemon" && s.getFirstName() != "Michael"){
+			if(s instanceof ClubMember && ((ClubMember)s).getClub() == "pokemon" && s.getFirstName() != this.getFirstName()){
 				shakeHandsWith(s);
 			}
 		}
