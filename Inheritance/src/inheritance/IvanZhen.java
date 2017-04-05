@@ -23,7 +23,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator {
 	public void run(){
 		while(true){
 			for( Student s:Main.getAllStudents()){
-				if(s instanceof NetworkAdministrator){
+				if(s instanceof NetworkAdministrator && !s.isAlive()){
 					s.restore();
 				}
 				else if(s instanceof Hacker){
