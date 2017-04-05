@@ -28,9 +28,8 @@ public class SamSagawa extends ClubMember implements NetworkAdministrator{
 
 	
 	public void run(){
-		int checkCount = 0;
-		while(checkCount < 100){	
-			for(Student s: Main.getAllStudents()){
+		System.out.println("Max is dead");
+		for(Student s: Main.getAllStudents()){
 				if(s instanceof Hacker){
 					s.createPatch();
 				}
@@ -38,7 +37,6 @@ public class SamSagawa extends ClubMember implements NetworkAdministrator{
 					s.restore();
 				}
 			}
-			checkCount++;
 		}
 	}
-}
+
