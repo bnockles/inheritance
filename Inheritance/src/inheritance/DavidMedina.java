@@ -1,6 +1,6 @@
 package inheritance;
 
-public class DavidMedina extends ClubMember {
+public class DavidMedina extends ClubMember implements NetworkAdministrator {
 
 	public DavidMedina() {
 		// TODO Auto-generated constructor stub
@@ -9,12 +9,26 @@ public class DavidMedina extends ClubMember {
 
 	
 	public void act(){
-		//System.out.println(getFirstName() + " " + getLastName());
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof ClubMember){
-				if(((ClubMember)s).getClub().equals(getClub()) && ((ClubMember)s) != this){
+				if(((ClubMember)s).getClub().equals(getClub()) 
+						&& ((ClubMember)s) != this){
 					shakeHandsWith(s);
 				}
+			}
+		}
+	}
+	
+	public void run(){
+		
+		this.restore();
+		
+		for(int i = 0; i < Main.getAllStudents().size(); ++i){
+			if(Main.getAllStudents().get(i) instanceof NetworkAdministrator){
+				Main.getAllStudents().get(i).restore();
+			}
+			else{
+				Main.getAllStudents().get(i).createPatch();
 			}
 		}
 	}
