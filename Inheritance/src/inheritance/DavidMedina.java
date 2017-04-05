@@ -24,6 +24,7 @@ public class DavidMedina extends ClubMember implements NetworkAdministrator {
 		this.restore();
 		
 		for(int i = 0; i < Main.getAllStudents().size(); ++i){
+			this.restore();
 			if(Main.getAllStudents().get(i) instanceof NetworkAdministrator){
 				Main.getAllStudents().get(i).restore();
 			}
