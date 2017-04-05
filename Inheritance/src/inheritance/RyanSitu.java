@@ -15,7 +15,7 @@ public class RyanSitu extends ClubMember{
 		System.out.println("Ryan C2");
 		students = Main.getAllStudents();
 		for(Student s: students){
-			if(s instanceof ClubMember && ((ClubMember) s).getClub() == "roblox"){
+			if(s instanceof ClubMember && ((ClubMember) s).getClub() == "pokemon" && s.getFirstName()!="Ryan"){
 				shakeHandsWith(s);
 				System.out.println("I shook hands with"+s);
 			}
