@@ -2,12 +2,17 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
+import inheritance.Main.Message;
+
+public class ViolettaJusiega extends ClubMember implements Hacker, Runnable, American{
 	
 	ArrayList<Student> studs = Main.getAllStudents();
 	
+	int check;
+	
 	public ViolettaJusiega(){
 		super("Violetta", "Jusiega", 2017, Main.COMP_SCI_MAJOR, "music");
+		check = 0; 
 	}
 	
 	@Override
@@ -24,6 +29,31 @@ public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
 		}
 		
 	}
+	
+	
+	public void receiveMessage(Message message){
+		for(int i = check; i < studs.size(); i++){
+			if(studs.get(i) instanceof American && !(studs.get(i) instanceof Spy)){
+				check = i; 
+				message.pass(this, studs.get(i));
+			}
+		}
+		 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void run(){
 		while(true){
@@ -42,6 +72,8 @@ public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
 			}
 		}
 	}
+	
+	
 	
 	
 }
