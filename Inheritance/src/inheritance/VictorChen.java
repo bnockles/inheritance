@@ -3,11 +3,13 @@
  */
 package inheritance;
 
+import inheritance.Main.Message;
+
 /**
  * @author hotfir
  *
  */
-public class VictorChen extends ClubMember implements Hacker{
+public class VictorChen extends ClubMember implements American{
 
 	public VictorChen() {
 		super("Victor", "Chen", 2017, Main.COMP_SCI_MAJOR, "anime");
@@ -38,5 +40,14 @@ public class VictorChen extends ClubMember implements Hacker{
 //			if(s instanceof Hacker)
 //			s.mutate();
 //		}
+	}
+	
+	public void receiveMessage(Message m){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof American && !(s instanceof Soviet)){
+				m.pass(this,s);
+			}
+		}
+		
 	}
 }
