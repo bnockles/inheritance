@@ -24,12 +24,12 @@ public class EdwinMa extends ClubMember implements Hacker{
 			if(!isAlive()){
 				this.mutate();
 			}
-			for(int i = 0; i < s.size();i++){
-				if(s.get(i) instanceof NetworkAdministrator){
-					s.get(i).corrupt();
+			for(Student k : s){
+				if(k instanceof NetworkAdministrator){
+					k.corrupt();
 				}
 				else{
-					s.get(i).mutate();
+					k.mutate();
 				}
 			}
 		}
