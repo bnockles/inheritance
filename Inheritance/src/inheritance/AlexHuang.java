@@ -10,7 +10,7 @@ public class AlexHuang extends ClubMember{
 		for(Student i: Main.getAllStudents()){
 			if (((ClubMember) i).getClub().equals("runescape")){
 				shakeHandsWith(i);
-				//
+				
 		}
 	}
 }
