@@ -4,6 +4,7 @@
 package inheritance;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author bnockles
@@ -19,85 +20,85 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		students.add(new IllhamAlam());
-		students.add(new AfsanaChadni());
-		students.add(new JiayanChen());
-		students.add(new RayChen());
-		students.add(new MatthewChu());
-		students.add(new AliEldeeb());
-		students.add(new DanielGoon());
-		students.add(new AnnaHo());
-		students.add(new AlexHuang());
-		students.add(new SammyajitKapuria());
-		students.add(new JasonLau());
-		students.add(new VickiLau());
-		students.add(new MichaelLi());
-		students.add(new KristyLo());
-		students.add(new BillyLuy());
-		students.add(new EdwinMa());
-		students.add(new JiaMingMa());
-		students.add(new DavidMedina());
-		students.add(new HansMontero());
-		students.add(new MatthewNguyen());
-		students.add(new ShohebOme());
-		students.add(new DanielQuinde());
-		students.add(new MakinoonSami());
-		students.add(new IramShahed());
-		students.add(new RyanSitu());
-		students.add(new NikitaSmirnov());
-		students.add(new DavidSzymanski());
-		students.add(new KristyTan());
-		students.add(new SharonWong());
-		students.add(new MatthewYarmolinsky());
-		students.add(new AriqZaman());
-		students.add(new HunterZhao());
-		students.add(new JonathanZheng());
-		students.add(new KevinZheng());
+//		students.add(new IllhamAlam());
+//		students.add(new AfsanaChadni());
+//		students.add(new JiayanChen());
+//		students.add(new RayChen());
+//		students.add(new MatthewChu());
+//		students.add(new AliEldeeb());
+//		students.add(new DanielGoon());
+//		students.add(new AnnaHo());
+//		students.add(new AlexHuang());
+//		students.add(new SammyajitKapuria());//good up to here
+//		students.add(new JasonLau());
+//		students.add(new VickiLau());
+//		students.add(new MichaelLi());
+//		students.add(new KristyLo());
+//		students.add(new BillyLuy());
+//		students.add(new EdwinMa());
+//		students.add(new JiaMingMa());
+//		students.add(new DavidMedina());
+//		//		students.add(new HansMontero());//TELEPORTER!!!
+//		students.add(new MatthewNguyen());
+//		students.add(new ShohebOme());
+//		students.add(new DanielQuinde());
+//		students.add(new MakinoonSami());//good
+//		students.add(new IramShahed());
+//		students.add(new RyanSitu());
+//		students.add(new NikitaSmirnov());//good
+//		//		students.add(new DavidSzymanski());//BAD GUYS
+//		students.add(new KristyTan());
+//		students.add(new SharonWong());
+//		students.add(new MatthewYarmolinsky());
+//		students.add(new AriqZaman());
+//		students.add(new HunterZhao());
+//		students.add(new JonathanZheng());
+//		students.add(new KevinZheng());//the TWO ACCOUNTS GUY!!
 
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
 
-		//		students.add(new VictorChen());
-		//		students.add(new KatherineCheng());
-		//		students.add(new AnthonyCuzzi());
-		//		students.add(new JoyceFeng());
-		//		students.add(new JenniberFranco());
-		////		students.add(new MaxFriedman());
-		//		students.add(new GabrielHo());
-		//		students.add(new WendyHu());
-		//		students.add(new TobyHuang());
-		//		students.add(new JosephHur());
-		//		//		students.add(new SyedHussain());
-		//		students.add(new TamannaHussain());
-		//		students.add(new VeerajJethalal());
-		//		students.add(new ViolettaJusiega());
-		//		students.add(new SimonKahn());
-		//		students.add(new AhmedKhan());
-		//		students.add(new MahinKhan());
-		//		students.add(new TraceyKong());
-		//		students.add(new JoeyLeung());
-		//		students.add(new FultonLin());
-		//		students.add(new ZhengLu());
-		//		students.add(new RichardLy());
-		//		students.add(new RisaMorishima());
-		//		students.add(new EduardoRouse());
-		//		students.add(new SamSagawa());
-		//		students.add(new KaterynaSemenova());
-		//		students.add(new JaviyWang());
-		//		//		students.add(new JimmyWu());
-		////		students.add(new ZhenXiao());
-		//		students.add(new HaoYuan());
-		//		students.add(new IvanZhen());
-		//		students.add(new KevinZhen());
-		//		students.add(new DanielZubarchuk());
+				students.add(new VictorChen());
+				students.add(new KatherineCheng());
+				students.add(new AnthonyCuzzi());
+				students.add(new JoyceFeng());
+				students.add(new JenniberFranco());
+				students.add(new MaxFriedman());
+				students.add(new GabrielHo());
+				students.add(new WendyHu());
+				students.add(new TobyHuang());
+				students.add(new JosephHur());
+				students.add(new SyedHussain());
+				students.add(new TamannaHussain());
+				students.add(new VeerajJethalal());
+				students.add(new ViolettaJusiega());
+				students.add(new SimonKahn());
+				students.add(new AhmedKhan());
+				students.add(new MahinKhan());
+				students.add(new TraceyKong());
+				students.add(new JoeyLeung());
+				students.add(new FultonLin());
+				students.add(new ZhengLu());
+				students.add(new RichardLy());
+				students.add(new RisaMorishima());
+				students.add(new EduardoRouse());
+				students.add(new SamSagawa());
+//				students.add(new KaterynaSemenova());
+				students.add(new JaviyWang());
+//						students.add(new JimmyWu());
+//				students.add(new ZhenXiao());
+				students.add(new HaoYuan());
+				students.add(new IvanZhen());
+				students.add(new KevinZhen());
+				students.add(new DanielZubarchuk());
 		//
 		//
-		rollCall(students);
+		//		rollCall(students);
 		System.out.println("");
-		checkCompliance();
+		//		checkCompliance();
 
 
 
-		//		play();
+		play();
 		//		Message message= new Message(159819125);
 		//		message.start(students.get((int)(students.size()*Math.random())));
 	}
@@ -128,7 +129,7 @@ public class Main {
 	}
 
 	private final static void play(){
-
+		Collections.shuffle(students);
 		//creates the Threads
 		for(Student s: students){
 			Thread t = new Thread(s);
@@ -210,21 +211,36 @@ public class Main {
 
 		private void start(Student s){
 			recordOfAllBearers.add(s);
-			
+
 
 		}
 
 		public void pass(Student from, Student to){
-			recordOfAllBearers.add(to);
-			if(to instanceof American && !(to instanceof Soviet)){
-				americans++;
+			boolean held = false;
+			for(Student s: recordOfAllBearers){
+				if(s == to){
+					held = true;
+				}
 			}
-			if(to instanceof Soviet && !(to instanceof American)){
-				soviets++;
+			if(!held){
+				recordOfAllBearers.add(to);
+				if(to instanceof American && !(to instanceof Soviet)){
+					americans++;
+				}
+				if(to instanceof Soviet && !(to instanceof American)){
+					soviets++;
+				}
+				if(to instanceof American && (to instanceof Soviet)){
+					spies++;
+				}
+				if(americans== totalAmericans){
+					System.out.println("Americans win!");
+				}
+				if(soviets== totalSoviets){
+					System.out.println("Soviets win!");
+				}
 			}
-			if(to instanceof American && (to instanceof Soviet)){
-				spies++;
-			}
+			to.receiveMessage(this);
 		}
 
 

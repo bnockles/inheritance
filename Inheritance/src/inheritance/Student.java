@@ -5,6 +5,8 @@ package inheritance;
 
 import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
 /**
  * @author bnockles
  *
@@ -134,6 +136,11 @@ public class Student implements Runnable{
 
 	public final void setPlay(Thread play) {
 		this.play = play;
+	}
+
+	public void receiveMessage(Message message) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
