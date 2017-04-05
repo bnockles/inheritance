@@ -10,8 +10,19 @@ public class AriqZaman extends ClubMember {
 	
 	@Override
 	public void act() {
-		System.out.print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+		System.out.print("AAAAAAA");
 		super.act();
+		
+		for(int i = 0; i<Main.getAllStudents().size();i++){
+			Student s = Main.getAllStudents().get(i);
+			
+			if(s instanceof ClubMember){
+				ClubMember c = (ClubMember) s;
+				if(c.getClub().equals(this.getClub())){
+					shakeHandsWith(s);
+				}
+			}
+		}
 	}
 
 }

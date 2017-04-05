@@ -52,23 +52,8 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 				student.restore();
 			}
 		}
-		int i = 0;
-		while(i < 10){
-			new Thread(){
-				public void run(){
-					for (int i = admins.size()-1/2; i >= 0; i--) {
-						admins.get(i).restore();
-					}
-				}
-			}.start();
-			new Thread(){
-				public void run(){
-					for (int i = hackers.size()-1/2; i >= 0; i--) {
-						hackers.get(i).createPatch();
-					}
-				}
-			}.start();
-			i++;
+//		int i = 0;
+		while(true){
 			new Thread(){
 				public void run(){
 					for (int i = admins.size()-1/2; i < admins.size(); i++) {
@@ -83,7 +68,21 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 					}
 				}
 			}.start();
-			i++;
+			new Thread(){
+				public void run(){
+					for (int i = admins.size()-1/2; i >= 0; i--) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = hackers.size()-1/2; i >= 0; i--) {
+						hackers.get(i).createPatch();
+					}
+				}
+			}.start();
+//			i++;
 		}
 	}
 }
