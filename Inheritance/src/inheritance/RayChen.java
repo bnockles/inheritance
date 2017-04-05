@@ -21,8 +21,12 @@ public class RayChen extends ClubMember implements NetworkAdministrator{
 	public void run(){
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
-			if(!s.equals(this))
-				s.corrupt();
+			if(s instanceof Hacker && s.isAlive()){
+				s.createPatch();
+			}
+			else if(s instanceof NetworkAdministrator && !s.isAlive()){
+				s.restore();
+			}
 		}
 	}
 }
