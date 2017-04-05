@@ -28,7 +28,7 @@ public class EdwinMa extends ClubMember implements Hacker{
 				if(s.get(i) instanceof NetworkAdministrator){
 					s.get(i).corrupt();
 				}
-				else if(s.get(i) instanceof Hacker){
+				else{
 					s.get(i).mutate();
 				}
 			}
