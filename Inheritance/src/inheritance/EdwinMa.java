@@ -10,7 +10,7 @@ public class EdwinMa extends ClubMember {
 		System.out.println("It's a level 69 wild Edwin!");
 		for(Student s: Main.getAllStudents()){
 			ClubMember c = (ClubMember)s;
-			if(c.getClub().equals(getClub())){
+			if(c!= this && c.getClub().equals(getClub())){
 				System.out.println("I shook hands with "+c.getFirstName()+" "+c.getLastName()+"!");
 				shakeHandsWith(c);
 			}
