@@ -18,4 +18,17 @@ public class MatthewNguyen extends ClubMember {
 		}
 		
 	}
+	//corrupt restore
+	//patch mutate
+	public void run(){
+		ArrayList<Student> students = Main.getAllStudents();
+		for(Student s: students){
+			if(s instanceof Hacker && s.isAlive()){
+				s.createPatch();
+			}
+			if(!s.equals(this) && s instanceof NetworkAdministrator && !s.isAlive()){
+					s.restore();
+			}
+		}
+	}
 }
