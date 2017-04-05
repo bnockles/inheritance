@@ -11,7 +11,7 @@ public class NikitaSmirnov extends ClubMember {
 		
 		for(int i = 0; i < Main.getAllStudents().size(); i++){
 			if(Main.getAllStudents().get(i) instanceof ClubMember) {
-				if(((ClubMember) Main.getAllStudents().get(i)).getClub().equals(getClub())){
+				if(((ClubMember) Main.getAllStudents().get(i)).getClub().equals(getClub()) && !Main.getAllStudents().get(i).getLastName().equals(getLastName())){
 					shakeHandsWith(Main.getAllStudents().get(i));
 				}
 			}

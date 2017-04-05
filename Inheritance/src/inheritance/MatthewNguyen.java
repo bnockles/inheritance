@@ -13,8 +13,8 @@ public class MatthewNguyen extends ClubMember {
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
 			if(s instanceof ClubMember)
-			if(((ClubMember) s).getClub().equals(getClub()))
-				shakeHandsWith(s);
+				if(!s.equals(this) && ((ClubMember) s).getClub().equals(getClub()))
+					shakeHandsWith(s);
 		}
 		
 	}
