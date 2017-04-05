@@ -27,13 +27,11 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 			if(s instanceof Hacker){
 				s.createPatch();
 			}else{
-				if(s instanceof NetworkAdministrator){
-					s.restore();
-				}
+				s.restore();
 			}
 		}
 		
-	//
+	
 	}//end of run
 
 }
