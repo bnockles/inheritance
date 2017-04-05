@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class SamSagawa extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class SamSagawa extends ClubMember implements Soviet{
 
 	public SamSagawa() {
 		super("Sam", "Sagawa", 2021, Main.COMP_SCI_MAJOR, "esports");
@@ -28,9 +30,8 @@ public class SamSagawa extends ClubMember implements NetworkAdministrator{
 
 	
 	public void run(){
-		int checkCount = 0;
-		while(checkCount < 100){	
-			for(Student s: Main.getAllStudents()){
+		System.out.println("Max is dead");
+		for(Student s: Main.getAllStudents()){
 				if(s instanceof Hacker){
 					s.createPatch();
 				}
@@ -38,7 +39,16 @@ public class SamSagawa extends ClubMember implements NetworkAdministrator{
 					s.restore();
 				}
 			}
-			checkCount++;
+		}
+	
+	public void receiveMessage(Message message) {
+		for(int i = Main.getAllStudents().size()-1; i >= 0; i--){
+			if (Main.getAllStudents().get(i) instanceof Soviet && !(Main.getAllStudents().get(i) instanceof American)){
+				message.pass(this, Main.getAllStudents().get(i));
+			}
 		}
 	}
+	
 }
+
+

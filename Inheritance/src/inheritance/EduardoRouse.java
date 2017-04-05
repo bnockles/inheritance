@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class EduardoRouse extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class EduardoRouse extends ClubMember implements Soviet{
 
 	ArrayList<Student> students = Main.getAllStudents();
 	
@@ -26,6 +28,15 @@ public class EduardoRouse extends ClubMember implements NetworkAdministrator{
 			}
 			if(s instanceof NetworkAdministrator && !s.isAlive()){
 				s.restore();
+			}
+		}
+	}
+	
+	@Override
+	public void receiveMessage(Message message){
+		for(Student s:students){
+			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
+				message.pass(this, s);
 			}
 		}
 	}
