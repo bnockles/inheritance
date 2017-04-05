@@ -40,7 +40,6 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator {
 			}
 		}).start();
 
-		while (true) {
 			for (Student s : Main.getAllStudents()) {
 				if (s instanceof NetworkAdministrator) {
 					System.out.println("you cant kill me. I subscribe with TWO ACCOUNTS.");
@@ -51,7 +50,6 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator {
 					s.createPatch();
 				}
 			}
-		}
 	}
 
 }
