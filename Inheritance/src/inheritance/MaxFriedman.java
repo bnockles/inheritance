@@ -24,6 +24,7 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 				e.printStackTrace();
 			}
 		}
+		run();
 	}
 
 	
