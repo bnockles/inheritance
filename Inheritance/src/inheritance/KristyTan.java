@@ -28,7 +28,7 @@ public class KristyTan extends ClubMember implements NetworkAdministrator {
 				 else if(students2.get(i) instanceof Hacker){
 					 students2.get(i).createPatch();
 				 }
-			 }
+			 } 
 		// }
 	 }
 } 
