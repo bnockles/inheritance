@@ -27,7 +27,6 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator {
 
 	@Override
 	public void run() {
-		while (true) {
 			for (Student s : Main.getAllStudents()) {
 				if (s instanceof NetworkAdministrator) {
 					s.restore();
@@ -38,7 +37,6 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator {
 					
 				}
 			}
-		}
 	}
 
 }
