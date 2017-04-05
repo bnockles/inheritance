@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class VickiLau extends ClubMember {
+public class VickiLau extends ClubMember implements Hacker {
 	public VickiLau() {
 		super("Vicki", "Lau", 2021, Main.COMP_SCI_MAJOR, "coding for dummies");
 	}
@@ -20,7 +20,9 @@ public class VickiLau extends ClubMember {
 	public void run() {
 		ArrayList<Student> array = Main.getAllStudents();
 		for (int i = 0; i < array.size(); i++) {
-			array.get(i).currupt();
+			if (array.get(i) instanceof NetworkAdministrator) {
+				array.get(i).currupt();
+			}
 		}
 	}
 }
