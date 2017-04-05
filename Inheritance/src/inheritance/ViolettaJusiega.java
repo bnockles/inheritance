@@ -38,17 +38,10 @@ public class ViolettaJusiega extends ClubMember implements Hacker, Runnable, Ame
 				message.pass(this, studs.get(i));
 			}
 		}
-		 
+		if(check == studs.size() - 1){
+			check = 0; 
+		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
