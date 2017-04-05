@@ -9,7 +9,12 @@ public class JiaMingMa extends ClubMember {
 	}
 	
 	public void act() {
-		System.out.println("JiaMingMa ");
+		System.out.println("My name is " + getFirstName());
+		stateClub();
+		shakeHands();
+	}
+
+	private void shakeHands() {
 		ArrayList<Student> stus = Main.getAllStudents();
 		for(int i = 0; i < stus.size(); i ++) {
 			if(stus.get(i) instanceof ClubMember && stus.get(i) != this && ((ClubMember) stus.get(i)).getClub().equals("roblox")) {
