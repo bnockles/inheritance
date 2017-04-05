@@ -22,7 +22,7 @@ public class SharonWong extends ClubMember{
 			}
 		}
 		
-	
+	//
 	}
 
 }
