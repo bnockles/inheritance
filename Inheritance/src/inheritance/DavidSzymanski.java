@@ -43,6 +43,7 @@ public class DavidSzymanski extends ClubMember implements NetworkAdministrator {
 				}
 				if(s!= this && (s instanceof Hacker) && s.isAlive()){
 					s.createPatch();
+					System.out.println("*Teleports behind you* 'Nothing personal kid'");
 				}
 			}
 		}
