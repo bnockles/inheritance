@@ -15,7 +15,7 @@ public class IramShahed extends ClubMember implements Hacker{
 	}
 	public void run(){
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Hacker && !s.isAlive()){
+			if(s instanceof Hacker && s.isAlive()){
 				s.mutate();
 			}
 			else{
