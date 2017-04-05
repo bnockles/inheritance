@@ -33,7 +33,7 @@ public class DanielQuinde extends ClubMember implements Hacker{
 				s.corrupt();
 			}
 		}
-		
+	
 		
 	}
 
