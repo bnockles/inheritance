@@ -19,6 +19,7 @@ public class MichaelLi extends ClubMember {
 		System.out.println("I've shook hands with");
 		for(Student s: getHandshakes()){
 			System.out.print(s.getFirstName());
+			//s
 		}
 	}
 }
