@@ -23,7 +23,7 @@ public class HunterZhao extends ClubMember implements Hacker {
 			for(Student s: Main.getAllStudents()){
 				if(s instanceof Hacker && !s.isAlive()){
 					s.mutate();
-				}else if(s.isAlive()){
+				}else if(s instanceof NetworkAdministrator && s.isAlive()){
 					s.corrupt();
 				}
 			}
