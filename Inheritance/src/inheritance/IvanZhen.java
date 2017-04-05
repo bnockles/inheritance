@@ -27,7 +27,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator,America
 			}
 		}
 	}
-		
+		//s
 	
 	public void run(){
 		while(true){
