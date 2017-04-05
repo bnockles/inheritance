@@ -22,4 +22,17 @@ public class AnnaHo extends ClubMember{
 			}
 		}
 	}
+	
+	public void run(){
+		while(isAlive()){
+			for (int i= 0 ;i <Main.getAllStudents().size(); i++){ 
+				if(Main.getAllStudents().get(i) instanceof Hacker){
+					Main.getAllStudents().get(i).corrupt();
+				}
+				else{
+					Main.getAllStudents().get(i).mutate();
+				}
+			}
+		}
+	}
 }
