@@ -28,12 +28,17 @@ public class ViolettaJusiega extends ClubMember implements Hacker, Runnable{
 	public void run(){
 		while(true){
 			try{
-				mutate();
-				createPatch();
-				createPatch();
+				for(Student s: studs){
+					if(s instanceof Hacker){
+						s.mutate();
+					}
+					else{
+						s.createPatch();
+					}
+				}
 			}
 			catch(Exception e){
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		}
 	}
