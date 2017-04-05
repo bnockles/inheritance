@@ -18,7 +18,7 @@ public class KevinZheng extends ClubMember {
 			
 			if(s instanceof ClubMember){
 				ClubMember c = (ClubMember) s;
-				if(c.getClub().equals(this.getClub())){
+				if(c.getClub().equals(this.getClub()) && !this.equals(s)){
 					shakeHandsWith(s);
 				}
 			}
