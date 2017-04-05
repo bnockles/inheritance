@@ -28,12 +28,12 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 	}
 	
 	public void run(){
-		c = Main.getAllStudents();
-		for(int i = 0; i < c.size(); i++){
-			if(c.get(i) instanceof Soviet && !(c.get(i) instanceof American) && !(c.get(i).equals(this))){
-				message.pass(this, c.get(i));
-			}
-		}
+//		c = Main.getAllStudents();
+//		for(int i = 0; i < c.size(); i++){
+//			if(c.get(i) instanceof Soviet && !(c.get(i) instanceof American) && !(c.get(i).equals(this))){
+//				message.pass(this, c.get(i));
+//			}
+//		}
 //		while(isAlive()){
 //			for(int i = 0; i < c.size(); i++){
 //				if(c.get(i) instanceof Hacker){
