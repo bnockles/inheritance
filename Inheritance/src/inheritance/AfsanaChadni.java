@@ -7,8 +7,14 @@ public class AfsanaChadni extends ClubMember {
 	}
 	
 	public void act(){
-		super.act();
-		System.out.print("Afsana Chadni ");
+		System.out.print("Afsana Chadni");
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			if (Main.getAllStudents().get(i) instanceof ClubMember 
+					&& ((ClubMember) (Main.getAllStudents().get(i))).getClub().equals("pokemon") 
+					&& Main.getAllStudents().get(i) != this){
+						shakeHandsWith(Main.getAllStudents().get(i));
+					}
+		}
 	}
 	
 	
