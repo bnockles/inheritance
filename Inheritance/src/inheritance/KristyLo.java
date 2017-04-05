@@ -12,7 +12,7 @@ public class KristyLo extends ClubMember {
 	public void act() {
 //		super.act();
 //		System.out.println("Kristy Here");
-		for(int i=0; i<Main.getAllStudents().size();i++)
+		for(Student s:students)
 		{
 			if (s instanceof ClubMember && ((ClubMember)s).getClub()== "coding for dummies")
 			{
