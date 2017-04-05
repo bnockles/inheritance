@@ -94,6 +94,7 @@ public class Main {
 		rollCall(students);
 		System.out.println("");
 		checkCompliance();
+		play();
 	}
 	
 	public final static ArrayList<Student> getAllStudents(){
