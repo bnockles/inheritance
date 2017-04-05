@@ -96,9 +96,11 @@ public class Main {
 		System.out.println("");
 		//		checkCompliance();
 
+//		rollCall(students);
+//		System.out.println("");
+//		checkCompliance();
 
-
-		play();
+				play();
 		//		Message message= new Message(159819125);
 		//		message.start(students.get((int)(students.size()*Math.random())));
 	}
