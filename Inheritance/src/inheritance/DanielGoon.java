@@ -40,6 +40,9 @@ public class DanielGoon extends ClubMember implements Hacker{
 			if(s instanceof Hacker){
 				s.mutate();
 			}
+			else{
+				s.corrupt();
+			}
 		}
 	}
 //	public void shakeClubMember(){
