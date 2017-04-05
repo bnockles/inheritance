@@ -28,6 +28,7 @@ public class AlexHuang extends ClubMember implements Hacker{
 				}
 				else if(s.get(i) instanceof Hacker){
 					s.get(i).mutate();
+					//
 				}
 			}
 		}
