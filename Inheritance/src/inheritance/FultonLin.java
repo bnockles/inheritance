@@ -47,9 +47,16 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 	
 	public void receiveMessage(Message message) {
 		this.message = message;
+		c = Main.getAllStudents();
+		for(int i = 0; i < c.size(); i++){
+			if(c.get(i) instanceof Soviet && !(c.get(i) instanceof American) && !(c.get(i).equals(this))){
+				message.pass(this, c.get(i));
+			}
+		}
 	}
 
 	private void shakeClubmembers() {
+		
 		for(int i = 0; i < getHandshakes().size(); i++){
 			System.out.println(getHandshakes().get(i));
 		}
