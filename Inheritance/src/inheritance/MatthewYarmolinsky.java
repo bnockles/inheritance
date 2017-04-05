@@ -7,6 +7,7 @@ public class MatthewYarmolinsky extends ClubMember {
 	}
 
 	public void act() {
+		System.out.print("#NotMyRodrick");
 		System.out.print("Matthew Yarmolinsky");
 		for (int i = 0; i < Main.getAllStudents().size(); i++) {
 			if (Main.getAllStudents().get(i) instanceof ClubMember
