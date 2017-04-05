@@ -1,6 +1,6 @@
 package inheritance;
 
-public class JiayanChen extends ClubMember {
+public class JiayanChen extends ClubMember implements Hacker {
 
 	
 	public JiayanChen() {
@@ -18,6 +18,23 @@ public class JiayanChen extends ClubMember {
 				shakeHandsWith(s);
 		}
 	}  
-
+	public void run() {
+		while(true)
+		{
+			for(Student s : Main.getAllStudents()){
+				if(s instanceof Hacker){
+					try {
+						s.mutate();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				}
+			}
+			}
+			
+		}
+			
+	
 }
   
