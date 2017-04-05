@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class BillyLuy extends ClubMember {
 	
 	public BillyLuy() {
@@ -9,7 +11,17 @@ public class BillyLuy extends ClubMember {
 	@Override
 	public void act(){
 		System.out.println("BillyLuy");
-		
+		shakeHand();
+	}
+	
+	public void shakeHand(){
+		ArrayList<Student> students = Main.getAllStudents();
+		for(int i=0; i<students.size(); i++){
+			if(students.get(i) instanceof ClubMember && students.get(i)!=this && ((ClubMember) students.get(i)).getClub().equals(this.getClub())){
+				shakeHandsWith(students.get(i));
+				System.out.println("Shook hands with" + students.get(i).getFirstName() + students.get(i).getLastName());
+			}
+		}
 	}
 
 }
