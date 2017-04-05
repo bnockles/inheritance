@@ -25,6 +25,7 @@ public class KristyLo extends ClubMember {
 	}
 	public void run()
 	{
+		
 		students =Main.getAllStudents();
 		while(isAlive())
 		{
