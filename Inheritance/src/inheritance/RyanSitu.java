@@ -7,7 +7,7 @@ public class RyanSitu extends ClubMember{
 	private ArrayList<Student> students;
 
 	public RyanSitu() {
-		super("Ryan", "Situ", 2017, Main.COMP_SCI_MAJOR,"Mr. Ip's Fanclub");
+		super("Ryan", "Situ", 2017, Main.COMP_SCI_MAJOR,"pokemon");
 	}
 
 	public void act(){
