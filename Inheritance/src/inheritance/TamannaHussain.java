@@ -22,15 +22,13 @@ public class TamannaHussain extends ClubMember implements Hacker, American{
 	}
 
 	public void run(){
-		
-//		for(Student s: Main.getAllStudents())
-//			if(s instanceof NetworkAdministrator){
-//				corrupt();
-//			}
-//			else{
-//				mutate();
-//			}
-//	}
+		for(Student s: Main.getAllStudents())
+			if(s instanceof NetworkAdministrator){
+				corrupt();
+			}
+			else{
+				mutate();
+		}
 	}
 	
 	public void recieveMessage(Message message){
