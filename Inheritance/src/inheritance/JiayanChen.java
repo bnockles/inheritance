@@ -13,6 +13,11 @@ public class JiayanChen extends ClubMember {
 		stateName();
 		stateClub();
 		System.out.println("hiiii");
+		for(Student s : Main.getAllStudents()){
+			ClubMember member = (ClubMember) s;
+			if(member.getClub().equals(this.getClub()) )
+				shakeHandsWith(s);
+		}
 	}  
 
 }

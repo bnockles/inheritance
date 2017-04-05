@@ -7,8 +7,13 @@ public class ShohebOme extends ClubMember {
 	}
 	
 	public void act(){
-		System.out.println("\n\n\n\n\nHans Montero reporting for duty! XDDD\n\n\n\n\nShoheb Ome");
+		for(Student s: Main.getAllStudents()){
+			ClubMember c = (ClubMember) s;
+			if(c.getClub().equals(this.getClub())){
+				shakeHandsWith(s);
+			}
+		}
 	}
-	//loll
+
 }
   
