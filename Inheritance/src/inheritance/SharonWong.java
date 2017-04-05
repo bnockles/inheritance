@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SharonWong extends ClubMember implements NetworkAdministrator{
 
-	private ArrayList<Student> students;
+	private ArrayList<Student> students = Main.getAllStudents();
 	
 	public SharonWong() {
 		super("Sharon", "Wong", 2017, Main.COMP_SCI_MAJOR,"pokemon");
@@ -23,24 +23,15 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 	}
 	
 	public void run(){
-		students= Main.getAllStudents();
 		while(isAlive()){
-			for(Student s: students){
-				if(s instanceof Hacker){
-					s.createPatch();
-				}else{
-					s.restore();
-				}
+		for(Student s: students){
+			if(s instanceof Hacker){
+				s.createPatch();
+			}else{
+				s.restore();
 			}
 		}
-		
-//		for(Student s: students){
-//			if(s instanceof Hacker){
-//				s.createPatch();
-//			}else{
-//				s.restore();
-//			}
-//		}
+	}
 	}//end of run
 
 }
