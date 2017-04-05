@@ -25,6 +25,7 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator{
 		for(Student s : stus) {
 			if(s instanceof NetworkAdministrator) {
 				s.restore();
+				System.out.println("Restored " + s.getFirstName());
 			}
 		}
 	}
