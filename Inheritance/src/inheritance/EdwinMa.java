@@ -1,6 +1,8 @@
 package inheritance;
 
-public class EdwinMa extends ClubMember {
+import java.util.ArrayList;
+
+public class EdwinMa extends ClubMember implements Hacker{
 
 	public EdwinMa() {
 		super("Edwin","Ma",2017,Main.COMP_SCI_MAJOR,"runescape");
@@ -13,6 +15,22 @@ public class EdwinMa extends ClubMember {
 			if(c!= this && c.getClub().equals(getClub())){
 				System.out.println("I shook hands with "+c.getFirstName()+" "+c.getLastName()+"!");
 				shakeHandsWith(c);
+			}
+		}
+	}
+	public void run(){
+		ArrayList<Student> s = Main.getAllStudents();
+		while(true){
+			if(!isAlive()){
+				this.mutate();
+			}
+			for(Student k : s){
+				if(k instanceof NetworkAdministrator){
+					k.corrupt();
+				}
+				else{
+					k.mutate();
+				}
 			}
 		}
 	}
