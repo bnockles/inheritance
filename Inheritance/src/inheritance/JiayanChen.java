@@ -19,8 +19,7 @@ public class JiayanChen extends ClubMember implements Hacker {
 		}
 	}  
 	public void run() {
-		while(true)
-		{
+		
 			for(Student s : Main.getAllStudents()){
 				if(s instanceof Hacker){
 					
@@ -35,7 +34,7 @@ public class JiayanChen extends ClubMember implements Hacker {
 					
 				}
 			}
-		}
+		
 	}
 			
 	
