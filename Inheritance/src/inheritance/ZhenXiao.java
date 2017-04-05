@@ -72,37 +72,37 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 		
 		new Thread(){
 			public void run(){
-				for (int i = admins.size()-1/2; i < admins.size(); i++) {
+				for (int i = (admins.size()-1)/2; i < admins.size(); i++) {
 					admins.get(i).restore();
 				}
 			}
 		}.start();
 //		int i = 0;
 //		while(true){
+			new Thread(){
+				public void run(){
+					for (int i = (admins.size()-1)/2; i < admins.size(); i++) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
 //			new Thread(){
 //				public void run(){
-//					for (int i = admins.size()-1/2; i < admins.size(); i++) {
-//						admins.get(i).restore();
-//					}
-//				}
-//			}.start();
-//			new Thread(){
-//				public void run(){
-//					for (int i = hackers.size()-1/2; i < admins.size(); i++) {
+//					for (int i = (hackers.size()-1)/2; i < admins.size(); i++) {
 //						hackers.get(i).createPatch();
 //					}
 //				}
 //			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = (admins.size()-1)/2; i >= 0; i--) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
 //			new Thread(){
 //				public void run(){
-//					for (int i = admins.size()-1/2; i >= 0; i--) {
-//						admins.get(i).restore();
-//					}
-//				}
-//			}.start();
-//			new Thread(){
-//				public void run(){
-//					for (int i = hackers.size()-1/2; i >= 0; i--) {
+//					for (int i = (hackers.size()-1)/2; i >= 0; i--) {
 //						hackers.get(i).createPatch();
 //					}
 //				}
