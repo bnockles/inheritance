@@ -1,14 +1,26 @@
 package inheritance;
 
-public class GabrielHo extends Student {
+import java.util.ArrayList;
+
+public class GabrielHo extends ClubMember {
 
 	public GabrielHo() {
-		super("Gabriel", "Ho", 2017, Main.COMP_SCI_MAJOR);
+		super("Gabriel", "Ho", 2017, Main.COMP_SCI_MAJOR, "anime");
 	}
-	//yes
+	
 	public void act(){
-		stateName();
-		stateStatus();
+		System.out.print("Hi, my name is Gabriel Ho.");
+		stateClub();
+		shakeHands(Main.getAllStudents());
+		getHandshakes();
+	}
+	
+	public void shakeHands(ArrayList<Student> s){
+		for(int i = 0; i < s.size(); i++){
+			if(((ClubMember) s.get(i)).getClub().equals("anime")){
+				shakeHandsWith(s.get(i));
+			}
+		}
 	}
 
 }

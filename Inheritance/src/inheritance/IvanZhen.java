@@ -1,15 +1,27 @@
 package inheritance;
 
-public class IvanZhen extends Student {
+public class IvanZhen extends ClubMember {
 
 	public IvanZhen() {
-		super("Ivan" ,"Zhen", 2017, Main.COMP_SCI_MAJOR);
+		
+		super("Seto(Ivan)" ,"Kaiba(Zhen)", 2017, Main.COMP_SCI_MAJOR,"tcg");
+		
 	}
 
 
 	@Override
 	public void act(){
-		stateName();
+		System.out.println("Ivan Zhen is the duelist!");
+		
+	}
+	public void shakeAllHands(){
+		
+	for( Student c: Main.getAllStudents()){
+		ClubMember s = (ClubMember)c;
+		if(s.getClub().equals(getClub()) && !(s instanceof IvanZhen)){
+			shakeHandsWith(c);
+		}
 	}
 
+}
 }

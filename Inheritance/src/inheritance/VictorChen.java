@@ -7,16 +7,25 @@ package inheritance;
  * @author hotfir
  *
  */
-public class VictorChen extends Student {
+public class VictorChen extends ClubMember {
 
 	public VictorChen() {
-		// TODO Auto-generated constructor stub
-		super("Victor", "Chen", 2017, Main.COMP_SCI_MAJOR);
+		super("Victor", "Chen", 2017, Main.COMP_SCI_MAJOR, "anime");
 	}
 	
 	public void act(){
-//		System.out.println(this.getFirstName() + " " + this.getLastName());
-		super.act();
+		System.out.println("Victor Chen is the student");
+		System.out.println("I have crippling Osteoporosis.");
+		
+		for(Student s: Main.getAllStudents()){
+			if(s != this && ((ClubMember) s).getClub().equals(this.getClub())){
+				shakeHandsWith(s);
+			}
+		}
+		
+		for(Student s: this.getHandshakes()){
+			System.out.println(s.getFirstName() + " " + s.getLastName() + " is in the " + this.getClub() + " club.");
+		}
 	}
 
 }

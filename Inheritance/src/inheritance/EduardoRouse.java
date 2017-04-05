@@ -1,14 +1,21 @@
 package inheritance;
 
-public class EduardoRouse extends Student {
+import java.util.ArrayList;
+
+public class EduardoRouse extends ClubMember {
 
 	public EduardoRouse() {
-		super("Eduardo", "Rouse", 2017, Main.COMP_SCI_MAJOR);
+		super("Eduardo", "Rouse", 2017, Main.COMP_SCI_MAJOR, "esports");
 	}
 	
 	public void act(){
-		stateName();
-		System.out.print("Who were you? Who are you?");
+		System.out.print("My name is "+getFirstName()+" "+getLastName()+". What are you? ");
+		ArrayList<Student> students = Main.getAllStudents();
+		for(Student s:students){
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(this.getClub()) && !s.equals(this)){
+				this.shakeHandsWith(s);
+			}
+		}
 	}
 
 }

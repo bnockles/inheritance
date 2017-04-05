@@ -11,8 +11,13 @@ public class RichardLy extends ClubMember {
 //		super(name, surname, gradClass, major);
 //		// TODO Auto-generated constructor stub
 //	}
+//	public void act(){
+//		
+//		stateName();
+//		stateStatus();
+//		stateClub();
+//	}
 	public void act(){
-		stateName();
-		stateStatus();
+		System.out.println("Hai! My name is Richard LY");
 	}
 }
