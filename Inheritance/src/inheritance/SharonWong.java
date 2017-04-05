@@ -15,7 +15,7 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 		//System.out.println(" Share on .");
 		students=Main.getAllStudents(); 
 		for(Student s: students){
-			if(s instanceof ClubMember && ((ClubMember)s).getClub()=="pokemon"){
+			if(s instanceof ClubMember && ((ClubMember)s).getClub()=="pokemon"&& !(s.getFirstName().equals(getFirstName()))){
 				shakeHandsWith(s);
 				System.out.println("shook hands with"+s);
 			}
@@ -30,8 +30,6 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 				s.restore();
 			}
 		}
-		
-	
 	}//end of run
 
 }
