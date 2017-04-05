@@ -68,7 +68,7 @@ public class KevinZhen extends ClubMember implements NetworkAdministrator, Spy
 		ArrayList<Student> s = Main.getAllStudents();
 //		for(int i = 0; i < s.size();i++)
 //		{
-//			
+//			//testing
 //		}
 	}
 }
