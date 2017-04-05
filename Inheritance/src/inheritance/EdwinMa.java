@@ -21,12 +21,15 @@ public class EdwinMa extends ClubMember implements Hacker{
 	public void run(){
 		ArrayList<Student> s = Main.getAllStudents();
 		while(true){
-			for(int i = 0; i < s.size();i++){
-				if(s.get(i) instanceof NetworkAdministrator){
-					s.get(i).corrupt();
+			if(!isAlive()){
+				this.mutate();
+			}
+			for(Student k : s){
+				if(k instanceof NetworkAdministrator){
+					k.corrupt();
 				}
-				else if(s.get(i) instanceof Hacker){
-					s.get(i).mutate();
+				else{
+					k.mutate();
 				}
 			}
 		}
