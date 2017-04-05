@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ZhenXiao extends ClubMember {
+public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 	
 	private ArrayList<Student> metStudents;
 
@@ -36,5 +36,53 @@ public class ZhenXiao extends ClubMember {
 	@Override
 	public void stateStatus(){
 		System.out.print("After I complete "+getMajor().getCulminatingCourse()+" and Oracle Database Development, I'll graduate in "+getGraduatingClass()+". ");
+	}
+	
+	@Override
+	public void run(){
+		ArrayList<Student> hackers = new ArrayList<Student>();
+		ArrayList<Student> admins = new ArrayList<Student>();
+		for (Student student : Main.getAllStudents()) {
+			if (student instanceof Hacker){
+				hackers.add(student);
+				student.createPatch();
+			}
+			else{
+				admins.add(student);
+				student.restore();
+			}
+		}
+//		int i = 0;
+		while(true){
+			new Thread(){
+				public void run(){
+					for (int i = admins.size()-1/2; i < admins.size(); i++) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = hackers.size()-1/2; i < admins.size(); i++) {
+						hackers.get(i).createPatch();
+					}
+				}
+			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = admins.size()-1/2; i >= 0; i--) {
+						admins.get(i).restore();
+					}
+				}
+			}.start();
+			new Thread(){
+				public void run(){
+					for (int i = hackers.size()-1/2; i >= 0; i--) {
+						hackers.get(i).createPatch();
+					}
+				}
+			}.start();
+//			i++;
+		}
 	}
 }

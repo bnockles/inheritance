@@ -1,9 +1,21 @@
 package inheritance;
 
-public class AhmedKhan extends ClubMember {
+public class AhmedKhan extends ClubMember implements NetworkAdministrator{
 
 	public AhmedKhan() {
 		super("Ahmed", "Khan", 2017, Main.COMP_SCI_MAJOR, "esports");
+	}
+	
+	public void run(){
+		while(true){
+			for(Student s: Main.getAllStudents()){
+				if(s instanceof NetworkAdministrator){
+					s.restore();
+				}else if(s instanceof Hacker){
+					s.createPatch();
+				}
+			}
+		}
 	}
 	
 	public void act(){
