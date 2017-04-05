@@ -16,6 +16,7 @@ public class MakinoonSami extends ClubMember {
 		
 		for ( int i = 0; i < studentList.size(); i ++){ 
 			if( studentList.get(i) instanceof ClubMember
+					&& studentList.get(i) != this
 					&& ((ClubMember) studentList.get(i)).getClub().equals("batman")){ 
 				shakeHandsWith(studentList.get(i)); 
 			}
