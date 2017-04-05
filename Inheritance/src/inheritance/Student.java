@@ -5,6 +5,8 @@ package inheritance;
 
 import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
 /**
  * @author bnockles
  *
@@ -29,6 +31,7 @@ public class Student implements Runnable{
 		lastName = "Schmoe";
 		graduatingClass= 2021;
 		major = new Major();
+		reportedDead = false;
 		alive = true;
 		metStudents = new ArrayList<Student>();
 	}
@@ -38,6 +41,7 @@ public class Student implements Runnable{
 		lastName = surname;
 		graduatingClass= gradClass;
 		this.major = major;
+		reportedDead = false;
 		alive = true;
 		metStudents = new ArrayList<Student>();
 	}
@@ -96,24 +100,34 @@ public class Student implements Runnable{
 	}
 	
 	
-	public final void createPatch(){
+	public final synchronized void createPatch(){
 		alive = false;
 	}
 	
-	public final void corrupt(){
+	public final synchronized void corrupt(){
 		alive = false;
 	}
 	
-	public final void restore(){
+	public final synchronized void restore(){
 		alive = true;
 	}
 	
-	public final void mutate(){
+	public final synchronized void mutate(){
 		alive = true;
 	}
 	
-	public final boolean isAlive(){
+	public final synchronized boolean isAlive(){
 		return alive;
+	}
+	
+	boolean reportedDead;
+	
+	public boolean isReportedDead(){
+		return reportedDead;
+	}
+	
+	public void setReportedDead(boolean b){
+		reportedDead = true;
 	}
 
 	public final Thread getPlay() {
@@ -122,6 +136,11 @@ public class Student implements Runnable{
 
 	public final void setPlay(Thread play) {
 		this.play = play;
+	}
+
+	public void receiveMessage(Message message) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

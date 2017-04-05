@@ -1,6 +1,6 @@
 package inheritance;
 
-public class JoeyLeung extends ClubMember {
+public class JoeyLeung extends ClubMember implements Hacker{
 
 	public JoeyLeung() {
 		// TODO Auto-generated constructor stub
@@ -20,5 +20,12 @@ public class JoeyLeung extends ClubMember {
 //			System.out.print(b.getFirstName());
 //		}
 	}
-
+	
+	//instanceof is for checking interface
+	
+	public void run(){
+		while(true){
+			mutate();
+		}
+	}
 }

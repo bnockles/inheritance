@@ -1,6 +1,6 @@
 package inheritance;
 
-public class AliEldeeb extends ClubMember {
+public class AliEldeeb extends ClubMember implements Hacker {
 	private String firstName;
 	private String lastName;
 
@@ -9,6 +9,16 @@ public class AliEldeeb extends ClubMember {
 	}
 	public void act(){
 		System.out.println("Ali Eldeeb");
+		for(Student a: Main.getAllStudents()){
+			if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
+				shakeHandsWith(a);
+			}
+		}
 	}
+	public void run(){
+		while(true){
+			mutate();
+		}
+	}
+//
 }
-//fa
