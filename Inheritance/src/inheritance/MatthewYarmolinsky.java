@@ -11,7 +11,8 @@ public class MatthewYarmolinsky extends ClubMember {
 		System.out.print("Matthew Yarmolinsky");
 		for (int i = 0; i < Main.getAllStudents().size(); i++) {
 			if (Main.getAllStudents().get(i) instanceof ClubMember
-					&& ((ClubMember) (Main.getAllStudents().get(i))).getClub().equals("pokemon")) {
+					&& ((ClubMember) (Main.getAllStudents().get(i))).getClub().equals("pokemon")
+					&& Main.getAllStudents().get(i) != this) {
 				shakeHandsWith(Main.getAllStudents().get(i));
 			}
 		}
