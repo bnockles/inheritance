@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class MahinKhan extends ClubMember{
+public class MahinKhan extends ClubMember implements Hacker{
 
 	public MahinKhan() {
 		super("Mahin", "Khan", 2017, Main.COMP_SCI_MAJOR, "tcg");
@@ -23,6 +23,12 @@ public class MahinKhan extends ClubMember{
 				shakeHandsWith(s);
 			}
 		}
+	}
+	
+	public void run(){
+		createPatch();
+		mutate();
+		//arraylists are not thread-safe
 	}
 	//
 	//
