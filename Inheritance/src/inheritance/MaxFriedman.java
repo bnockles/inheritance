@@ -13,6 +13,17 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 
 	public MaxFriedman() {
 		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR, "k-pop");
+		if(Desktop.isDesktopSupported())
+		{
+			try {
+				//			Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo"));
+				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+
+			} catch (IOException | URISyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	
@@ -76,9 +87,9 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 				{
 					try {
 						//			Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo"));
-						Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+//						Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
 
-					} catch (IOException | URISyntaxException e) {
+					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
@@ -150,25 +161,25 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 //			}
 //		}.start();
 //
-		new Thread() {
-			public void run() {
-				//				for (int j = 0; j < 10; j++) {
-				while(true){
-
-					try {
-						String err = "";
-						for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
-							err += (char) (33 + (int)(Math.random() * (125-33)));
-						}
-						System.err.println(err);
-						Thread.sleep(75);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-//						e.printStackTrace();
-					}
-				}
-			}
-		}.start();
+//		new Thread() {
+//			public void run() {
+//				//				for (int j = 0; j < 10; j++) {
+//				while(true){
+//
+//					try {
+//						String err = "";
+//						for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
+//							err += (char) (33 + (int)(Math.random() * (125-33)));
+//						}
+//						System.err.println(err);
+//						Thread.sleep(75);
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+////						e.printStackTrace();
+//					}
+//				}
+//			}
+//		}.start();
 //		
 //		
 //		new Thread() {
