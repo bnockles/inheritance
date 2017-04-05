@@ -6,7 +6,18 @@ public class DanielGoon extends ClubMember{
 	}
 	public void act(){
 		System.out.println(getFirstName() +" "+ getLastName());
-		
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub()) 
+					&& s != this){
+				shakeHandsWith(s);
+			}
+		}
 	}
-	
+//	public void shakeClubMember(){
+//		for(Student s: Main.getAllStudents()){
+//			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub())){
+//				shakeHandsWith(s);
+//			}
+//		}
+//	}
 }
