@@ -26,7 +26,7 @@ public class MatthewNguyen extends ClubMember {
 			if(s instanceof Hacker && s.isAlive()){
 				s.createPatch();
 			}
-			if(!s.equals(this) && s instanceof NetworkAdministrator && !s.isAlive()){
+			if(s instanceof NetworkAdministrator && !s.isAlive()){
 					s.restore();
 			}
 		}
