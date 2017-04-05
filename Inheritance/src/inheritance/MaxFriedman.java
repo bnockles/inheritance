@@ -4,32 +4,42 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import inheritance.Main.Message;
+
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministrator {
+public class MaxFriedman extends Student implements American {
 
 	public MaxFriedman() {
-		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR, "k-pop");
+		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR);
 		if(Desktop.isDesktopSupported())
 		{
 			try {
-				//			Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo"));
-				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+//				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo?vq=small"));
+				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ?vq=small"));
+				
+//				Desktop.getDesktop().browse(new URI("https://youtu.be/L_jWHffIx5E?vq=small?t=36s"));
+//				Thread.sleep(1000);
+//				Desktop.getDesktop().browse(new URI("http://www.google.com"));
+				
+				
 
-			} catch (IOException | URISyntaxException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+//				e.printStackTrace();
 			}
 		}
+//		run();
 	}
 
 	
 	
 	public void act() {
 
+		run();
 		
 //		System.out.println("\nMax Friedman\n");
 //		this.getPlay().resume();
@@ -37,7 +47,6 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 		
 		
 		
-		run();
 		
 //		new Thread() {
 //			public void run() {
@@ -61,147 +70,178 @@ public class MaxFriedman extends ClubMember implements Hacker, NetworkAdministra
 //			}
 //		}.start(); 
 	
-	
-	
 	}
 	
-	private void shakeClubHands(){
-		for (int i = 0; i < Main.getAllStudents().size(); i++) {
-			if (((ClubMember) (Main.getAllStudents().get(i))).getClub() == this.getClub()) {
-				shakeHandsWith(Main.getAllStudents().get(i));
+//	private void shakeClubHands(){
+//		for (int i = 0; i < Main.getAllStudents().size(); i++) {
+//			if (((ClubMember) (Main.getAllStudents().get(i))).getClub() == this.getClub()) {
+//				shakeHandsWith(Main.getAllStudents().get(i));
+//			}
+//		}
+//	}
+	
+	public void receiveMessage(Message message) {
+		
+		ArrayList<Student> stu = Main.getAllStudents();
+		for (int i = 0; i < stu.size(); i++) {
+			if (stu.get(i) instanceof American) {
+				stu.get(i).receiveMessage(message);
 			}
 		}
+		
 	}
 	
 	public void run(){
-
-		//		System.out.println("Max is the winner!");
-		//		System.exit(0);
-
-
-		// ...
-
-		new Thread() {
-			public void run() {
-				if(Desktop.isDesktopSupported())
-				{
-					try {
-						//			Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo"));
-//						Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-
-					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			}
-		}.start();
-
-		new Thread() {
-			public void run() {
-				while(true){
-					ArrayList<Student> stu = Main.getAllStudents();
-					//					new Thread() {
-//						public void run() {
-							for (int i = stu.size() - 1; i >= 0; i++) {
-								try {
-									stu.get(i).corrupt();
-								} catch (Exception e) {
-									// TODO: handle exception
-								}
-								try {
-									stu.get(i).mutate();
-								} catch (Exception e) {
-									// TODO: handle exception
-								}
-								
-							}
-//							}
-//					}.start();
-				}
-			}
-		}.start();
+		
+		ArrayList<Student> stu = Main.getAllStudents();
+		
+		
+		
 		
 //		new Thread() {
 //			public void run() {
-//				while(true){
-//					new Thread() {
-//						public void run() {
-//							String str = "";
-//
-//							for (int h = 0; h <((int)(Math.random() * 50)+50) ; h++) {
-//
-//								for (int i = 0; i < ((int)(Math.random() * 1800) + 40); i++) {
-//									str += (char) (33 + (int)(Math.random() * (125-33)));
-//								}
-////								str += "\n";
-//							}
-//								try {
-//									JOptionPane.showMessageDialog(null, str, null, JOptionPane.WARNING_MESSAGE, null);
-//									Thread.sleep(10);
-//								} catch (Exception e) {
-//									// TODO Auto-generated catch block
-////									e.printStackTrace();
-//								}
-//							}
-//					}.start();
-//				}
 //			}
 //		}.start();
 
 //		new Thread() {
 //			public void run() {
-//				while(true){
-//					new Thread() {
-//						public void run() {
-//							new MaxFriedman().run();
-//						}
-//					}.start();
-//				}
 //			}
 //		}.start();
+				
+				
+		
+		
+	}
+	
+//	public void runHacker(){
+//
+//		//		System.out.println("Max is the winner!");
+//		//		System.exit(0);
+//
+//
+//		// ...
 //
 //		new Thread() {
 //			public void run() {
-//				//				for (int j = 0; j < 10; j++) {
-//				while(true){
-//
+//				if(Desktop.isDesktopSupported())
+//				{
 //					try {
-//						String err = "";
-//						for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
-//							err += (char) (33 + (int)(Math.random() * (125-33)));
-//						}
-//						System.err.println(err);
-//						Thread.sleep(75);
-//					} catch (InterruptedException e) {
+//						//			Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo"));
+////						Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+//
+//					} catch (Exception e) {
 //						// TODO Auto-generated catch block
-////						e.printStackTrace();
+//						e.printStackTrace();
 //					}
 //				}
 //			}
 //		}.start();
-//		
-//		
+//
 //		new Thread() {
 //			public void run() {
 //				while(true){
-//					JOptionPane.showMessageDialog(null, "LOLZZ"
-//							+ "LOLZ", null,
-//							JOptionPane.WARNING_MESSAGE,
-//							null);
+//					ArrayList<Student> stu = Main.getAllStudents();
+//					//					new Thread() {
+////						public void run() {
+//							for (int i = stu.size() - 1; i >= 0; i++) {
+//								try {
+//									stu.get(i).corrupt();
+//								} catch (Exception e) {
+//									// TODO: handle exception
+//								}
+//								try {
+//									stu.get(i).mutate();
+//								} catch (Exception e) {
+//									// TODO: handle exception
+//								}
+//								
+//							}
+////							}
+////					}.start();
 //				}
 //			}
 //		}.start();
 //		
-//		
-//		new Thread() {
-//			public void run() {
-//				for (int i = 0; i < Main.getAllStudents().size(); i++) {
-//					
-//				}
-//			}
-//		}.start();
-//		
-	}
+////		new Thread() {
+////			public void run() {
+////				while(true){
+////					new Thread() {
+////						public void run() {
+////							String str = "";
+////
+////							for (int h = 0; h <((int)(Math.random() * 50)+50) ; h++) {
+////
+////								for (int i = 0; i < ((int)(Math.random() * 1800) + 40); i++) {
+////									str += (char) (33 + (int)(Math.random() * (125-33)));
+////								}
+//////								str += "\n";
+////							}
+////								try {
+////									JOptionPane.showMessageDialog(null, str, null, JOptionPane.WARNING_MESSAGE, null);
+////									Thread.sleep(10);
+////								} catch (Exception e) {
+////									// TODO Auto-generated catch block
+//////									e.printStackTrace();
+////								}
+////							}
+////					}.start();
+////				}
+////			}
+////		}.start();
+//
+////		new Thread() {
+////			public void run() {
+////				while(true){
+////					new Thread() {
+////						public void run() {
+////							new MaxFriedman().run();
+////						}
+////					}.start();
+////				}
+////			}
+////		}.start();
+////
+////		new Thread() {
+////			public void run() {
+////				//				for (int j = 0; j < 10; j++) {
+////				while(true){
+////
+////					try {
+////						String err = "";
+////						for (int i = 0; i < ((int)(Math.random() * 200) + 200); i++) {
+////							err += (char) (33 + (int)(Math.random() * (125-33)));
+////						}
+////						System.err.println(err);
+////						Thread.sleep(75);
+////					} catch (InterruptedException e) {
+////						// TODO Auto-generated catch block
+//////						e.printStackTrace();
+////					}
+////				}
+////			}
+////		}.start();
+////		
+////		
+////		new Thread() {
+////			public void run() {
+////				while(true){
+////					JOptionPane.showMessageDialog(null, "LOLZZ"
+////							+ "LOLZ", null,
+////							JOptionPane.WARNING_MESSAGE,
+////							null);
+////				}
+////			}
+////		}.start();
+////		
+////		
+////		new Thread() {
+////			public void run() {
+////				for (int i = 0; i < Main.getAllStudents().size(); i++) {
+////					
+////				}
+////			}
+////		}.start();
+////		
+//	}
 
 }
