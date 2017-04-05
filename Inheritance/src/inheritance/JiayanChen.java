@@ -25,7 +25,7 @@ public class JiayanChen extends ClubMember implements Hacker {
 				if(s instanceof Hacker){
 					
 					
-						try {
+						try { 
 							s.mutate();
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
