@@ -210,6 +210,7 @@ public class Main {
 		}
 
 		private void start(Student s){
+			System.out.println("The game is starting. The message is handed to "+s.getFirstName()+" "+s.getLastName()+".");
 			recordOfAllBearers.add(s);
 
 
@@ -240,6 +241,12 @@ public class Main {
 					System.out.println("Soviets win!");
 				}
 			}
+			if(to instanceof American && (to instanceof Soviet)){
+				System.out.println("The message was handed to a spy!");
+			}else{
+				System.out.println("The message was handed to "+to.getFirstName()+" "+to.getLastName()+".");
+			}
+			
 			to.receiveMessage(this);
 		}
 
