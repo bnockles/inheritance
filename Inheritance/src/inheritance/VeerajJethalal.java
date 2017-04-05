@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class VeerajJethalal extends ClubMember implements Soviet,American{
+public class VeerajJethalal extends ClubMember implements Spy{
 
 	public VeerajJethalal() {
 		super("Veeraj", "Jethalal", 2017, Main.COMP_SCI_MAJOR, 
