@@ -13,7 +13,7 @@ public class RayChen extends ClubMember {
 		ArrayList<Student> students = Main.getAllStudents();
 		for(Student s: students){
 			if(s instanceof ClubMember){
-				if(!s.equals(this) && ((ClubMember) s).getClub().equals(getClub()))
+				if(!s.equals(this) && ((ClubMember)s).getClub().equals(getClub()))
 					shakeHandsWith(s);
 			}
 		}
