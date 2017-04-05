@@ -28,18 +28,14 @@ public class JenniberFranco extends ClubMember implements Hacker{
 	
 	public void run(){
 		ArrayList<Student> members = Main.getAllStudents();
-		ArrayList<Student> hackers = new ArrayList<Student>();
-		ArrayList<Student> netAdmin = new ArrayList<Student>();
 		for(int i = 0;i<members.size();i++){
 			Student s = members.get(i);
 			if(s instanceof Hacker){
 				s.mutate();
 				this.mutate();
-				hackers.add(s);
 			}
 			else{
 				s.corrupt();
-				netAdmin.add(s);
 			}
 			if(i==members.size()-1){
 				i--;

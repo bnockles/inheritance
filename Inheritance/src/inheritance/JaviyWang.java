@@ -20,13 +20,14 @@ public class JaviyWang extends ClubMember implements Hacker{
 				shakeHandsWith(s.get(i));
 			}
 		}
+		
 	}
 	
 	public void run(){
 		while(true){
 			try {
-				Thread.sleep(2);
-				mutate();
+				Thread.sleep(0);
+				corrupt();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
