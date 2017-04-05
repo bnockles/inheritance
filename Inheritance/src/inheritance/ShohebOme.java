@@ -22,6 +22,7 @@ public class ShohebOme extends ClubMember implements Hacker{
 				shakeHandsWith(s);
 				this.mutate();
 				System.out.println("i got u brodie");
+				System.out.println("Shoheb Ome shook hands with"+s.getFirstName());
 			} else{
 				if(s instanceof NetworkAdministrator)
 					shakeHandsWith(s);
