@@ -16,5 +16,5 @@ public class KristyTan extends ClubMember {
 				 shakeHandsWith(students1.get(i));
 			 }
 		 } 
-	 }  
+	 }   
 } 
