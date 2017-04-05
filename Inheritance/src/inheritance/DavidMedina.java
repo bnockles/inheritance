@@ -9,9 +9,13 @@ public class DavidMedina extends ClubMember {
 
 	
 	public void act(){
-		System.out.println(getFirstName() + " " + getLastName());
+		//System.out.println(getFirstName() + " " + getLastName());
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof ClubMember){
+				if(((ClubMember)s).getClub().equals(getClub()) && ((ClubMember)s) != this){
+					shakeHandsWith(s);
+				}
+			}
+		}
 	}
-	
-	
-
 }

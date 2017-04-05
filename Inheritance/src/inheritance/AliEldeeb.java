@@ -9,6 +9,11 @@ public class AliEldeeb extends ClubMember {
 	}
 	public void act(){
 		System.out.println("Ali Eldeeb");
+		for(Student a: Main.getAllStudents()){
+			if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
+				shakeHandsWith(a);
+			}
+		}
 	}
 }
-//fa
+//
