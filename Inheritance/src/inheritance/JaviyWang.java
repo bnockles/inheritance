@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class JaviyWang extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class JaviyWang extends ClubMember implements Spy{
 
 	public JaviyWang() {
 		super("Javiy", "Wang", 2017, Main.COMP_SCI_MAJOR,"anime");
@@ -23,14 +25,20 @@ public class JaviyWang extends ClubMember implements Hacker{
 		
 	}
 	
-	public void run(){
-		while(true){
-			try {
-				Thread.sleep(0);
-				corrupt();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+//	public void run(){
+//		while(true){
+//			try {
+//				Thread.sleep(0);
+//				mutate();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+	
+	public void recieveMessage(){
+		for(int i = 1;i<Main.getAllStudents().size();i++){
+			//Message.pass(Main.getAllStudents().get(0),Main.getAllStudents().get(i));
 		}
 	}
 }
