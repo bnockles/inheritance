@@ -57,12 +57,12 @@ public class Main {
 
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!PERIOD 8
 
-		students.add(new VictorChen());
+//		students.add(new VictorChen());
 		students.add(new KatherineCheng());
 		students.add(new AnthonyCuzzi());
 		students.add(new JoyceFeng());
 		students.add(new JenniberFranco());
-		students.add(new MaxFriedman());
+//		students.add(new MaxFriedman());
 		students.add(new GabrielHo());
 		students.add(new WendyHu());
 		students.add(new TobyHuang());
@@ -71,9 +71,9 @@ public class Main {
 		students.add(new TamannaHussain());
 		students.add(new VeerajJethalal());
 		students.add(new ViolettaJusiega());
-		students.add(new SimonKahn());
-		students.add(new AhmedKhan());
-		students.add(new MahinKhan());
+//		students.add(new SimonKahn());
+//		students.add(new AhmedKhan());
+//		students.add(new MahinKhan());
 		students.add(new TraceyKong());
 		students.add(new JoeyLeung());
 		students.add(new FultonLin());
@@ -83,7 +83,7 @@ public class Main {
 		students.add(new EduardoRouse());
 		students.add(new SamSagawa());
 		//				students.add(new KaterynaSemenova());
-		students.add(new JaviyWang());
+//		students.add(new JaviyWang());
 		//						students.add(new JimmyWu());
 		//				students.add(new ZhenXiao());
 		students.add(new HaoYuan());
@@ -222,7 +222,7 @@ public class Main {
 		private void start(Student s){
 			System.out.println("The game is starting. The message is handed to "+s.getFirstName()+" "+s.getLastName()+".");
 			recordOfAllBearers.add(s);
-
+			s.receiveMessage(this);
 
 		}
 
@@ -270,6 +270,15 @@ public class Main {
 					to.receiveMessage(this);
 				}
 			}
+
+
+			if(to instanceof American && (to instanceof Soviet)){
+				System.out.println("The message was handed to a spy!");
+			}else{
+				System.out.println("The message was handed to "+to.getFirstName()+" "+to.getLastName()+".");
+			}
+			
+			to.receiveMessage(this);
 		}
 
 		private void reportWinners(int team){

@@ -1,6 +1,8 @@
 package inheritance;
 
-public class ZhengLu extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class ZhengLu extends ClubMember implements NetworkAdministrator, Soviet{
 	
 	private String food;
 	
@@ -33,18 +35,19 @@ public class ZhengLu extends ClubMember implements NetworkAdministrator{
 		while(true)
 		{
 			restore();
-//			Student s = Main.getAllStudents().get(i);
-//			if(s.isAlive())
-//			{
-//				if(s instanceof Hacker)
-//					((Hacker)s).createPatch();
-//				else
-//					((NetworkAdministrator)s).restore();
-//			}
-//			
-//			i = i%Main.getAllStudents().size();
+			Student s = Main.getAllStudents().get(i);
+			if(s.isAlive() && s instanceof NetworkAdministrator)
+				((NetworkAdministrator)s).restore();
+			
+			i = i%Main.getAllStudents().size();
 			
 		}
 	}
-
+	
+	public void receiveMessage(Message message) {
+		for(Student s : Main.getAllStudents())
+			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this))
+				message.pass(this, s);
+		
+	}
 }
