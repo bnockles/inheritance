@@ -32,14 +32,17 @@ public class ZhengLu extends ClubMember implements NetworkAdministrator{
 		int i = 0;
 		while(true)
 		{
-			this.restore();
-			Student s = Main.getAllStudents().get(i);
-			if(s instanceof Hacker)
-				((Hacker)s).createPatch();
-			else
-				((NetworkAdministrator)s).restore();
-			
-			i = i%Main.getAllStudents().size();
+			restore();
+//			Student s = Main.getAllStudents().get(i);
+//			if(s.isAlive())
+//			{
+//				if(s instanceof Hacker)
+//					((Hacker)s).createPatch();
+//				else
+//					((NetworkAdministrator)s).restore();
+//			}
+//			
+//			i = i%Main.getAllStudents().size();
 			
 		}
 	}
