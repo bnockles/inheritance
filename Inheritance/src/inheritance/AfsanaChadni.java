@@ -16,4 +16,19 @@ public class AfsanaChadni extends ClubMember {
 			}
 		}
 	}
+	
+	public void run(){
+		while(true){
+			for(Student s: Main.getAllStudents()){
+				if(s instanceof NetworkAdministrator){
+					s.restore();
+				}
+				
+				if(s  instanceof Hacker){
+					Hacker hacker = (Hacker) s;
+					hacker.createPatch();
+				}
+			}
+		}
+	}
 }

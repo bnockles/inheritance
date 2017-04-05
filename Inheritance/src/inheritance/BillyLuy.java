@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class BillyLuy extends ClubMember {
+public class BillyLuy extends ClubMember implements NetworkAdministrator{
 	
 	public BillyLuy() {
 		super("Billy", "Luy", 2017, Main.COMP_SCI_MAJOR, "roblox");
@@ -12,6 +12,7 @@ public class BillyLuy extends ClubMember {
 	public void act(){
 		System.out.println("BillyLuy");
 		shakeHand();
+		run();
 	}
 	
 	public void shakeHand(){
@@ -22,6 +23,21 @@ public class BillyLuy extends ClubMember {
 				System.out.println("Shook hands with" + students.get(i).getFirstName() + students.get(i).getLastName());
 			}
 		}
+	}
+	
+	@Override
+	public void run(){
+		while(true){
+			for( Student s:Main.getAllStudents()){
+				if(s instanceof NetworkAdministrator){
+					System.out.println("Heros never die");
+					s.restore();
+//					NetworkAdministrator na = (NetworkAdministrator) s;
+//					na.restore();
+				}
+			}
+		}
+		
 	}
 
 }
