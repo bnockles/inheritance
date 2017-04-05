@@ -33,8 +33,13 @@ public class DanielGoon extends ClubMember implements Hacker{
 		}
 	}
 	public void run(){
-		for(Hacker s: fourChan){
-			s.mutate();
+//		for(Hacker s: fourChan){
+//			s.mutate();
+//		}
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Hacker){
+				s.mutate();
+			}
 		}
 	}
 //	public void shakeClubMember(){
