@@ -33,7 +33,7 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 			}
 		}
 		
-		
+	//
 	}//end of run
 
 }
