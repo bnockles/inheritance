@@ -7,7 +7,7 @@ public class RayChen extends ClubMember implements NetworkAdministrator{
 	public RayChen() {
 		super("Ray", "Chen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
 	}
-	//:<<
+	//:<
 	public void act(){
 		System.out.println("Hi I'm "+getFirstName()+" "+getLastName()+".");
 		ArrayList<Student> students = Main.getAllStudents();
@@ -24,7 +24,7 @@ public class RayChen extends ClubMember implements NetworkAdministrator{
 			if(s instanceof Hacker && s.isAlive()){
 				s.createPatch();
 			}
-			else if(!s.equals(this) && s instanceof NetworkAdministrator && !s.isAlive()){
+			else if(s instanceof NetworkAdministrator && !s.isAlive()){
 				s.restore();
 			}
 		}
