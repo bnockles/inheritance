@@ -29,9 +29,10 @@ public class HansMontero extends ClubMember implements NetworkAdministrator{
 				Student player = players.get(random);
 				if(player!=this){
 					if(player.isAlive()){
-						if(player instanceof Hacker)
+						if(player instanceof Hacker){
 							System.out.println("*Teleports behind you* nothing personal kid");
 							player.createPatch();
+						}
 					}
 					else{
 						if(player instanceof NetworkAdministrator)
