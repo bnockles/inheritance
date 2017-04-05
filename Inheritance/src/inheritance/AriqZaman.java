@@ -22,7 +22,7 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator {
 				}
 			}
 		}
-
+ 
 	}
 
 	@Override
