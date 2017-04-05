@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class WendyHu extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class WendyHu extends ClubMember implements NetworkAdministrator, American{
 
 	public WendyHu() {
 		// TODO Auto-generated constructor stub
@@ -20,8 +22,7 @@ public class WendyHu extends ClubMember implements NetworkAdministrator{
 			{
 				shakeHandsWith(s);
 			}
-		}
-		
+		}		
 		
 	}
 	
@@ -42,13 +43,24 @@ public class WendyHu extends ClubMember implements NetworkAdministrator{
 			{
 				s.restore();
 			}
-			if(i<Students.size())
+			if(i<Students.size())//ArrayIndexOutOfBound
 			{
 				i++;
 			}
 			else
 			{
 				i = 0;
+			}
+		}
+	}
+	
+	@Override
+	public void receiveMessage(Message message){
+		for(Student s: Main.getAllStudents())
+		{
+			if (s instanceof American && !(s instanceof Soviet))
+			{
+				message.pass(this, s);
 			}
 		}
 		
