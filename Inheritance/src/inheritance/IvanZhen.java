@@ -1,13 +1,22 @@
 package inheritance;
 
-public class IvanZhen extends ClubMember implements NetworkAdministrator {
+import inheritance.Main.Message;
+
+public class IvanZhen extends ClubMember implements NetworkAdministrator,American {
 
 	public IvanZhen() {
 		
 		super("Seto(Ivan)" ,"Kaiba(Zhen)", 2017, Main.COMP_SCI_MAJOR,"tcg");
 		
 	}
-
+	@Override
+	public void receiveMessage(Message message){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet  && !(s instanceof American)){
+				message.pass(this, s);
+			}
+		}
+	}
 
 	@Override
 	public void act(){
@@ -18,7 +27,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator {
 			}
 		}
 	}
-		
+		//s
 	
 	public void run(){
 		while(true){
@@ -32,5 +41,6 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator {
 			}
 		}
 	}
+	
 	
 }
