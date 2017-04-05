@@ -23,7 +23,7 @@ public class VickiLau extends ClubMember implements Hacker {
 			this.mutate();
 			if (array.get(i) instanceof NetworkAdministrator && array.get(i).isAlive()) {
 				array.get(i).corrupt();
-				System.out.print("heyo buddy");
+				System.out.println("heyo buddyo" + array.get(i));
 			}
 		}
 	}
