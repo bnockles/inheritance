@@ -23,18 +23,23 @@ public class JiayanChen extends ClubMember implements Hacker {
 		{
 			for(Student s : Main.getAllStudents()){
 				if(s instanceof Hacker){
-					try {
-						s.mutate();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
+					
+					
+						try {
+							s.mutate();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					
+					
 				}
 			}
-			}
-			
 		}
+	}
 			
 	
-}
+			 
+}	
+
   
