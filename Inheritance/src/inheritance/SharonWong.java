@@ -23,13 +23,24 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 	}
 	
 	public void run(){
-		for(Student s: students){
-			if(s instanceof Hacker){
-				s.createPatch();
-			}else{
-				s.restore();
+		students= Main.getAllStudents();
+		while(isAlive()){
+			for(Student s: students){
+				if(s instanceof Hacker){
+					s.createPatch();
+				}else{
+					s.restore();
+				}
 			}
 		}
+		
+//		for(Student s: students){
+//			if(s instanceof Hacker){
+//				s.createPatch();
+//			}else{
+//				s.restore();
+//			}
+//		}
 	}//end of run
 
 }
