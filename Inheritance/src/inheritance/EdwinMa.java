@@ -7,6 +7,13 @@ public class EdwinMa extends ClubMember {
 		// TODO Auto-generated constructor stub
 	}
 	public void act(){
-		System.out.println("Edwin Ma");
+		System.out.println("It's a level 69 wild Edwin!");
+		for(Student s: Main.getAllStudents()){
+			ClubMember c = (ClubMember)s;
+			if(c!= this && c.getClub().equals(getClub())){
+				System.out.println("I shook hands with "+c.getFirstName()+" "+c.getLastName()+"!");
+				shakeHandsWith(c);
+			}
+		}
 	}
 }

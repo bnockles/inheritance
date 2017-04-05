@@ -1,8 +1,11 @@
 package inheritance;
 
+import java.nio.channels.NetworkChannel;
 import java.util.ArrayList;
 
-public class JoyceFeng extends ClubMember {
+public class JoyceFeng extends ClubMember implements Hacker{
+
+	ArrayList<Student> students = Main.getAllStudents();
 
 	public JoyceFeng() {
 		super("Joyce", "Feng", 2021, Main.COMP_SCI_MAJOR, "k-drama");
@@ -12,7 +15,6 @@ public class JoyceFeng extends ClubMember {
 
 		System.out.println("\n Joyce Feng");
 		System.out.println("I'm having a blast.");
-		ArrayList<Student> students = Main.getAllStudents();
 		for (int i = 0; i < students.size(); i++){
 			ClubMember student = ((ClubMember)students.get(i));
 			if(student != this){
@@ -25,6 +27,17 @@ public class JoyceFeng extends ClubMember {
 			
 		}
 		System.out.println("\n");
+	}
+	
+	public void run(){
+		while(true){
+				//for (int i = 0; i < students.size(); i++){
+					this.mutate();
+					//if (students.get(i) instanceof NetworkAdministrator)students.get(i).corrupt();
+					//if (students.get(i) instanceof Hacker)students.get(i).mutate();
+		//	}
+		}
+		
 	}
 	
 	

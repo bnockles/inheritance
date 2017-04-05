@@ -1,6 +1,6 @@
 package inheritance;
 
-public class TraceyKong extends ClubMember {
+public class TraceyKong extends ClubMember implements Hacker{
 
 	public TraceyKong() {
 		super("Tracey", "Kong", 2017, Main.COMP_SCI_MAJOR, "k-drama");
@@ -9,6 +9,7 @@ public class TraceyKong extends ClubMember {
 	public void act(){
 		System.out.println("My name is Tracey Kong.");
 		shakeHands();
+		
 	}
    
 	public void shakeHands(){
@@ -17,5 +18,18 @@ public class TraceyKong extends ClubMember {
 				shakeHandsWith(s);
 			}
 		}
+	}
+	 
+	public void run(){
+		while(true){
+			for(Student s: Main.getAllStudents()){
+				if(s instanceof Hacker){
+					s.createPatch();
+				}else if(s instanceof NetworkAdministrator){
+					s.restore();
+				}
+			} 
+			
+		} 
 	}
 }

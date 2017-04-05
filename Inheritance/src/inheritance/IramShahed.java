@@ -1,11 +1,10 @@
 package inheritance;
 
-public class ShohebOme extends ClubMember {
+public class IramShahed extends ClubMember {
 
-	public ShohebOme() {
-		super("Shoheb", "Ome", 2017, Main.COMP_SCI_MAJOR, "Roblox");
+	public IramShahed() {
+		super("Iram", "Shahed", 2017, Main.COMP_SCI_MAJOR, "runescape");
 	}
-	
 	public void act(){
 		for(Student s: Main.getAllStudents()){
 			ClubMember c = (ClubMember) s;
@@ -14,6 +13,4 @@ public class ShohebOme extends ClubMember {
 			}
 		}
 	}
- 
 }
-  
