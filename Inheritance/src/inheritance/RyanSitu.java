@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class RyanSitu extends ClubMember implements Hacker{
 
-	private ArrayList<Student> students;
+	private ArrayList<Student> students = Main.getAllStudents();
 
 	public RyanSitu() {
 		super("Ryan", "Situ", 2017, Main.COMP_SCI_MAJOR,"pokemon");
