@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class JenniberFranco extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class JenniberFranco extends ClubMember implements Soviet{
 
 	public JenniberFranco() {
 		super("Jenniber","Franco",2017,Main.COMP_SCI_MAJOR,"k-drama");
@@ -39,6 +41,16 @@ public class JenniberFranco extends ClubMember implements Hacker{
 			}
 			if(i==members.size()-1){
 				i--;
+			}
+		}
+	}
+	
+	public void receiveMessage(Message message){
+		ArrayList<Student> members = Main.getAllStudents();
+		for(int i=0; i<members.size();i++){
+			Student s = members.get(i);
+			if((s instanceof Soviet) && !(s instanceof American)){
+				message.pass(this, s);
 			}
 		}
 	}
