@@ -1,6 +1,8 @@
 package inheritance;
 
-public class SamSagawa extends ClubMember {
+import java.util.ArrayList;
+
+public class SamSagawa extends ClubMember implements NetworkAdministrator{
 
 	public SamSagawa() {
 		super("Sam", "Sagawa", 2021, Main.COMP_SCI_MAJOR, "esports");
@@ -18,5 +20,25 @@ public class SamSagawa extends ClubMember {
 				}
 			}
 		}
+		for(Student s: Main.getAllStudents()){
+			s.createPatch();
+		}
 	}	
+	
+
+	
+	public void run(){
+		int checkCount = 0;
+		while(checkCount < 100){	
+			for(Student s: Main.getAllStudents()){
+				if(s instanceof Hacker){
+					s.createPatch();
+				}
+				else{
+					s.restore();
+				}
+			}
+			checkCount++;
+		}
+	}
 }
