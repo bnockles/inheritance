@@ -33,7 +33,7 @@ public class MichaelLi extends ClubMember implements Hacker{
 			runCount = 1;
 		}
 		
-		while(true){
+		while(this.isAlive()){
 			for (Student s: NA){
 				this.mutate();
 				s.corrupt();
