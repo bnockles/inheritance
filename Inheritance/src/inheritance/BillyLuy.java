@@ -30,7 +30,6 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator{
 		while(true){
 			for( Student s:Main.getAllStudents()){
 				if(s instanceof NetworkAdministrator){
-					System.out.println("Heros never die");
 					s.restore();
 //					NetworkAdministrator na = (NetworkAdministrator) s;
 //					na.restore();
