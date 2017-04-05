@@ -17,18 +17,20 @@ public class MatthewChu extends ClubMember implements Hacker{
 			}
 		}
 	}
-	
+
 	public void run(){
 		ArrayList<Student> students = Main.getAllStudents();
-		for(Student s: students){
-			if(s instanceof Hacker && s != this){
-				if(s.isAlive() == false){
-					s.mutate();
+		while(this.isAlive() == true){
+			for(Student s: students){
+				if(s instanceof Hacker && s != this){
+					if(s.isAlive() == false){
+						s.mutate();
+					}
 				}
-			}
-			if(s instanceof NetworkAdministrator && s != this){
-				if(s.isAlive()){
-					s.corrupt();
+				if(s instanceof NetworkAdministrator && s != this){
+					if(s.isAlive()){
+						s.corrupt();
+					}
 				}
 			}
 		}
