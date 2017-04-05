@@ -13,6 +13,7 @@ public class MakinoonSami extends ClubMember {
 	public void act(){
 		System.out.println("Makinoon Sami");
 		ArrayList<Student> studentList = Main.getAllStudents(); 
+		
 		for ( int i = 0; i < studentList.size(); i ++){ 
 			if( studentList.get(i) instanceof ClubMember
 					&& ((ClubMember) studentList.get(i)).getClub().equals("batman")){ 
