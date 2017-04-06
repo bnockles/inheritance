@@ -40,7 +40,9 @@ public class JimmyWu extends ClubMember implements   NetworkAdministrator,Soviet
 	public void receiveMessage(Message message){
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Soviet  && !(s instanceof American)){
+				System.out.println("rush b cyka blyat");
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
