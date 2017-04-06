@@ -68,12 +68,12 @@ public class KevinZhen extends ClubMember implements NetworkAdministrator, Ameri
 	public void recieveMessage(Message message)
 	{
 		ArrayList<Student> s = Main.getAllStudents();
-		int num = (int) (Math.random()*s.size());
-		while(!(s.get(num) instanceof American))
-		{
-			num = (int) (Math.random()*s.size());
+		for(int i=0; i<s.size(); i++){
+			if(s.get(i).getFirstName().equals("Toby")){
+				message.pass(this,s.get(i));
+				break;
+			}
 		}
-		message.pass(this,s.get(num));
 	}
 }
 
