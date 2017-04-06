@@ -9,10 +9,10 @@ public class AnthonyCuzzi extends ClubMember implements NetworkAdministrator, Am
 	}
 	
 	
-	public void recieveMessage(Message message){
+	public void receiveMessage(Message message){
 		boolean go = false;
 		for(Student s: Main.getAllStudents()){
-			if(s.getFirstName().equals("Kateryna") && !(go)){
+			if(s.getFirstName().equals("Kat") && !(go)){
 				message.pass(this,s);
 				go = true;
 			}
