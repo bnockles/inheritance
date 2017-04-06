@@ -30,7 +30,7 @@ public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 			Student s = studentList.get(i);
 			if(s instanceof Soviet) {
 				message.pass(this, s);
-				break;
+				break;//
 			}
 		}
 	}
