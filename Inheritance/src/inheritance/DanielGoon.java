@@ -7,8 +7,10 @@ import inheritance.Main.Message;
 public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
+	private ArrayList<Student> sentList;
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
+		sentList = new ArrayList<Student>();
 	}
 	public void act(){
 //		System.out.println(getFirstName() +" "+ getLastName());
