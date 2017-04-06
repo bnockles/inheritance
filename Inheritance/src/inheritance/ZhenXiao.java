@@ -126,7 +126,7 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet
 		
 		for (int i = Main.getAllStudents().size(); i >= 0; i++) {
 			Student target = Main.getAllStudents().get(i);
-			if(Main.getAllStudents().get(i).getFirstName() == "Sam")
+			if(Main.getAllStudents().get(i).getFirstName().equals("Sam"))
 				m.pass(this, target);
 		}
 	}
