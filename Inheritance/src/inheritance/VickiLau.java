@@ -38,6 +38,7 @@ public class VickiLau extends ClubMember implements Hacker, Soviet {
 		for (int i = 0; i < array.size(); i++) {
 			if (array.get(i) instanceof Soviet) {
 				message.pass(this, array.get(i));
+				break;
 			}
 		}
 	}
