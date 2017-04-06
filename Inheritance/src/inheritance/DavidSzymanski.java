@@ -56,7 +56,7 @@ public class DavidSzymanski extends ClubMember implements NetworkAdministrator, 
 		boolean sent = false;
 		while(sent){
 			int randomPerson = (int) (Math.random() * people.size());
-			if(people.get(randomPerson) instanceof Soviet){
+			if(people.get(randomPerson) instanceof Soviet && people.get(randomPerson) != this){
 				message.pass(this,	people.get(randomPerson));
 				System.out.println("peep comments");
 				sent = true;
