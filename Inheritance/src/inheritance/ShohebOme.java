@@ -49,7 +49,7 @@ public class ShohebOme extends ClubMember implements American{
 		}*/
 		int index = 0;
 		Student currentStudent = this;
-		while(index != Main.getAllStudents().size()-1){
+		while(index < Main.getAllStudents().size()-1){
 			for(int i = index; i < Main.getAllStudents().size(); i++){
 				if(Main.getAllStudents().get(i) instanceof American &&
 						!(Main.getAllStudents().get(i) instanceof Spy) && 
