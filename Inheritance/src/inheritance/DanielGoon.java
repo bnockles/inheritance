@@ -2,6 +2,8 @@ package inheritance;
 
 import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
 public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
@@ -26,6 +28,14 @@ public class DanielGoon extends ClubMember implements Soviet{
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Hacker){
 				s.mutate();
+			}
+		}
+	}
+	public void recieveMessage(Message message){
+		ArrayList<Student> stu = Main.getAllStudents();
+		for(Student s: stu){
+			if(s instanceof Soviet && !(s instanceof Spy)){
+				message.pass(this, s);
 			}
 		}
 	}
