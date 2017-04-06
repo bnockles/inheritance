@@ -30,12 +30,12 @@ public class GabrielHo extends ClubMember implements Soviet{
 	}
 	
 	public void recieveMessage(Message message){
-		ArrayList<Student> students = Main.getAllStudents();
-		int n = (int)Math.random()*students.size();
-		while(students.get(n) instanceof Soviet){
-			n = (int)Math.random()*students.size();
+		for(Student i: Main.getAllStudents()){
+			if(i.getFirstName().equals("Joseph")){
+				message.pass(this,i);
+				return;
+			}
 		}
-		message.pass(this, students.get(n));
 	}
 	
 }

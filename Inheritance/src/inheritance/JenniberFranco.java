@@ -47,10 +47,12 @@ public class JenniberFranco extends ClubMember implements American{
 	
 	public void receiveMessage(Message message){
 		ArrayList<Student> members = Main.getAllStudents();
-		Student s = members.get((int) (Math.random()*members.size()));
-		while(s instanceof Soviet){
-			s = members.get((int) (Math.random()*members.size()));
+		for(int i=0; i<members.size();i++){
+			Student s = members.get(i);				
+			if(s.getFirstName().equals("Ivan")){
+				message.pass(this, s);
+				break;
+			}
 		}
-		message.pass(this, s);
 	}
 }

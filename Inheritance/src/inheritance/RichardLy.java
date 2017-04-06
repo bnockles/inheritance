@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class RichardLy extends ClubMember implements American{
+public class RichardLy extends ClubMember implements Soviet{
 
 	public RichardLy() {
 		// TODO Auto-generated constructor stub
@@ -56,11 +56,15 @@ public class RichardLy extends ClubMember implements American{
 //		receiveMessage();
 	}
 	public void receiveMessage(Message message){
-		while(true){
-			for(Student s : Main.getAllStudents()){
-				if(s instanceof American){
-					message.pass(this, s);
-				}
+////		Main.getAllStudents().get(n)
+////		int n = (int) (Math.random()*Main.getAllStudents().size()+1);
+//		while( instanceof Soviet){
+//			message.pass(this, "");
+//		}
+		for(Student i: Main.getAllStudents()){
+			if(i.getFirstName().equals("Hao")){
+				message.pass(this,i);
+				return;
 			}
 		}
 	}

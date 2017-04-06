@@ -7,7 +7,7 @@ import inheritance.Main.Message;
 public class KaterynaSemenova extends ClubMember implements  American{
 
 	public KaterynaSemenova(){
-		super("Kat","Semenova", 2012, Main.COMP_SCI_MAJOR, "k-drama");
+		super("Kateryna","Semenova", 2012, Main.COMP_SCI_MAJOR, "k-drama");
 	}
 	
 	public void act(){
@@ -47,15 +47,13 @@ public class KaterynaSemenova extends ClubMember implements  American{
 		}
 	}
 	
-	public void recieveMessage(Message mess){
+	public void recieveMessage(Message message){
 		ArrayList<Student> studentList =  Main.getAllStudents();
-		boolean bool = true;
-		do{
-			int rand = (int)( Math.random()*studentList.size());
-			if(studentList.get(rand) instanceof American){
-				mess.pass(this, studentList.get(rand));
-				bool=false;
-			}
-		}while(bool);
+		for(Student s: studentList){
+			if(s.getFirstName().equals("Tamanna"));
+				message.pass(this, s);
+		}
+				
+		
 	}
 }

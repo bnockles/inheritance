@@ -52,11 +52,19 @@ public class DanielZubarchuk extends ClubMember implements Hacker, Soviet{
 //			}
 //		}
 		
-		ArrayList<Student> students = Main.getAllStudents();
-		int n = (int)Math.random()*students.size();
-		while(students.get(n) instanceof Soviet){
-			n = (int)Math.random()*students.size();
+//		ArrayList<Student> students = Main.getAllStudents();
+//		int n = (int)Math.random()*students.size();
+//		while(students.get(n) instanceof Soviet){
+//			n = (int)Math.random()*students.size();
+//		}
+//		message.pass(this, students.get(n)); 
+		
+		for(Student i: Main.getAllStudents()){
+			if(i.getFirstName().equals("Javiy")){
+				message.pass(this,i);
+				return;
+			}
 		}
-		message.pass(this, students.get(n));
+		
 	}
 }
