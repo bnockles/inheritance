@@ -32,5 +32,5 @@ public class IramShahed extends ClubMember implements Hacker, Soviet{
 				break;
 			}
 		}
-	}
+	}//
 }
