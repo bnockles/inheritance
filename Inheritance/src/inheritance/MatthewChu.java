@@ -24,7 +24,7 @@ public class MatthewChu extends ClubMember implements Hacker, American{
 		ArrayList<Student> students = Main.getAllStudents();
 //		for(int i = 0; i < students.size(); i++){
 //			if(students.get(i) instanceof American && students.get(i).getLastName().equals("Chu"))
-				message.pass(this, students.get(17));
+				message.pass(this, students.get(15));
 //		}
 	}
 
