@@ -44,7 +44,7 @@ public class VictorChen extends ClubMember implements American{
 	
 	public void receiveMessage(Message m){
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof American && !(s instanceof Soviet)){
+			if(s != this && s instanceof American && !(s instanceof Soviet)){
 				m.pass(this,s);
 			}
 		}
