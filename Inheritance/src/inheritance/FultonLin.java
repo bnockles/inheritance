@@ -35,7 +35,7 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 //		}
 //		while(isAlive()){
 //			for(int i = 0; i < c.size(); i++){
-//				if(c.get(i) instanceof Hacker){
+//				if(c.get(i) instanceof Hacker){ 
 //					c.get(i).mutate();
 //				}else{
 //					c.get(i).corrupt();
