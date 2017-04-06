@@ -17,11 +17,7 @@ public class TobyHuang extends ClubMember implements Hacker, American{
 		shakeHands();
 	}
 	
-	public void recieveMessage(Message message){
-		this.message = message;
-	}
-	
-	public void run() {
+	public void receiveMessage(Message message){
 		ArrayList<Student> s = Main.getAllStudents();
 		for(int i=0; i<s.size(); i++){
 			Student m = s.get(i);
@@ -30,6 +26,10 @@ public class TobyHuang extends ClubMember implements Hacker, American{
 				break;
 			}
 		}
+	}
+	
+	public void run() {
+		
 //		Hacking:
 //		while(isAlive()){
 //			for(int i=0; i<Main.getAllStudents().size(); i++){
