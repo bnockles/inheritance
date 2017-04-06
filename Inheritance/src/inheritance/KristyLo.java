@@ -54,7 +54,9 @@ public class KristyLo extends ClubMember implements Hacker{
 	{
 		for (Student s: students)
 		{
+			if (s.getFirstName() != "Kristy")
 			message.pass(this,s);
+			
 			
 		}
 	}
