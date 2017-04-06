@@ -49,6 +49,7 @@ public class AhmedKhan extends ClubMember implements NetworkAdministrator,Soviet
 //				break;
 //			}
 			if(Main.getAllStudents().get(i).getFirstName().equals("Veeraj")){
+				System.out.println("cyka blyat");
 				message.pass(this, Main.getAllStudents().get(i));
 				break;
 			}

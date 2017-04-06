@@ -49,6 +49,7 @@ public class JimmyWu extends ClubMember implements NetworkAdministrator,Soviet{
 //				break;
 //			}
 			if(Main.getAllStudents().get(i).getFirstName().equals("Zheng")){
+				System.out.println("cyka blyat");
 				message.pass(this, Main.getAllStudents().get(i));
 				break;
 			}
