@@ -10,13 +10,9 @@ public class AnthonyCuzzi extends ClubMember implements NetworkAdministrator, Am
 	
 	
 	public void recieveMessage(Message message){
-		boolean sent = true;
-		while(sent){
-			int randInt = (int) (Math.random()*Main.getAllStudents().size());
-			Student s = Main.getAllStudents().get(randInt);
-			if(s instanceof American && !(s instanceof Soviet)){
+		for(Student s: Main.getAllStudents()){
+			if(s.getFirstName().equals("Kateryna")){
 				message.pass(this,s);
-				sent = false;
 			}
 		}
 	}
