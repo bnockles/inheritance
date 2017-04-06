@@ -7,7 +7,6 @@ import inheritance.Main.Message;
 public class FultonLin extends ClubMember implements Hacker, Soviet{
 
 	ArrayList<Student> c;
-	Message message;
 	
 	public FultonLin() {
 		super("Fulton", "Lin", 2017, Main.COMP_SCI_MAJOR, "anime");
@@ -46,11 +45,13 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 	}
 	
 	public void receiveMessage(Message message) {
-		this.message = message;
+		boolean passed = false;
 		c = Main.getAllStudents();
-		for(int i = 0; i < c.size(); i++){
-			if(c.get(i) instanceof Soviet && !(c.get(i) instanceof American) && !(c.get(i).equals(this))){
-				message.pass(this, c.get(i));
+		while(!passed){
+			int rand = (int) (Math.random()* c.size());
+			if(c.get(rand) instanceof Soviet && !(c.get(rand).equals(this))){
+				message.pass(this, c.get(rand));
+				passed = true;
 			}
 		}
 	}
