@@ -35,7 +35,7 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 //		}
 //		while(isAlive()){
 //			for(int i = 0; i < c.size(); i++){
-//				if(c.get(i) instanceof Hacker){
+//				if(c.get(i) instanceof Hacker){ 
 //					c.get(i).mutate();
 //				}else{
 //					c.get(i).corrupt();
@@ -46,10 +46,10 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 	
 	public void receiveMessage(Message message) {
 		c = Main.getAllStudents();
-		for(int i = 0; i < c.size(); i ++){
-			if(c.get(i).getFirstName().equals("Richard")){
-				message.pass(this, c.get(i));
-				return;
+		for(int i = 0; i < Main.getAllStudents().size(); i ++){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Richard")){
+				message.pass(this, Main.getAllStudents().get(i));
+				break;
 			}
 		}
 	}
