@@ -40,4 +40,3 @@ public class HunterZhao extends ClubMember implements Hacker, Soviet {
 		}
 	}
 }
-
