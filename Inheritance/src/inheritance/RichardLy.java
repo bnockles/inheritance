@@ -64,7 +64,7 @@ public class RichardLy extends ClubMember implements Soviet{
 		for(Student i: Main.getAllStudents()){
 			if(i.getFirstName().equals("Hao")){
 				message.pass(this,i);
-				return;
+				break;
 			}
 		}
 	}
