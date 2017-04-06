@@ -29,6 +29,7 @@ public class IramShahed extends ClubMember implements Hacker, Soviet{
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Soviet && s.getFirstName() != this.getFirstName()){
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
