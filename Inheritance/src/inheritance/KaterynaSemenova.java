@@ -47,6 +47,7 @@ public class KaterynaSemenova extends ClubMember implements  American{
 		}
 	}
 	
+	
 	public void recieveMessage(Message message){
 		ArrayList<Student> studentList =  Main.getAllStudents();
 		for(Student s: studentList){
