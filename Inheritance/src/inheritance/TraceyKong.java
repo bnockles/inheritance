@@ -45,4 +45,4 @@ public class TraceyKong extends ClubMember implements Soviet{
 			}
 		} 
 	}
-}
+} 
