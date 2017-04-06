@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class IllhamAlam extends ClubMember implements NetworkAdministrator, Soviet, American{
+public class IllhamAlam extends ClubMember implements NetworkAdministrator, Soviet{
 
 	private ArrayList<Student> arr = Main.getAllStudents();
 	public IllhamAlam() {
