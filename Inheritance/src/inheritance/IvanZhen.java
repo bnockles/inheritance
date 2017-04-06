@@ -12,7 +12,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator,America
 	@Override
 	public void receiveMessage(Message message){
 		for(Student s: Main.getAllStudents()){
-			if(s.getFirstName().equals("Ahmed")){	
+			if(s.getFirstName().equals("Simon")){	
 				System.out.println("Hi neighbor.");
 				message.pass(this, s);
 				break;
