@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ZhenXiao extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet{
 	
 	private ArrayList<Student> metStudents;
 
@@ -109,5 +111,16 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 //			}.start();
 //			i++;
 //		}
+	}
+	
+	@Override
+	public void receiveMessage(Message m){
+		while(true){
+			Student target = Main.getAllStudents().get((int) (Math.random()*Main.getAllStudents().size()));
+			if (target instanceof Soviet && !(target instanceof American) && target != this) {
+				m.pass(this, target);
+				break;
+			}
+		}
 	}
 }
