@@ -1,9 +1,9 @@
 package inheritance;
 
 import inheritance.Main.Message;
-
-public class AhmedKhan extends ClubMember implements NetworkAdministrator{
-
+//
+public class AhmedKhan extends ClubMember implements NetworkAdministrator,Soviet{
+//
 	private int nextStudentIndex = 0;
 
 	public AhmedKhan() {
@@ -42,10 +42,15 @@ public class AhmedKhan extends ClubMember implements NetworkAdministrator{
 	
 	public void receiveMessage(Message message){
 		for(int i=nextStudentIndex; i<Main.getAllStudents().size(); i++){
-			if(Main.getAllStudents().get(i) instanceof Soviet && !(Main.getAllStudents().get(i) instanceof Spy)){
-				nextStudentIndex = i+1;
+//			if(Main.getAllStudents().get(i) instanceof Soviet && !(Main.getAllStudents().get(i) instanceof Spy)){
+//				nextStudentIndex = i+1;
+//				message.pass(this, Main.getAllStudents().get(i));
+//				System.out.println("Cyka Blyat");
+//				break;
+//			}
+			if(Main.getAllStudents().get(i).getFirstName().equals("Veeraj")){
+				System.out.println("cyka blyat");
 				message.pass(this, Main.getAllStudents().get(i));
-				System.out.println("Cyka Blyat");
 				break;
 			}
 		}
