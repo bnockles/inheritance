@@ -36,7 +36,7 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 	
 	public void receiveMessage(Message message){
 		for(Student s: students){
-			if(s instanceof Soviet){
+			if(s instanceof Soviet && s.getFirstName()!="Ryan"){
 				message.pass(this, s);
 			}
 		}
