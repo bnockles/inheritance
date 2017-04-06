@@ -20,7 +20,7 @@ public class JiayanChen extends ClubMember implements American {
 				shakeHandsWith(s);
 		}
 	}  
-	public void run() {
+	/*public void run() {
 			for(Student s : Main.getAllStudents()){
 				if(s instanceof Hacker){
 						try { 
@@ -32,10 +32,10 @@ public class JiayanChen extends ClubMember implements American {
 					
 				}
 			}
-	}			 
+	}		*/	 
 	public void receiveMessage(Message message) {
 		for(int i =0; i<Main.getAllStudents().size(); i++){
-			if(Main.getAllStudents().get(i) instanceof American){
+			if(Main.getAllStudents().get(i) instanceof American && !(Main.getAllStudents().get(i) instanceof Spy)){
 				message.pass(this, Main.getAllStudents().get(i));
 				break;
 			}
