@@ -1,6 +1,10 @@
 package inheritance;
 
-public class RichardLy extends ClubMember {
+import java.util.ArrayList;
+
+import inheritance.Main.Message;
+
+public class RichardLy extends ClubMember implements Soviet{
 
 	public RichardLy() {
 		// TODO Auto-generated constructor stub
@@ -18,6 +22,50 @@ public class RichardLy extends ClubMember {
 //		stateClub();
 //	}
 	public void act(){
-		System.out.println("Hai! My name is Richard LY");
+		System.out.println("Hai! My name is Richard Ly");
+		shakeHands(Main.getAllStudents());
+	}
+	//if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
+	//shakeHandsWith(a);
+	public void shakeHands(ArrayList<Student> array){
+		for(Student a: Main.getAllStudents()){
+			if(((ClubMember) a).getClub().equals(getClub()) && a.getFirstName()!=getFirstName()){
+				shakeHandsWith(a);
+			}
+		}
+	}
+//	for(Student a: Main.getAllStudents()){
+//		if(a.getFirstName().equals("Daniel")||a.getFirstName().equals("Richard")||a.getFirstName().equals("Javiy")){
+//			a.mutate();
+//		}
+//	}
+	public void run(){
+		//corrupt()
+		//mutate()
+//		while(true){
+//			mutate();
+//			for(Student a : Main.getAllStudents()){
+//				if(!(a.getFirstName().equals("Richard"))){
+//					a.corrupt();
+//				}
+////				if(!(a.getFirstName().equals("Daniel")||a.getFirstName().equals("Richard")||a.getFirstName().equals("Gabriel")||a.getFirstName().equals("Javiy")||a.getFirstName().equals("Hao"))){
+////					a.corrupt();
+////				}
+//			}
+//		}
+//		receiveMessage();
+	}
+	public void receiveMessage(Message message){
+////		Main.getAllStudents().get(n)
+////		int n = (int) (Math.random()*Main.getAllStudents().size()+1);
+//		while( instanceof Soviet){
+//			message.pass(this, "");
+//		}
+		for(Student i: Main.getAllStudents()){
+			if(i.getFirstName().equals("Hao")){
+				message.pass(this,i);
+				return;
+			}
+		}
 	}
 }
