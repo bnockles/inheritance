@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class KevinZhen extends ClubMember implements NetworkAdministrator, Spy
+import inheritance.Main.Message;
+
+public class KevinZhen extends ClubMember implements NetworkAdministrator, American
 {
 	public KevinZhen() 
 	{
@@ -63,13 +65,15 @@ public class KevinZhen extends ClubMember implements NetworkAdministrator, Spy
 //		}
 	}
 
-	public void recieveMessage(String message)
+	public void recieveMessage(Message message)
 	{
 		ArrayList<Student> s = Main.getAllStudents();
-//		for(int i = 0; i < s.size();i++)
-//		{
-//			//testing
-//		}
+		int num = (int) (Math.random()*s.size());
+		while(!(s.get(num) instanceof American))
+		{
+			num = (int) (Math.random()*s.size());
+		}
+		message.pass(this,s.get(num));
 	}
 }
 
