@@ -28,6 +28,7 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Spy{
 		for(Student s : stus) {
 			if(s instanceof Soviet && !(s instanceof American) && s != this) {
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
