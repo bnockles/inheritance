@@ -49,7 +49,7 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 		for(int i = 0; i < Main.getAllStudents().size(); i ++){
 			if(Main.getAllStudents().get(i).getFirstName().equals("Richard")){
 				message.pass(this, Main.getAllStudents().get(i));
-				return;
+				break;
 			}
 		}
 	}
