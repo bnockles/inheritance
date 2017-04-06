@@ -38,8 +38,8 @@ public class TamannaHussain extends ClubMember implements Hacker, American{
 					!(members.get(i) instanceof Soviet) && 
 					!(members.get(i) instanceof Spy)){
 					message.pass(this, members.get(i));
+					break;
 			}
-			break;
 		}
 	}
 }
