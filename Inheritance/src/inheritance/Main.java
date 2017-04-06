@@ -272,7 +272,6 @@ public class Main {
 				}
 			}
 
-
 			if(to instanceof American && (to instanceof Soviet)){
 				System.out.println("The message was handed to a spy!");
 			}else{

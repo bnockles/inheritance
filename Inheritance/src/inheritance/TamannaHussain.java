@@ -31,7 +31,7 @@ public class TamannaHussain extends ClubMember implements Hacker, American{
 		}
 	}
 	
-	public void recieveMessage(Message message){
+	public void receiveMessage(Message message){
 		ArrayList<Student> members = Main.getAllStudents();
 		for(int i = 0; i < members.size(); i++){
 			if((members.get(i).getFirstName().equals("Wendy")) && 
