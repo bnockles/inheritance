@@ -40,7 +40,7 @@ public class JiayanChen extends ClubMember implements American {
 				break; 
 			}
 		}
-		
+		 
 	}
 }	
 
