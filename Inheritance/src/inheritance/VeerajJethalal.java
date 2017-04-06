@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class VeerajJethalal extends ClubMember implements Soviet,American{
+public class VeerajJethalal extends ClubMember implements Soviet{
 
 	public VeerajJethalal() {
 		super("Veeraj", "Jethalal", 2017, Main.COMP_SCI_MAJOR, 
@@ -20,8 +20,11 @@ public class VeerajJethalal extends ClubMember implements Soviet,American{
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for(int i = 0; i < studentList.size(); i++){
 			Student s = studentList.get(i);
-			if((s instanceof Soviet) && (s instanceof American)){
+		}
+		for(Student s : studentList){
+			if(s instanceof Soviet){
 				message.pass(this, s);
+				break;
 			}
 		}
 	}

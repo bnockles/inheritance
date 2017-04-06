@@ -2,6 +2,8 @@ package inheritance;
 
 import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
 public class MatthewNguyen extends ClubMember {
 
 	public MatthewNguyen() {
@@ -30,5 +32,14 @@ public class MatthewNguyen extends ClubMember {
 					s.restore();
 			}
 		}
+	}
+	public void receiveMessage(Message m){
+		ArrayList<Student> students = Main.getAllStudents();
+		int num = (int)Math.random()*students.size();
+		while(students.get(num) instanceof American || students.get(num).equals(this)){
+			num = (int)Math.random()*students.size();
+		}
+		m.pass(this, students.get(num));
+		//(int)Math.random()*students.size()
 	}
 }

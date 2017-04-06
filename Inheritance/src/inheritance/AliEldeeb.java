@@ -1,9 +1,10 @@
 package inheritance;
 
-public class AliEldeeb extends ClubMember implements Hacker {
-	private String firstName;
-	private String lastName;
+import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
+public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 	public AliEldeeb() {
 		super("Ali", "Eldeeb", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
@@ -20,5 +21,14 @@ public class AliEldeeb extends ClubMember implements Hacker {
 			mutate();
 		}
 	}
-//
+	public void receiveMessage(Message message){
+		ArrayList<Student> studentList = Main.getAllStudents();
+		for(int i = 0; i < studentList.size(); i++){
+			Student s = studentList.get(i);
+			if(s instanceof Soviet) {
+				message.pass(this, s);
+				break;//
+			}
+		}
+	}
 }
