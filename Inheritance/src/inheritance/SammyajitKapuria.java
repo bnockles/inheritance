@@ -29,13 +29,13 @@ public class SammyajitKapuria extends ClubMember implements Hacker,American {
 
 			else{
 				s.mutate();
-			}
+			} 
 		}
 	}
 	
 	public void receiveMessage(Message message){
 		for(Student s: allStudents){
-			if(s instanceof American){
+			if(s instanceof American &&s.getFirstName()!="Sammy" ){
 				message.pass(this, s);
 			}
 		}
