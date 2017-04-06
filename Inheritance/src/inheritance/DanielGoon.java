@@ -36,6 +36,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 		for(Student s: stu){
 			if(this != s && s instanceof Soviet){
 				message.pass(this, s);
+				
 				break;
 			}
 		}
