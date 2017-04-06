@@ -42,8 +42,9 @@ public class AnnaHo extends ClubMember implements Soviet{
 //	message.pass(this, );
 	
 	public void receiveMessage(Message message) {
-		for(Student s : students)
-			message.pass(this, s);
+		for(Student s : Main.getAllStudents())
+			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this))
+				message.pass(this, s);
 		
 	}
 }
