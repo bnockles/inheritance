@@ -51,7 +51,7 @@ public class JaviyWang extends ClubMember implements Soviet{
 		for(Student i : Main.getAllStudents()){
 			if(i.getFirstName().equals("Gabriel")){
 				message.pass(this,i);
-				return;
+				break;
 			}
 		}
 
