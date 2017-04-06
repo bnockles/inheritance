@@ -37,10 +37,11 @@ public class SammyajitKapuria extends ClubMember implements Hacker,American {
 		for(Student s: allStudents){
 			if(s instanceof American &&s.getFirstName()!="Sammy" ){
 				message.pass(this, s);
+				break;
 			} 
 		}
 		
-	}
+	} 
 } 
 
 
