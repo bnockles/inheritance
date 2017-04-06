@@ -46,7 +46,7 @@ public void act(){
 public void recievedMessage(Message message)
 {
 	for(int i=0; i <Main.getAllStudents().size()-1;i++){
-		if(Main.getAllStudents().get(i) instanceof American){
+		if(Main.getAllStudents().get(i).getFirstName().equals("Max")){
 			message.pass(this, Main.getAllStudents().get(i));
 			break;
 		}
