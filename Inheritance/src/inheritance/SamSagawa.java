@@ -45,6 +45,8 @@ public class SamSagawa extends ClubMember implements Soviet{
 		for(int i = Main.getAllStudents().size()-1; i >= 0; i--){
 			if (Main.getAllStudents().get(i) instanceof Soviet && !(Main.getAllStudents().get(i) instanceof American)){
 				message.pass(this, Main.getAllStudents().get(i));
+				System.out.println("Cyka Blyat");
+				break;
 			}
 		}
 	}
