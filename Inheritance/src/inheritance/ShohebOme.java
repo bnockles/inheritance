@@ -1,6 +1,8 @@
 package inheritance;
 
-public class ShohebOme extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class ShohebOme extends ClubMember implements American{
 
 	public ShohebOme() {
 		super("Shoheb", "Ome", 2017, Main.COMP_SCI_MAJOR, "Roblox");
@@ -15,7 +17,7 @@ public class ShohebOme extends ClubMember implements Hacker{
 		}
 	}
 	
-	public void run(){
+	/*public void run(){
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Hacker && !s.isAlive()){
 				s.mutate();
@@ -32,6 +34,16 @@ public class ShohebOme extends ClubMember implements Hacker{
 			}
 		}
 			
+		
+	}*/
+	
+	public void receiveMessage(Message message) {
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof American && !(s instanceof Spy)){
+				message.pass(this, s);
+				break;
+			}
+		}
 		
 	}
  

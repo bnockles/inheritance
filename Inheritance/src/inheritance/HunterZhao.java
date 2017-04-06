@@ -1,6 +1,8 @@
 package inheritance;
 
-public class HunterZhao extends ClubMember implements Hacker {
+import inheritance.Main.Message;
+
+public class HunterZhao extends ClubMember implements Hacker, Soviet {
 
 	public HunterZhao() {
 		super("Hunter", "Zhao", 2017, Main.COMP_SCI_MAJOR, "roblox");
@@ -29,5 +31,12 @@ public class HunterZhao extends ClubMember implements Hacker {
 			}
 		}
 	}
+	
+	public void receiveMessage(Message message) {
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet && !s.getFirstName().equals("Hunter")){
+				message.pass(this, s);
+			}
+		}
+	}
 }
-
