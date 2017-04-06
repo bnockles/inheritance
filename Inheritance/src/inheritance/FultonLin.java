@@ -45,13 +45,11 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 	}
 	
 	public void receiveMessage(Message message) {
-		boolean passed = false;
 		c = Main.getAllStudents();
-		while(!passed){
-			int rand = (int) (Math.random()* c.size());
-			if(c.get(rand) instanceof Soviet && !(c.get(rand).equals(this))){
-				message.pass(this, c.get(rand));
-				passed = true;
+		for(int i = 0; i < c.size(); i ++){
+			if(c.get(i).getFirstName().equals("Richard")){
+				message.pass(this, c.get(i));
+				return;
 			}
 		}
 	}
