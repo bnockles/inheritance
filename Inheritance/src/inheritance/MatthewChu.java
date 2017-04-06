@@ -20,10 +20,10 @@ public class MatthewChu extends ClubMember implements Hacker{
 
 	public void run(){
 		ArrayList<Student> students = Main.getAllStudents();
-		while(this.isAlive() == true){
+		while(this.isAlive()){
 			for(Student s: students){
 				if(s instanceof Hacker && s != this){
-					if(s.isAlive() == false){
+					if(!s.isAlive()){
 						s.mutate();
 					}
 				}
