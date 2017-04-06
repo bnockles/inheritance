@@ -38,7 +38,9 @@ public class SharonWong extends ClubMember implements Soviet{
 	}//end of run
 	public void receiveMessage(Message message){
 		for(Student s: students){
+			if (s instanceof Soviet){
 			message.pass(s, this);
+			}
 		}
 	}
 
