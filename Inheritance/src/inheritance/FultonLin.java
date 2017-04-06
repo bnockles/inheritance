@@ -25,7 +25,7 @@ public class FultonLin extends ClubMember implements Hacker, Soviet{
 		}
 		shakeClubmembers();
 	}
-	
+	 
 	public void run(){
 //		c = Main.getAllStudents();
 //		for(int i = 0; i < c.size(); i++){
