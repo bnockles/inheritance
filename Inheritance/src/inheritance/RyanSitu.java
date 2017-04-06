@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class RyanSitu extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class RyanSitu extends ClubMember implements Hacker,Soviet{
 
 	private ArrayList<Student> students = Main.getAllStudents();
 
@@ -31,5 +33,14 @@ public class RyanSitu extends ClubMember implements Hacker{
 			}
 		}
 	}
+	
+	public void receiveMessage(Message message){
+		for(Student s: students){
+			if(s instanceof Soviet){
+				message.pass(this, s);
+			}
+		}
+	}
+
 
 }
