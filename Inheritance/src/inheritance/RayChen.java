@@ -40,5 +40,6 @@ public class RayChen extends ClubMember implements NetworkAdministrator, Soviet{
 			num = (int)(Math.random()*students.size());
 		}
 		m.pass(this, students.get(num));
+		passedTo.add(num);
 	}
 }
