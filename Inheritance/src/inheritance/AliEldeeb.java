@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class AliEldeeb extends ClubMember implements Hacker, Soviet {
-	private String firstName;
-	private String lastName;
-
 	public AliEldeeb() {
 		super("Ali", "Eldeeb", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
