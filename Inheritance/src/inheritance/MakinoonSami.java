@@ -57,7 +57,9 @@ public class MakinoonSami extends ClubMember
 	public void receiveMessage(Message message ){
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for(Student s: studentList){
-			if (s instanceof American){
+			if (s instanceof American
+					&& s != this ){
+				
 				
 				message.pass(this, s);
 			}
