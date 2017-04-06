@@ -45,6 +45,7 @@ public class DavidMedina extends ClubMember implements Soviet {
 					&& Main.getAllStudents().get(i) != this)
 			{
 				message.pass(this, Main.getAllStudents().get(i));
+				break;
 			}
 		}
 	}
