@@ -43,7 +43,7 @@ public void act(){
 		//System.out.print(" "+i.getFirstName());
 	}
 	
-public void recievedMessage(Message message)
+public void receiveMessage(Message message)
 {
 	for(int i=0; i <Main.getAllStudents().size()-1;i++){
 		if(Main.getAllStudents().get(i).getFirstName().equals("Max")){

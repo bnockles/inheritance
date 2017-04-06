@@ -45,10 +45,9 @@ public class VictorChen extends ClubMember implements American{
 	}
 	
 	public void receiveMessage(Message m){
-		ArrayList<Student> studentList = Main.getAllStudents();
-		for(int i = studentList.size() - 1; i >= 0; i--){
-			if(studentList.get(i).getFirstName().equals("Mahin")){
-				m.pass(this, studentList.get(i));
+		for(int i = Main.getAllStudents().size() - 1; i >= 0; i--){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Mahin")){
+				m.pass(this, Main.getAllStudents().get(i));
 				break;
 			}
 		}

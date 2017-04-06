@@ -62,6 +62,8 @@ public class MahinKhan extends ClubMember implements Hacker, American{
 		for(Student s: Main.getAllStudents()){
 			if(s.getFirstName().equals("Anthony")){
 				message.pass(this,s);
+				break;
+				//
 			}
 		}
 	}
