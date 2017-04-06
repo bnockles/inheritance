@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class JaviyWang extends ClubMember implements American{
+public class JaviyWang extends ClubMember implements Soviet{
 
 	private int times;
 
@@ -43,7 +43,7 @@ public class JaviyWang extends ClubMember implements American{
 		boolean passed = false;
 		int allStudents = Main.getAllStudents().size()-times;
 		while(!passed){
-			if(Main.getAllStudents().get(times) instanceof American){
+			if(Main.getAllStudents().get(times) instanceof Soviet){
 				message.pass(this,Main.getAllStudents().get(allStudents));
 				passed = true;
 			}else times++;
