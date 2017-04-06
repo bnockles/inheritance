@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class SammyajitKapuria extends ClubMember implements Hacker {
+import inheritance.Main.Message;
+
+public class SammyajitKapuria extends ClubMember implements Hacker,American {
 	ArrayList<Student> allStudents = Main.getAllStudents();
 	public SammyajitKapuria() {
 		super("Sammy", "Kapuria",2017,Main.COMP_SCI_MAJOR,"pokemon");
@@ -30,6 +32,15 @@ public class SammyajitKapuria extends ClubMember implements Hacker {
 			}
 		}
 	}
-}
+	
+	public void receiveMessage(Message message){
+		for(Student s: allStudents){
+			if(s instanceof American){
+				message.pass(this, s);
+			}
+		}
+		
+	}
+} 
 
 
