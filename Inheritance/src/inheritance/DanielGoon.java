@@ -38,5 +38,5 @@ public class DanielGoon extends ClubMember implements Hacker{
 				s.mutate();
 			}
 		}
-	}\
+	}
 }
