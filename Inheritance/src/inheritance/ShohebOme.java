@@ -39,8 +39,9 @@ public class ShohebOme extends ClubMember implements American{
 	
 	public void receiveMessage(Message message) {
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof American && !(s instanceof Spy)){
+			if(s instanceof American && !(s instanceof Spy) && !(s.getFirstName().equals(this.getFirstName()))){
 				message.pass(this, s);
+				 
 				break;
 			}
 		}
