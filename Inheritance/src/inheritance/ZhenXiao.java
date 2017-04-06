@@ -6,6 +6,7 @@ import inheritance.Main.Message;
 
 public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet{
 	
+	@SuppressWarnings("unused")
 	private ArrayList<Student> metStudents;
 
 	public ZhenXiao() {
@@ -115,12 +116,18 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet
 	
 	@Override
 	public void receiveMessage(Message m){
-		while(true){
-			Student target = Main.getAllStudents().get((int) (Math.random()*Main.getAllStudents().size()));
-			if (target instanceof Soviet && !(target instanceof American) && target != this) {
+//		while(true){
+//			Student target = Main.getAllStudents().get((int) (Math.random()*Main.getAllStudents().size()));
+//			if (target instanceof Soviet && !(target instanceof American) && target != this) {
+//				m.pass(this, target);
+//				break;
+//			}
+//		}
+		
+		for (int i = Main.getAllStudents().size(); i >= 0; i++) {
+			Student target = Main.getAllStudents().get(i);
+			if(Main.getAllStudents().get(i).getFirstName() == "Sam")
 				m.pass(this, target);
-				break;
-			}
 		}
 	}
 }
