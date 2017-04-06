@@ -1,5 +1,7 @@
 package inheritance;
 
+import inheritance.Main.Message;
+
 public class KevinZheng extends ClubMember implements NetworkAdministrator {
 
 	public KevinZheng() {
@@ -50,6 +52,16 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator {
 					s.createPatch();
 				}
 			}
+	}
+	
+	@Override
+	public void receiveMessage(Message message){
+		for (Student s : Main.getAllStudents()) {
+		 if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
+			 message.pass(this, s);
+		 }
+	}
+
 	}
 
 }
