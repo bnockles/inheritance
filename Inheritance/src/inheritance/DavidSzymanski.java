@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class DavidSzymanski extends ClubMember implements NetworkAdministrator {
+import inheritance.Main.Message;
+
+public class DavidSzymanski extends ClubMember implements NetworkAdministrator, Soviet {
 	
 	
 	public DavidSzymanski(){
@@ -46,6 +48,20 @@ public class DavidSzymanski extends ClubMember implements NetworkAdministrator {
 					System.out.println("*Teleports behind you* 'Nothing personal kid'");
 				}
 			}
+		}
+	}
+	
+	public void recieveMessage(Message message){
+		ArrayList<Student> people = Main.getAllStudents();
+		boolean sent = false;
+		while(sent){
+			int randomPerson = (int) (Math.random() * people.size());
+			if(people.get(randomPerson) instanceof Soviet){
+				message.pass(this,	people.get(randomPerson));
+				System.out.println("peep comments");
+				sent = true;
+			}
+			else randomPerson = (int) (Math.random() * people.size());
 		}
 	}
 	
