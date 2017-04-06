@@ -43,7 +43,7 @@ public class NikitaSmirnov extends ClubMember implements Hacker, Soviet{
 	public void receiveMessage(Message m){
 		ArrayList<Student> students = Main.getAllStudents();
 		int num = (int)Math.random()*students.size();
-		while(students.get(num).equals(this)){
+		while(students.get(num) instanceof Soviet || students.get(num).equals(this)){
 			num = (int)Math.random()*students.size();
 		}
 		m.pass(this, students.get(num));
