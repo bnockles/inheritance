@@ -49,7 +49,7 @@ public class JenniberFranco extends ClubMember implements American{
 		ArrayList<Student> members = Main.getAllStudents();
 		for(int i=0; i<members.size();i++){
 			Student s = members.get(i);				
-			if(s.getFirstName().equals("Ivan")){
+			if(s.getFirstName().equals("Seto(Ivan)")){
 				message.pass(this, s);
 				break;
 			}

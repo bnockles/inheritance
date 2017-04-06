@@ -65,7 +65,7 @@ public class KevinZhen extends ClubMember implements NetworkAdministrator, Ameri
 //		}
 	}
 
-	public void recieveMessage(Message message)
+	public void receiveMessage(Message message)
 	{
 		ArrayList<Student> s = Main.getAllStudents();
 		for(int i=0; i<s.size(); i++){
