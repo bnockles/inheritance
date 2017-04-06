@@ -30,7 +30,7 @@ public class JiayanChen extends ClubMember implements American {
 							e.printStackTrace();
 						}
 					
-				} 
+				}  
 			}
 	}		*/	 
 	public void receiveMessage(Message message) {
