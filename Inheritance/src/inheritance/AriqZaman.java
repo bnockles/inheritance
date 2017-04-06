@@ -1,6 +1,8 @@
 package inheritance;
 
-public class AriqZaman extends ClubMember implements NetworkAdministrator {
+import inheritance.Main.Message;
+
+public class AriqZaman extends ClubMember implements NetworkAdministrator, Soviet {
 
 	public AriqZaman() {
 		super("Ariq", "Zaman", 2021, Main.COMP_SCI_MAJOR, "roblox");
@@ -40,5 +42,14 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator {
 			}
 		}
 	}
+	@Override
+	public void receiveMessage(Message message){
+		for (Student s : Main.getAllStudents()) {
+		 if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
+			 message.pass(this, s);
+			 break;
+		 }
+	}
 
+	}
 }

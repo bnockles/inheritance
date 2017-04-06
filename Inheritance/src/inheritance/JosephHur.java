@@ -36,11 +36,22 @@ public class JosephHur extends ClubMember implements NetworkAdministrator, Sovie
 	 
 	@Override
 	public void receiveMessage(Message message){
-		for(Student s: Main.getAllStudents()){
-			if(s instanceof Soviet  && !(s instanceof American) && !s.equals(this)){
+//		boolean p = false;
+//		while(!p){
+//		for(Student s: Main.getAllStudents()){
+//			if(s instanceof Soviet  && !(s instanceof American) && !s.equals(this) && !(p = true)){
+//				message.pass(this, s);
+//				break;
+//			}
+//		}
+//		p = true;
+//	}
+//	}
+		for(Student s:Main.getAllStudents()){
+			if(s.getFirstName().equals("Eduardo")){
 				message.pass(this, s);
-			}
+				break;
+			}  
 		}
 	}
 }
-  

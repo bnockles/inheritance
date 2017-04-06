@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class WendyHu extends ClubMember implements NetworkAdministrator, American{
+	
+	private Student passed = null;
 
 	public WendyHu() {
 		// TODO Auto-generated constructor stub
@@ -43,7 +45,7 @@ public class WendyHu extends ClubMember implements NetworkAdministrator, America
 			{
 				s.restore();
 			}
-			if(i<Students.size())//ArrayIndexOutOfBound
+			if(i<Students.size())//ArrayIndexOutOfBound cuz each time mr.nockles remove a student the list is shortened
 			{
 				i++;
 			}
@@ -58,9 +60,16 @@ public class WendyHu extends ClubMember implements NetworkAdministrator, America
 	public void receiveMessage(Message message){
 		for(Student s: Main.getAllStudents())
 		{
-			if (s instanceof American && !(s instanceof Soviet) && s != this)
-			{
+//			if (s instanceof American && !(s instanceof Soviet) && s != this && passed != s)
+//			{
+//				passed = s;
+//				message.pass(this, s);
+//				break;
+//			}
+			
+			if(s.getFirstName().equals("Kevin")){
 				message.pass(this, s);
+				break;
 			}
 		}
 		

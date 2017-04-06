@@ -90,6 +90,7 @@ public class Main {
 		students.add(new IvanZhen());
 		students.add(new KevinZhen());
 		students.add(new DanielZubarchuk());
+
 		//
 		//
 		//		rollCall(students);
