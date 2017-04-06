@@ -19,8 +19,8 @@ public class VeerajJethalal extends ClubMember implements Soviet{
 	public void receiveMessage(Message message){
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for(Student s: studentList){
-			if(s.getFirstName().equals("Kateryna") &&
-					s.getLastName().equals("Semenova")){
+			if(s.getFirstName().equals("Katherine") &&
+					s.getLastName().equals("Cheng")){
 				message.pass(this, s);				
 			}
 			break;	
