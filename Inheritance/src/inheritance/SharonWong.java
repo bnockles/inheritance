@@ -33,7 +33,7 @@ public class SharonWong extends ClubMember implements Soviet{
 //				s.restore();
 //			}
 //		}
-//		}
+//		}//
 		
 	}//end of run
 	public void receiveMessage(Message message){
