@@ -33,7 +33,7 @@ public class GabrielHo extends ClubMember implements Soviet{
 		for(Student i: Main.getAllStudents()){
 			if(i.getFirstName().equals("Joseph")){
 				message.pass(this,i);
-				return;
+				break;
 			}
 		}
 	}
