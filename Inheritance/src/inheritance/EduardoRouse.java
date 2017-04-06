@@ -34,13 +34,19 @@ public class EduardoRouse extends ClubMember implements Soviet{
 	
 	@Override
 	public void receiveMessage(Message message){
-		boolean passed = false;
-		while(!passed){
-			int rand = (int)(Math.random()*students.size()+1);
-			Student s = students.get(rand);
-			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
+//		boolean passed = false;
+//		while(!passed){
+//			int rand = (int)(Math.random()*students.size()+1);
+//			Student s = students.get(rand);
+//			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
+//				message.pass(this, s);
+//				passed = true;
+//			}
+//		}
+		for(Student s:students){
+			if(s.getFirstName()=="Ahmed"){
 				message.pass(this, s);
-				passed = true;
+				break;
 			}
 		}
 	}

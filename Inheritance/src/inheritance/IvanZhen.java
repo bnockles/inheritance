@@ -14,6 +14,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator,America
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Soviet  && !(s instanceof American)){
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
