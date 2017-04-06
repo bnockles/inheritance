@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class AnnaHo extends ClubMember{
+import inheritance.Main.Message;
+
+public class AnnaHo extends ClubMember implements Soviet{
 	
 	private ArrayList<Student> students;
 
@@ -34,5 +36,15 @@ public class AnnaHo extends ClubMember{
 				}
 			}
 		}
+	}
+	
+//	String message = "hello world";
+//	message.pass(this, );
+	
+	public void receiveMessage(Message message) {
+		for(Student s : Main.getAllStudents())
+			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this))
+				message.pass(this, s); 
+	
 	}
 }
