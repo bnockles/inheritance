@@ -35,7 +35,7 @@ public class JiayanChen extends ClubMember implements American {
 	}		*/	 
 	public void receiveMessage(Message message) {
 		for(int i =0; i<Main.getAllStudents().size(); i++){
-			if(Main.getAllStudents().get(i) instanceof American && !(Main.getAllStudents().get(i).equals(this))){
+			if(!(Main.getAllStudents().get(i).getFirstName().equals("Jiayan")) && Main.getAllStudents().get(i) instanceof American ){
 				message.pass(this, Main.getAllStudents().get(i));
 				break;
 			}
