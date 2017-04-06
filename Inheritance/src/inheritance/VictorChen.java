@@ -47,9 +47,7 @@ public class VictorChen extends ClubMember implements American{
 	public void receiveMessage(Message m){
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for(int i = studentList.size() - 1; i >= 0; i--){
-			Student s = studentList.get(i);
-			if(s != this && s instanceof American){
-				System.out.println("Make America Great Again!");
+			if(studentList.get(i).getFirstName().equals("Mahin")){
 				m.pass(this, studentList.get(i));
 				break;
 			}
