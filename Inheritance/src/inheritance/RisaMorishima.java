@@ -29,7 +29,7 @@ public class RisaMorishima extends ClubMember implements Soviet{
 	
 	public void recieveMessage(Message message){
 		for(Student s : Main.getAllStudents()){
-			if(s.getFirstName.equals("Jimmy"){
+			if(s.getFirstName.equals("Zhen"){
 				message.pass(this, s);
 				break;
 			}
