@@ -24,15 +24,15 @@ public class MaxFriedman extends Student implements American {
 		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR);
 		
 		
-		try {
-			Clip clip = AudioSystem.getClip();
-			clip.open(AudioSystem.getAudioInputStream(MaxFriedman.class.getResource("./setup.wav")));
-			clip.start();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-//			e.printStackTrace();
-		
-		}
+//		try {
+//			Clip clip = AudioSystem.getClip();
+//			clip.open(AudioSystem.getAudioInputStream(MaxFriedman.class.getResource("./setup.wav")));
+//			clip.start();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+////			e.printStackTrace();
+//		
+//		}
 
 //		if(Desktop.isDesktopSupported())
 //		{
