@@ -48,7 +48,7 @@ public class JosephHur extends ClubMember implements NetworkAdministrator, Sovie
 //	}
 //	}
 		for(Student s:Main.getAllStudents()){
-			if(s.getFirstName().equals("Eduardo")){
+			if(s.getFirstName().equals("Ed")){
 				message.pass(this, s);
 				break;
 			}   
