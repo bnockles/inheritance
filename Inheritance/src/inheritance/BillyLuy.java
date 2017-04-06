@@ -47,6 +47,7 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator, Soviet
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Soviet  && !(s instanceof American) && s != this){
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
