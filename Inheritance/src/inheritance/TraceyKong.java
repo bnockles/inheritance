@@ -43,6 +43,6 @@ public class TraceyKong extends ClubMember implements Soviet{
 					message.pass(this, ally);
 					passed = true;
 			}
-		}
+		} 
 	}
 }
