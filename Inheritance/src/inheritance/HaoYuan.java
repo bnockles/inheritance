@@ -38,7 +38,7 @@ public class HaoYuan extends ClubMember implements Hacker, Soviet{
 		for (int i = 0; i < student.size(); i++) {
 			Student s = student.get(i);
 			if (s != this && s instanceof Soviet && s.getFirstName().equals("Joey")) {
-				message.pass(this, student.get(i));
+				message.pass(this, s);
 				break;
 			}
 		}
