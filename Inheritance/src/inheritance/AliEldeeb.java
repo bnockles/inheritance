@@ -28,10 +28,10 @@ public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for(int i = 0; i < studentList.size(); i++){
 			Student s = studentList.get(i);
-			if((s instanceof Soviet)) {
+			if(s instanceof Soviet) {
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
-//dsasassd
 }
