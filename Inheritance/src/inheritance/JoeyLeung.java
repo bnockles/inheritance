@@ -53,9 +53,9 @@ public class JoeyLeung extends ClubMember implements Soviet{
 //				}
 //			}
 //		}
-		for(Student i: Main.getAllStudents()){
-			if(i.getFirstName().equals("Daniel")){
-				message.pass(this,i);
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Daniel")){
+				message.pass(this,Main.getAllStudents().get(i));
 				return;
 			}
 		}

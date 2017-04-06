@@ -59,9 +59,9 @@ public class DanielZubarchuk extends ClubMember implements Hacker, Soviet{
 //		}
 //		message.pass(this, students.get(n)); 
 		
-		for(Student i: Main.getAllStudents()){
-			if(i.getFirstName().equals("Javiy")){
-				message.pass(this,i);
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Javiy")){
+				message.pass(this,Main.getAllStudents().get(i));
 				return;
 			}
 		}
