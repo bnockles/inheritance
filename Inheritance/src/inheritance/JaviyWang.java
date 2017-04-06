@@ -49,7 +49,7 @@ public class JaviyWang extends ClubMember implements Soviet{
 		//			}else times++;
 		//		}
 		for(Student i : Main.getAllStudents()){
-			if(i.getFirstName().equals("Gabriel Ho")){
+			if(i.getFirstName().equals("Gabriel")){
 				message.pass(this,i);
 				return;
 			}
