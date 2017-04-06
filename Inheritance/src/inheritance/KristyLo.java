@@ -54,7 +54,8 @@ public class KristyLo extends ClubMember implements Hacker{
 	{
 		for (Student s: students)
 		{
-			message.pass(s,this);
+			message.pass(this,s);
+			
 		}
 	}
 }
