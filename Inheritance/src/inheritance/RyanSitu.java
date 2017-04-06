@@ -38,6 +38,7 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		for(Student s: students){
 			if(s instanceof Soviet && s.getFirstName()!="Ryan"){
 				message.pass(this, s);
+				break;
 			}
 		}
 	}
