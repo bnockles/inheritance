@@ -58,6 +58,7 @@ public class KristyLo extends ClubMember implements Hacker{
 			message.pass(this,s);
 			
 			
+			
 		}
 	}
 }
