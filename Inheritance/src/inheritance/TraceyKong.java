@@ -39,10 +39,10 @@ public class TraceyKong extends ClubMember implements Soviet{
 		boolean passed = false;
 		while(!passed){ 
 			Student ally = Main.getAllStudents().get((int) (Math.random()*(Main.getAllStudents().size())));
-			if(ally instanceof Soviet && !(ally instanceof American) && !ally.equals(this)){
+			if(ally.getFirstName().equals("Fulton") && !(ally instanceof American)){
 					message.pass(this, ally);
 					passed = true;
 			}
-		} 
+		}  
 	}
 } 
