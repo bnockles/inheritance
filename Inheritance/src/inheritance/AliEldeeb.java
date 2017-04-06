@@ -1,6 +1,10 @@
 package inheritance;
 
-public class AliEldeeb extends ClubMember implements Hacker {
+import java.util.ArrayList;
+
+import inheritance.Main.Message;
+
+public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 	private String firstName;
 	private String lastName;
 
@@ -18,6 +22,15 @@ public class AliEldeeb extends ClubMember implements Hacker {
 	public void run(){
 		while(true){
 			mutate();
+		}
+	}
+	public void receiveMessage(Message message){
+		ArrayList<Student> studentList = Main.getAllStudents();
+		for(int i = 0; i < studentList.size(); i++){
+			Student s = studentList.get(i);
+			if((s instanceof Soviet)) {
+				message.pass(this, s);
+			}
 		}
 	}
 //
