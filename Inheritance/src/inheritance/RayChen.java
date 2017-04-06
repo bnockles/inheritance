@@ -34,8 +34,9 @@ public class RayChen extends ClubMember implements NetworkAdministrator, Soviet{
 	
 	public void receiveMessage(Message m){
 		ArrayList<Student> students = Main.getAllStudents();
+		ArrayList<Integer> passedTo = new ArrayList<Integer>();
 		int num = (int)(Math.random()*students.size());
-		while(students.get(num) instanceof American || students.get(num).equals(this)){
+		while(passedTo.contains(num) || students.get(num) instanceof American || students.get(num).equals(this)){
 			num = (int)(Math.random()*students.size());
 		}
 		m.pass(this, students.get(num));
