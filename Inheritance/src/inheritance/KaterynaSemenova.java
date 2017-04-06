@@ -53,6 +53,7 @@ public class KaterynaSemenova extends ClubMember implements  American{
 		for(Student s: studentList){
 			if(s.getFirstName().equals("Tamanna"));
 				message.pass(this, s);
+				break;
 		}
 				
 		
