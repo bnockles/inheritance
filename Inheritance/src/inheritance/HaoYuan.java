@@ -35,13 +35,13 @@ public class HaoYuan extends ClubMember implements Hacker, Soviet{
 	
 	public void recieveMessage(Message message) {
 		boolean consider = true;
-		for(Student s: Main.getAllStudents()) {
+		for (Student s: Main.getAllStudents()) {
 			consider = !consider;
-			if(s != this && s instanceof Soviet && consider) {
+			if (s != this && s instanceof Soviet && consider) {
 				message.pass(this, s);
 				break;
 			}
-			else if(s != this && s instanceof American) {
+			else if (s != this && s instanceof American) {
 				consider = !consider;
 			}
 		}
