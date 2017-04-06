@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class NikitaSmirnov extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class NikitaSmirnov extends ClubMember implements Hacker, Soviet{
 
 	public NikitaSmirnov() {
 		super("Nikita", "Smirnov", 2017, Main.COMP_SCI_MAJOR, "roblox");
@@ -23,11 +25,17 @@ public class NikitaSmirnov extends ClubMember implements Hacker{
 	public void run(){
 		ArrayList<Student> students = Main.getAllStudents();
 		
+//		for(int i = 0; i < Main.getAllStudents().size(); i++){
+//			if(students.get(i) instanceof Hacker) {
+//				students.get(i).mutate();
+//			} else {
+//				students.get(i).corrupt();
+//			}
+//		}
+		
 		for(int i = 0; i < Main.getAllStudents().size(); i++){
-			if(students.get(i) instanceof Hacker) {
-				students.get(i).mutate();
-			} else {
-				students.get(i).corrupt();
+			if(students.get(i) instanceof Soviet && students.get(i).getFirstName() != getFirstName()) {
+				Message.pass(this, students.get(i));
 			}
 		}
 	}
