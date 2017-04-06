@@ -38,7 +38,7 @@ public class KristyTan extends ClubMember implements American {
 			 if(Main.getAllStudents().get(i).getLastName() == "Lo"){
 				 s = i;
 				 break;
-			 }
+			 } 
 		 }
 		 message.pass(this, Main.getAllStudents().get(s));
 	 }
