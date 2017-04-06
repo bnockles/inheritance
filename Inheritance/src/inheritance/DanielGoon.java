@@ -37,6 +37,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 		ArrayList<Student> stu = Main.getAllStudents();
  		for(Student s: stu){
 			if(this != s && s instanceof Soviet){
+				sentList.add(s);
 				message.pass(this, s);
 				break;
 			}
