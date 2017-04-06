@@ -58,7 +58,7 @@ public class WendyHu extends ClubMember implements NetworkAdministrator, America
 	
 	@Override
 	public void receiveMessage(Message message){
-		for(Student s: Main.getAllStudents())
+		for(int i = 0; i< Main.getAllStudents().size(); i++)
 		{
 //			if (s instanceof American && !(s instanceof Soviet) && s != this && passed != s)
 //			{
@@ -67,8 +67,8 @@ public class WendyHu extends ClubMember implements NetworkAdministrator, America
 //				break;
 //			}
 			
-			if(s.getFirstName().equals("Kevin")){
-				message.pass(this, s);
+			if(Main.getAllStudents().get(i).getFirstName().equals("Kevin")){
+				message.pass(this, Main.getAllStudents().get(i));
 				break;
 			}
 		}

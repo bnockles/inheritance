@@ -17,9 +17,7 @@ public class IvanZhen extends ClubMember implements NetworkAdministrator,America
 				message.pass(this, s);
 				break;
 			}
-			else if(s instanceof Soviet){
-				System.out.println("What's popping neighbor? Oh, you're not an American," + s.getFirstName());
-			}
+		
 	}
 	}
 	
