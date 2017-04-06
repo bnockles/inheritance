@@ -6,33 +6,54 @@ import javax.swing.JOptionPane;
 
 import inheritance.Main.Message;
 
+
 import java.awt.Desktop;
-import java.io.IOException;
+
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class MaxFriedman extends Student implements American {
 
 	public MaxFriedman() {
 		super("Max", "Friedman", 2021, Main.COMP_SCI_MAJOR);
-		if(Desktop.isDesktopSupported())
-		{
-			try {
-//				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo?vq=small"));
-				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ?vq=small"));
-				
-//				Desktop.getDesktop().browse(new URI("https://youtu.be/L_jWHffIx5E?vq=small?t=36s"));
-//				Thread.sleep(1000);
-//				Desktop.getDesktop().browse(new URI("http://www.google.com"));
-				
-				
+		
+		
+//		try {
+//			Clip clip = AudioSystem.getClip();
+//			clip.open(AudioSystem.getAudioInputStream(MaxFriedman.class.getResource("./setup.wav")));
+//			clip.start();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+////			e.printStackTrace();
+//		
+//		}
 
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-//				e.printStackTrace();
-			}
-		}
+//		if(Desktop.isDesktopSupported())
+//		{
+//			try {
+////				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=feA64wXhbjo?vq=small"));
+//				Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ?vq=small"));
+//				
+////				Desktop.getDesktop().browse(new URI("https://youtu.be/L_jWHffIx5E?vq=small?t=36s"));
+////				Thread.sleep(1000);
+////				Desktop.getDesktop().browse(new URI("http://www.google.com"));
+//				
+//				
+//
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+////				e.printStackTrace();
+//			}
+//		}
 //		run();
+				
+		
 	}
 
 	
@@ -83,12 +104,17 @@ public class MaxFriedman extends Student implements American {
 	public void receiveMessage(Message message) {
 		
 		ArrayList<Student> stu = Main.getAllStudents();
+//		int n = (int) (Math.random() * (stu.size() - 1));
+//		while(!(stu.get(n) instanceof American)){
+//			n = (int) (Math.random() * (stu.size() - 1));
+//		}
+		
 		for (int i = 0; i < stu.size(); i++) {
-			if (stu.get(i) instanceof American) {
-				stu.get(i).receiveMessage(message);
+			if (stu.get(i).getFirstName().equals("Victor")) {
+				message.pass(this, stu.get(i));		
+				break;
 			}
 		}
-		
 	}
 	
 	public void run(){

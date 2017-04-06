@@ -1,13 +1,15 @@
 package inheritance;
 
-public class JiayanChen extends ClubMember implements Hacker {
+import inheritance.Main.Message;
+
+public class JiayanChen extends ClubMember implements American {
 
 	
 	public JiayanChen() {
 		super("Jiayan", "Chen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public void act()
 	{
 		stateName();
@@ -18,12 +20,9 @@ public class JiayanChen extends ClubMember implements Hacker {
 				shakeHandsWith(s);
 		}
 	}  
-	public void run() {
-		
+	/*public void run() {
 			for(Student s : Main.getAllStudents()){
 				if(s instanceof Hacker){
-					
-					
 						try { 
 							s.mutate();
 						} catch (Exception e) {
@@ -31,14 +30,18 @@ public class JiayanChen extends ClubMember implements Hacker {
 							e.printStackTrace();
 						}
 					
-					
-				}
+				}  
 			}
-		
+	}		*/	 
+	public void receiveMessage(Message message) {
+		for(int i =0; i<Main.getAllStudents().size(); i++){
+			if(!(Main.getAllStudents().get(i).getFirstName().equals("Jiayan")) && Main.getAllStudents().get(i) instanceof American ){
+				message.pass(this, Main.getAllStudents().get(i));
+				break; 
+			}
+		}
+		 
 	}
-			
-	
-			 
 }	
 
   
