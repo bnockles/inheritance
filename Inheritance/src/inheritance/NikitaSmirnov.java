@@ -32,12 +32,22 @@ public class NikitaSmirnov extends ClubMember implements Hacker, Soviet{
 //				students.get(i).corrupt();
 //			}
 //		}
-		
-		for(int i = 0; i < Main.getAllStudents().size(); i++){
-			if(students.get(i) instanceof Soviet && students.get(i).getFirstName() != getFirstName()) {
-				Message.pass(this, students.get(i));
-			}
+//		
+//		for(int i = 0; i < Main.getAllStudents().size(); i++){
+//			if(students.get(i) instanceof Soviet && students.get(i).getFirstName() != getFirstName()) {
+//				Message.pass(this, students.get(i));
+//			}
+//		}
+	}
+	
+	public void receiveMessage(Message m){
+		ArrayList<Student> students = Main.getAllStudents();
+		int num = (int)Math.random()*students.size();
+		while(students.get(num).equals(this)){
+			num = (int)Math.random()*students.size();
 		}
+		m.pass(this, students.get(num));
+		//(int)Math.random()*students.size()
 	}
 
 }
