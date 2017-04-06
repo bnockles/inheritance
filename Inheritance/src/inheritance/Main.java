@@ -62,7 +62,7 @@ public class Main {
 				students.add(new AnthonyCuzzi());
 				students.add(new JoyceFeng());
 				students.add(new JenniberFranco());
-				students.add(new MaxFriedman());
+				//students.add(new MaxFriedman());
 				students.add(new GabrielHo());
 				students.add(new WendyHu());
 				students.add(new TobyHuang());
