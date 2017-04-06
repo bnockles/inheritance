@@ -40,7 +40,7 @@ public class MakinoonSami extends ClubMember
 			}
 			if(s instanceof Hacker && s != this){
 				if(s.isAlive()){
-				
+				//
 					s.createPatch();
 				}
 			}
