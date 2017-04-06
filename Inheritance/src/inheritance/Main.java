@@ -107,6 +107,8 @@ public class Main {
 
 
 //		play();
+		
+
 			startSpyGame();
 
 				
@@ -141,21 +143,13 @@ public class Main {
 	}
 
 	private final static void play(){
+		
 		Collections.shuffle(students);
 		//creates the Threads
 		for(Student s: students){
 			Thread t = new Thread(s);
 			s.setPlay(t);
 			System.out.println(s.getFirstName()+" has entered the game.");
-		}
-		try {
-			Clip clip = AudioSystem.getClip();
-			clip.open(AudioSystem.getAudioInputStream(BenNockles.class.getResource("./setup.wav")));
-			clip.start();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-//			e.printStackTrace();
-		
 		}
 		//starts the Threads
 		for(Student s: students){		
@@ -206,6 +200,7 @@ public class Main {
 	}
 
 	private static final void stopAllThreads(){
+		
 		for(Student s: students){		
 			s.getPlay().interrupt();
 		}
@@ -236,6 +231,16 @@ public class Main {
 			System.out.println("The game is starting. The message is handed to "+s.getFirstName()+" "+s.getLastName()+".");
 			recordOfAllBearers.add(s);
 			s.receiveMessage(this);
+			try {
+				Clip clip = AudioSystem.getClip();
+				clip.open(AudioSystem.getAudioInputStream(BenNockles.class.getResource("./setup.wav")));
+				clip.start();
+				Thread.sleep(10000);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+//				e.printStackTrace();
+				
+			}
 
 		}
 
