@@ -36,7 +36,7 @@ public class VickiLau extends ClubMember implements Hacker, Soviet {
 	public void receiveMessage(Message message) {
 		ArrayList<Student> array = Main.getAllStudents();
 		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) instanceof Soviet) {
+			if (array.get(i) != this && array.get(i) instanceof Soviet) {
 				message.pass(this, array.get(i));
 				break;
 			}
