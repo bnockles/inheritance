@@ -24,7 +24,7 @@ public class TobyHuang extends ClubMember implements Hacker, American{
 	public void run() {
 		ArrayList<Student> s = Main.getAllStudents();
 		for(int i=0; i<s.size(); i++){
-			Student m= s.get(i);
+			Student m = s.get(i);
 			if(m.getFirstName() == "Jenniber"){
 				message.pass(this, m);
 				break;
