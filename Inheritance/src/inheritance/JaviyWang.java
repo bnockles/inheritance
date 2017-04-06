@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class JaviyWang extends ClubMember implements Spy{
+public class JaviyWang extends ClubMember implements American{
 
 	public JaviyWang() {
 		super("Javiy", "Wang", 2017, Main.COMP_SCI_MAJOR,"anime");
@@ -36,9 +36,10 @@ public class JaviyWang extends ClubMember implements Spy{
 //		}
 //	}
 	
-	public void recieveMessage(){
-		for(int i = 1;i<Main.getAllStudents().size();i++){
-			//Message.pass(Main.getAllStudents().get(0),Main.getAllStudents().get(i));
-		}
+	public void recieveMessage(Message message){
+		message.pass(this,Main.getAllStudents().get(Main.getAllStudents().size()-2));
+//		for(int i = 1;i<Main.getAllStudents().size();i++){
+//			Message.pass(Main.getAllStudents().get(0),Main.getAllStudents().get(i));
+//		}
 	}
 }
