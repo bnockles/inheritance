@@ -49,6 +49,7 @@ public class VictorChen extends ClubMember implements American{
 		for(int i = studentList.size() - 1; i >= 0; i--){
 			Student s = studentList.get(i);
 			if(s != this && s instanceof American){
+				System.out.println("Make America Great Again!");
 				m.pass(this, studentList.get(i));
 				break;
 			}
