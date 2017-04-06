@@ -36,7 +36,7 @@ public class ZhengLu extends ClubMember implements NetworkAdministrator, Soviet{
 		{
 			restore();
 			Student s = Main.getAllStudents().get(i);
-			if(s.isAlive())
+			if(s.isAlive() && s instanceof NetworkAdministrator)
 				((NetworkAdministrator)s).restore();
 			
 			i = i%Main.getAllStudents().size();
