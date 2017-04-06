@@ -8,6 +8,7 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet
 	
 	@SuppressWarnings("unused")
 	private ArrayList<Student> metStudents;
+	private boolean firstPass;
 
 	public ZhenXiao() {
 		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "tcg");
@@ -123,11 +124,12 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet
 //				break;
 //			}
 //		}
-		
-		for (int i = Main.getAllStudents().size(); i >= 0; i++) {
+		for (int i = Main.getAllStudents().size()-1; i >= 0; i++) {
 			Student target = Main.getAllStudents().get(i);
-			if(Main.getAllStudents().get(i).getFirstName().equals("Sam"))
+			if(Main.getAllStudents().get(i).getFirstName().equals("Sam")){
 				m.pass(this, target);
+				firstPass = false;
+			}
 		}
 	}
 }
