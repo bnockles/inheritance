@@ -2,9 +2,12 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class JasonLau extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class JasonLau extends ClubMember implements Hacker, Soviet {
 	
 	ArrayList<Student> arr = Main.getAllStudents();
+	String message = "ryan pass teh wheat";
 	int b = 0;
 	public JasonLau(){
 		super("Jason","Lau",2017,Main.COMP_SCI_MAJOR,"roblox");
@@ -23,27 +26,39 @@ public class JasonLau extends ClubMember implements Hacker{
 	}
 	
 	public void run(){
-		for(int i = 0; i < arr.size(); i++){
-			int a = 0;
-			this.mutate();
-			if(arr.get(i) instanceof Hacker){
-				arr.get(i).mutate();
-				if(arr.get(i).getFirstName().equals("Matthew") || arr.get(i).getFirstName().equals("Ryan")&& 
-						arr.get(i) instanceof NetworkAdministrator){
-					b = i;
-					while(a < 40){
-						if(a % 4 == 0){
-							arr.get(b).corrupt();
-							a+=4;
-							System.out.println("no hard feeeligns maaaathew");
-						}
-					}
-				}
-				
-				
+//		for(int i = 0; i < arr.size(); i++){
+//			int a = 0;
+//			this.mutate();
+//			if(arr.get(i) instanceof Hacker){
+//				arr.get(i).mutate();
+//				if(arr.get(i).getFirstName().equals("Matthew") || arr.get(i).getFirstName().equals("Ryan")&& 
+//						arr.get(i) instanceof NetworkAdministrator){
+//					b = i;
+//					while(a < 40){
+//						if(a % 4 == 0){
+//							arr.get(b).corrupt();
+//							a+=4;
+//							System.out.println("no hard feeeligns maaaathew");
+//						}
+//					}
+//				}
+//				
+//				
+//			}
+			
+		
+		}
+	
+	public void receiveMessage(Message message){
+		for(Student s: arr){
+			if(s instanceof Soviet){
+				message.pass(this,s);
+				break;
 			}
 		}
 		
+	
+
 		
 		
 		
