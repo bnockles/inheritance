@@ -38,7 +38,7 @@ public class JaviyWang extends ClubMember implements Soviet{
 	//		}
 	//	}
 
-	public void recieveMessage(Message message){
+	public void receiveMessage(Message message){
 		//		times = times + 1;
 		//		boolean passed = false;
 		//		int allStudents = Main.getAllStudents().size()-times;
