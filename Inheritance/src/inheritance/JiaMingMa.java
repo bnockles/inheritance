@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class JiaMingMa extends ClubMember implements NetworkAdministrator, Soviet{
+public class JiaMingMa extends ClubMember implements NetworkAdministrator, Spy{
 
 	Message msg;
 	ArrayList<Student> stus = Main.getAllStudents();
