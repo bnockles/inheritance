@@ -7,6 +7,7 @@ import inheritance.Main.Message;
 public class JasonLau extends ClubMember implements Hacker, Soviet {
 	
 	ArrayList<Student> arr = Main.getAllStudents();
+	ArrayList<Student> sovs = new ArrayList<Student>();
 	String message = "ryan pass teh wheat";
 	int b = 0;
 	public JasonLau(){
@@ -23,6 +24,12 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 			}
 		}
 		System.out.println("jason shook hands with" + getHandshakes());
+		
+		for(Student s: arr){
+			if(s instanceof Soviet){
+				sovs.add(s);
+			}
+		}
 	}
 	
 	public void run(){
@@ -50,12 +57,6 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 		}
 	
 	public void receiveMessage(Message message){
-		ArrayList<Student> sovs = new ArrayList<Student>();
-		for(Student s: arr){
-			if(s instanceof Soviet){
-				sovs.add(s);
-			}
-		}
 		
 		message.pass(this,sovs.get(sovs.size()-1));
 		sovs.remove(0);
