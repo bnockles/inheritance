@@ -30,6 +30,6 @@ public class IramShahed extends ClubMember implements Hacker, Soviet{
 			if(s instanceof Soviet && s.getFirstName() != this.getFirstName()){
 				message.pass(this, s);
 			}
-		}
+		}//
 	}
 }
