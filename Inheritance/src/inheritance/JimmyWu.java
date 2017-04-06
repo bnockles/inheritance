@@ -1,7 +1,7 @@
 package inheritance;
 
 import inheritance.Main.Message;
-
+//
 public class JimmyWu extends ClubMember implements   NetworkAdministrator,Soviet{
 
 	public JimmyWu() {
