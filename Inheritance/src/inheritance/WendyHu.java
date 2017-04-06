@@ -60,9 +60,14 @@ public class WendyHu extends ClubMember implements NetworkAdministrator, America
 	public void receiveMessage(Message message){
 		for(Student s: Main.getAllStudents())
 		{
-			if (s instanceof American && !(s instanceof Soviet) && s != this && passed != s)
-			{
-				passed = s;
+//			if (s instanceof American && !(s instanceof Soviet) && s != this && passed != s)
+//			{
+//				passed = s;
+//				message.pass(this, s);
+//				break;
+//			}
+			
+			if(s.getFirstName().equals("Kevin")){
 				message.pass(this, s);
 				break;
 			}
