@@ -1,6 +1,8 @@
 package inheritance;
 
-public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrator {
+import inheritance.Main.Message;
+
+public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrator, American {
 
 	public MatthewYarmolinsky() {
 		super("Matthew", "Yarmolinsky", 2017, Main.COMP_SCI_MAJOR, "pokemon");
@@ -28,6 +30,14 @@ public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrat
 				if (s instanceof Hacker) {
 					s.createPatch();
 				}
+			}
+		}
+	}
+	
+	public void receiveMessage(Message message){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof American && !(s instanceof Soviet) && s != this){
+				message.pass(this, s);
 			}
 		}
 	}
