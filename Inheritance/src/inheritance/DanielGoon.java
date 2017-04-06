@@ -33,23 +33,10 @@ public class DanielGoon extends ClubMember implements Hacker{
 		}
 	}
 	public void run(){
-//		for(Hacker s: fourChan){
-//			s.mutate();
-//		}
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Hacker){
 				s.mutate();
 			}
-//			else{
-//				s.corrupt();
-//			}
 		}
-	}
-//	public void shakeClubMember(){
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub())){
-//				shakeHandsWith(s);
-//			}
-//		}
-//	}
+	}\
 }
