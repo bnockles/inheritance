@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class RayChen extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class RayChen extends ClubMember implements NetworkAdministrator, Soviet{
 
 	public RayChen() {
 		super("Ray", "Chen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
@@ -28,5 +30,14 @@ public class RayChen extends ClubMember implements NetworkAdministrator{
 				s.restore();
 			}
 		}
+	}
+	
+	public void receiveMessage(Message m){
+		ArrayList<Student> students = Main.getAllStudents();
+		int num = (int)(Math.random()*students.size());
+		while(students.get(num) instanceof American || students.get(num).equals(this)){
+			num = (int)(Math.random()*students.size());
+		}
+		m.pass(this, students.get(num));
 	}
 }
