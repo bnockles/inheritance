@@ -42,5 +42,4 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		}
 	}
 
-
 }
