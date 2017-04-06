@@ -2,21 +2,11 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class DanielGoon extends ClubMember implements Hacker{
+public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof Hacker){
-//				fourChan.add((Hacker)s);
-//			}
-//		}
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof NetworkAdministrator){
-//				nwdm.add((NetworkAdministrator)s);
-//			}
-//		}
 	}
 	public void act(){
 //		System.out.println(getFirstName() +" "+ getLastName());
