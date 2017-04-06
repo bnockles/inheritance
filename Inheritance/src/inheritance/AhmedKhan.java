@@ -3,7 +3,7 @@ package inheritance;
 import inheritance.Main.Message;
 //
 public class AhmedKhan extends ClubMember implements NetworkAdministrator,Soviet{
-
+//
 	private int nextStudentIndex = 0;
 
 	public AhmedKhan() {
