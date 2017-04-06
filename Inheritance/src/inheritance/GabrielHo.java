@@ -30,10 +30,10 @@ public class GabrielHo extends ClubMember implements Soviet{
 	}
 	
 	public void receiveMessage(Message message){
-		for(Student i: Main.getAllStudents()){
-			if(i.getFirstName().equals("Joseph")){
-				message.pass(this,i);
-				break;
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Joseph")){
+				message.pass(this,Main.getAllStudents().get(i));
+				return;
 			}
 		}
 	}
