@@ -26,7 +26,7 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 	public void receiveMessage(Message m){
 		ArrayList<Student> players = Main.getAllStudents();
 		int rand = (int)(Math.random()*players.size());
-		while(!(players.get(rand) instanceof American)){
+		while(!(players.get(rand) instanceof American) || players.get(rand)==this){
 			rand = (int)(Math.random()*players.size());
 		}
 		System.out.println("peep message");
