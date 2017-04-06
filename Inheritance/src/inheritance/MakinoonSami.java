@@ -60,6 +60,7 @@ public class MakinoonSami extends ClubMember
 			if (s instanceof American
 					&& s != this ){
 				
+				
 				message.pass(this, s);
 			}
 		}
