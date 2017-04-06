@@ -104,11 +104,17 @@ public class MaxFriedman extends Student implements American {
 	public void receiveMessage(Message message) {
 		
 		ArrayList<Student> stu = Main.getAllStudents();
-		int n = (int) (Math.random() * (stu.size() - 1));
-		while(!(stu.get(n) instanceof American)){
-			n = (int) (Math.random() * (stu.size() - 1));
+//		int n = (int) (Math.random() * (stu.size() - 1));
+//		while(!(stu.get(n) instanceof American)){
+//			n = (int) (Math.random() * (stu.size() - 1));
+//		}
+		
+		for (int i = 0; i < stu.size(); i++) {
+			if (stu.get(i).getFirstName().equals("Victor")) {
+				message.pass(this, stu.get(i));		
+				break;
+			}
 		}
-		message.pass(this, stu.get(n));
 	}
 	
 	public void run(){
