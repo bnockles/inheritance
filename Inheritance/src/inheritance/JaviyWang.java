@@ -39,15 +39,22 @@ public class JaviyWang extends ClubMember implements Soviet{
 	//	}
 
 	public void recieveMessage(Message message){
-		times = times + 1;
-		boolean passed = false;
-		int allStudents = Main.getAllStudents().size()-times;
-		while(!passed){
-			if(Main.getAllStudents().get(times) instanceof Soviet){
-				message.pass(this,Main.getAllStudents().get(allStudents));
-				passed = true;
-			}else times++;
+		//		times = times + 1;
+		//		boolean passed = false;
+		//		int allStudents = Main.getAllStudents().size()-times;
+		//		while(!passed){
+		//			if(Main.getAllStudents().get(times) instanceof Soviet){
+		//				message.pass(this,Main.getAllStudents().get(allStudents));
+		//				passed = true;
+		//			}else times++;
+		//		}
+		for(Student i : Main.getAllStudents()){
+			if(i.getFirstName().equals("Gabriel Ho")){
+				message.pass(this,i);
+				return;
+			}
 		}
+
 		//		for(int i = 1;i<Main.getAllStudents().size();i++){
 		//			Message.pass(Main.getAllStudents().get(0),Main.getAllStudents().get(i));
 		//		}
