@@ -51,7 +51,7 @@ public class KaterynaSemenova extends ClubMember implements  American{
 	public void receiveMessage(Message message){
 		ArrayList<Student> studentList =  Main.getAllStudents();
 		for(Student s: studentList){
-			if(s.getFirstName().equals("Tamanna"));
+			if(s.getLastName().equals("Hussain"));
 				message.pass(this, s);
 				break;
 		}
