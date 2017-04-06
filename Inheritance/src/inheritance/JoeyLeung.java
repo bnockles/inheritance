@@ -36,7 +36,7 @@ public class JoeyLeung extends ClubMember implements Soviet{
 	//	}
 
 	//	Soviet
-	private ArrayList<Integer> check = new ArrayList<Integer>();
+//	private ArrayList<Integer> check = new ArrayList<Integer>();
 	public void receiveMessage(Message message){
 //		boolean o = false;
 //		for(int i = 0;i<Main.getAllStudents().size();i++){
