@@ -6,6 +6,9 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 /**
  * @author bnockles
  *
@@ -144,6 +147,15 @@ public class Main {
 			Thread t = new Thread(s);
 			s.setPlay(t);
 			System.out.println(s.getFirstName()+" has entered the game.");
+		}
+		try {
+			Clip clip = AudioSystem.getClip();
+			clip.open(AudioSystem.getAudioInputStream(BenNockles.class.getResource("./setup.wav")));
+			clip.start();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+		
 		}
 		//starts the Threads
 		for(Student s: students){		
