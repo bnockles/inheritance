@@ -59,6 +59,7 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator {
 		for (Student s : Main.getAllStudents()) {
 		 if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
 			 message.pass(this, s);
+			 break;
 		 }
 	}
 

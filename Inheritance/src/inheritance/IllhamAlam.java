@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class IllhamAlam extends ClubMember implements NetworkAdministrator, Soviet, American{
+public class IllhamAlam extends ClubMember implements NetworkAdministrator, Soviet{
 
 	private ArrayList<Student> arr = Main.getAllStudents();
 	public IllhamAlam() {
@@ -22,26 +22,26 @@ public class IllhamAlam extends ClubMember implements NetworkAdministrator, Sovi
 	}
 	
 	public void run(){
-//		ArrayList<Student> arr = Main.getAllStudents();
-//		ArrayList<Integer> hackers = new ArrayList<Integer>();
-//		for(int i = arr.size()-1; i >= 0; i--){
-//			if(arr.get(i) instanceof Hacker){
-//				arr.get(i).createPatch();
-//				hackers.add(i);
-//			}else if(arr.get(i) instanceof NetworkAdministrator){
-//				arr.get(i).restore();
-//			}
-//		}
-//		while(true){
-//			for(int i = 0; i < hackers.size(); i++){
-//				arr.get(hackers.get(i)).createPatch();
-//			}
-//		}	
+		ArrayList<Student> arr = Main.getAllStudents();
+		ArrayList<Integer> hackers = new ArrayList<Integer>();
+		for(int i = arr.size()-1; i >= 0; i--){
+			if(arr.get(i) instanceof Hacker){
+				arr.get(i).createPatch();
+				hackers.add(i);
+			}else if(arr.get(i) instanceof NetworkAdministrator){
+				arr.get(i).restore();
+			}
+		}
+		while(true){
+			for(int i = 0; i < hackers.size(); i++){
+				arr.get(hackers.get(i)).createPatch();
+			}
+		}	
 		
 	}
 	public void reciveMessage(Message message){
 		for(Student s: arr){
-			if(s instanceof Soviet){
+			if(s instanceof Soviet && s != this){
 				message.pass(this,s);
 				break;
 			}
