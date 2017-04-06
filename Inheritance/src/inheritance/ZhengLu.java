@@ -45,9 +45,15 @@ public class ZhengLu extends ClubMember implements NetworkAdministrator, Soviet{
 	}
 	
 	public void receiveMessage(Message message) {
-		for(Student s : Main.getAllStudents())
+		
+		Student s;
+		
+		do
+		{
+			s = Main.getAllStudents().get((int)(Math.random() * Main.getAllStudents().size()));
 			if(s instanceof Soviet && !(s instanceof American) && !s.equals(this))
 				message.pass(this, s);
-		
+		}while(!(s instanceof Soviet));
+	
 	}
 }
