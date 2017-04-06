@@ -43,11 +43,10 @@ public class AhmedKhan extends ClubMember implements NetworkAdministrator, Sovie
 	}
 	
 	public void receiveMessage(Message message){
-<<<<<<< HEAD
+
 		for(int i=nextStudentIndex; i<Main.getAllStudents().size(); i++){
-=======
-		for(int i=nextStudentIndex ; i<Main.getAllStudents().size(); i++){
->>>>>>> refs/heads/row1
+
+
 			if(Main.getAllStudents().get(i) instanceof Soviet && !(Main.getAllStudents().get(i) instanceof Spy)){
 				message.pass(this, Main.getAllStudents().get(i));
 				nextStudentIndex = i+1;
