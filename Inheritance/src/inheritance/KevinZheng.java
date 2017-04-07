@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 import inheritance.Main.Message;
 
 public class KevinZheng extends ClubMember implements NetworkAdministrator, Soviet {
@@ -29,6 +31,7 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator, Sovi
 	@Override
 	public void run() {
 		new Thread(() -> {
+			
 			while (true) {
 				for (Student s : Main.getAllStudents()) {
 					if (s instanceof NetworkAdministrator) {
@@ -56,13 +59,17 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator, Sovi
 	
 	@Override
 	public void receiveMessage(Message message){
-		for (Student s : Main.getAllStudents()) {
-		 if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
-			 message.pass(this, s);
-			 break;
-		 }
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet  && !(s instanceof American)){
+				soviets.add(s);
+			}
+			
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
+		}
 	}
-
-	}
-
 }
