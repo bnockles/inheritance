@@ -37,4 +37,4 @@ public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 		else
 			m.pass(this, soviets.get(index+1));
 	}
-}
+}//
