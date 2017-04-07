@@ -2,7 +2,10 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class HansMontero extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class HansMontero extends ClubMember implements NetworkAdministrator,American{
+	private int index = 0;
 
 	public HansMontero() {
 		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR, "minecraft");
@@ -19,6 +22,18 @@ public class HansMontero extends ClubMember implements NetworkAdministrator{
 		}
 		System.out.println("I dapped up "+getHandshakes().size()+" Minecraft homies!!1");
 		
+	}
+	
+	public void receiveMessage(Message m){
+		ArrayList<Student> players = Main.getAllStudents();
+		for(int i=index;i<players.size();i++){
+			Student s = players.get(i);
+			if(s instanceof Meme && !(s instanceof Soviet) && s!=this){
+				index = i+1;
+				m.pass(this,s);
+				break;
+			}
+		}
 	}
 	
 	public void run(){

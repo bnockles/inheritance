@@ -1,31 +1,26 @@
 package inheritance;
 
-public class AnthonyCuzzi extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class AnthonyCuzzi extends ClubMember implements NetworkAdministrator, American{
 	
 	public AnthonyCuzzi() {
 		super("Anthony","Cuzzi",2017,new Major("Software","Computer Science"),"anime");
 	}
 	
 	
-	public void act(){
-		System.out.println("Anthony Cuzzi a student");
-		for(Student s :  Main.getAllStudents()){
-			if(((ClubMember) s).getClub().equals("anime") && !(s.getFirstName().equals("Anthony")))
-			shakeHandsWith(s);
+	public void receiveMessage(Message message){
+		//boolean go = false;
+		Student receiver = null;
+		for(Student s: Main.getAllStudents()){
+			if(s.getFirstName().equals("Kateryna") ){
+				receiver = s;
+			}
 		}
+		message.pass(this,receiver);
 	}
 	
 	public void run(){
-		while(super.isAlive()){
-			int randInt= (int) (Math.random()*Main.getAllStudents().size());
-			if(Main.getAllStudents().get(randInt) instanceof Hacker){	
-				if(Main.getAllStudents().get(randInt).isAlive() == false){
-					Main.getAllStudents().get(randInt).mutate();
-				}else{
-					Main.getAllStudents().get(randInt).corrupt();
-				}
-			}
-		}
 	}
 
 }
