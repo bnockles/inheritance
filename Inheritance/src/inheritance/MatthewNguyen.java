@@ -37,7 +37,7 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) != this && array.get(i) instanceof Soviet) {
+			if (array.get(i) instanceof Soviet) {
 				soviets.add(array.get(i));
 			}
 		}
