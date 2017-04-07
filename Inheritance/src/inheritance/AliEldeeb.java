@@ -22,13 +22,17 @@ public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 		}
 	}
 	public void receiveMessage(Message message){
-		ArrayList<Student> studentList = Main.getAllStudents();
-		for(int i = 0; i < studentList.size(); i++){
-			Student s = studentList.get(i);
-			if(s instanceof Soviet) {
-				message.pass(this, s);
-				break;//
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet){
+				soviets.add(s);
 			}
+		}
+		int index = soviets.indexOf(this);
+		if(index + 1 <soviets.size()){
+			message.pass(this, soviets.get(index + 1));
+		}else{
+			message.pass(this, soviets.get(0));
 		}
 	}
 }
