@@ -56,7 +56,7 @@ public class MakinoonSami extends ClubMember implements NetworkAdministrator, Am
 
 				message.pass(this, s);
 				break;
-				//
+				
 			}
 		}
 	}
