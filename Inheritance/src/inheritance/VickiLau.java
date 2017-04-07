@@ -19,34 +19,33 @@ public class VickiLau extends ClubMember implements Hacker, Soviet, RealSoviet {
 		}
 	}
 	
-	public void run() {
-//		ArrayList<Student> array = Main.getAllStudents();
-//		while(true) {
-//			this.mutate();
-//			System.out.println("i cannot die");
-//			for (int i = 0; i < array.size(); i++) {
-//				if (array.get(i) instanceof NetworkAdministrator && array.get(i).isAlive()) {
-//					array.get(i).corrupt();
-//					System.out.println("heyo buddyo" + array.get(i));
-//				}
-//			}
-//		}
+	public void run() {Student hans = null;
+	for (Student s : Main.getAllStudents()) {
+		if (s.getFirstName().contains("Hans")) {
+			hans = s;
+			break;
+		}
 	}
-	
-	public void receiveMessage(Message message) {
-		ArrayList<Student> array = Main.getAllStudents();
+
+	while (true) {
+		Message m = new Main.Message();
+		m.pass(this, hans);
+	}
+}
+
+	@Override
+	public void receiveMessage(Message message){
 		ArrayList<Student> soviets = new ArrayList<Student>();
-		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) instanceof RealSoviet) {
-				soviets.add(array.get(i));
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof RealSoviet  && !(s instanceof American)){
+				soviets.add(s);
 			}
 		}
-		int index = soviets.indexOf(this);
-		if (index + 1 > soviets.size()) {
-			message.pass(this, soviets.get(0));	
-		} else {
-			message.pass(this, soviets.get(index + 1));	
-		}		
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
+		}
 	}
 	
 	
