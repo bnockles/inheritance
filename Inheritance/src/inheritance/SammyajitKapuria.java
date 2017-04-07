@@ -38,7 +38,7 @@ public class SammyajitKapuria extends ClubMember implements Hacker,American {
 			if(s.getFirstName().equals("Hans") ){
 				message.pass(this, s);
 			} 
-		}
+		} 
 		
 	}  
 } 
