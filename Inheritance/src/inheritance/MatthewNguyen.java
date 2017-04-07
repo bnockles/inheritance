@@ -41,5 +41,5 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		}
 		m.pass(this, students.get(num));
 		//(int)Math.random()*students.size()
-	}
+	} 
 }
