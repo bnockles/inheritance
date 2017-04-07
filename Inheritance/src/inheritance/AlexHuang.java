@@ -41,9 +41,10 @@ public class AlexHuang extends ClubMember implements American{
 		for (int i = 0; i < s.size(); i++) {
 			if (s.get(i).getFirstName().equals("Hans")) {
 				message.pass(this, s.get(i));
+				break;
 			}
-			break;
-			//
+			
+			
 		}
 		
 	}
