@@ -33,13 +33,16 @@ public class RayChen extends ClubMember implements NetworkAdministrator, Soviet{
 	}
 	
 	public void receiveMessage(Message m){
-		ArrayList<Student> students = Main.getAllStudents();
-		ArrayList<Integer> passedTo = new ArrayList<Integer>();
-		int num = (int)(Math.random()*students.size());
-		while(passedTo.contains(num) || students.get(num) instanceof American || students.get(num).equals(this)){
-			num = (int)(Math.random()*students.size());
+		ArrayList<Student> allStudents = Main.getAllStudents();
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for(int i = 0; i<allStudents.size(); i++){
+			if(allStudents.get(i) instanceof Soviet)
+				soviets.add(allStudents.get(i));
 		}
-		m.pass(this, students.get(num));
-		passedTo.add(num);
+		int index = soviets.indexOf(this);
+		if(index == soviets.size()-1)
+			m.pass(this, soviets.get(0));
+		else
+			m.pass(this, soviets.get(index+1));
 	}
 }

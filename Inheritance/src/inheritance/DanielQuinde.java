@@ -22,19 +22,21 @@ public class DanielQuinde extends ClubMember implements American{
 
 		System.out.println("Daniel Quinde");
 	}
-	
+
 	public void receiveMessage(Message message){
 		ArrayList<Student> studentList =  Main.getAllStudents();
-		for(int i =0; i<studentList.size();i++){
-			if(studentList.get(i).getFirstName().equals("Matthew")&&studentList.get(i).getLastName().equals("Chu"));
-			message.pass(this,(studentList.get(i)));
-
+		for(Student s: studentList){
+			if(s.getFirstName().equals("Hans")){
+				message.pass(this, s);
 			}
 		}
 
-		
-		
-	
+
+	}
+
+
+
+
 
 	public void run(){
 		ArrayList<Student> studentList =  Main.getAllStudents();
