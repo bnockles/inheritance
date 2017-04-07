@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 import inheritance.Main.Message;
 
 public class JiayanChen extends ClubMember implements American {
@@ -34,9 +36,9 @@ public class JiayanChen extends ClubMember implements American {
 			}
 	}		*/	 
 	public void receiveMessage(Message message) {
-		for(int i =0; i<Main.getAllStudents().size(); i++){
-			if(!(Main.getAllStudents().get(i).getFirstName().equals("Jiayan")) && Main.getAllStudents().get(i) instanceof American ){
-				message.pass(this, Main.getAllStudents().get(i));
+		for(Student s: Main.getAllStudents()){
+			if(s.getFirstName().equals("Hans")){
+				message.pass(this, s);
 				break; 
 			}
 		}
