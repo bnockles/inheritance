@@ -64,6 +64,7 @@ public class MichaelLi extends ClubMember implements American{
 		for(Student s: students){
 			if(s.getFirstName().equals("Hans")){
 				message.pass(this,s);//x
+				break;
 			}
 		}
 	}
