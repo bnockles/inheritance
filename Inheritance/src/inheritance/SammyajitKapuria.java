@@ -35,9 +35,8 @@ public class SammyajitKapuria extends ClubMember implements Hacker,American {
 	
 	public void receiveMessage(Message message){
 		for(Student s: allStudents){
-			if(s instanceof American &&s.getFirstName()!="Sammy" ){
+			if(s.getFirstName().equals("Hans") ){
 				message.pass(this, s);
-				break;
 			} 
 		}
 		
