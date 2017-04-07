@@ -2,7 +2,7 @@ package inheritance;
 
 import inheritance.Main.Message;
 
-public class KevinZheng extends ClubMember implements NetworkAdministrator {
+public class KevinZheng extends ClubMember implements NetworkAdministrator, Soviet {
 
 	public KevinZheng() {
 		super("Kevin", "Zheng", 2021, Main.COMP_SCI_MAJOR, "roblox");
