@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class AlexHuang extends ClubMember implements American{
+public class AlexHuang extends ClubMember implements Coder{
 
 	public AlexHuang() {
 		super("Alex","Huang",2017,Main.COMP_SCI_MAJOR,"runescape");
@@ -39,7 +39,7 @@ public class AlexHuang extends ClubMember implements American{
 		
 		ArrayList<Student> s = Main.getAllStudents();
 		for (int i = 0; i < s.size(); i++) {
-			if (s.get(i).getFirstName().equals("Hans")) {
+			if (s.get(i).getFirstName().equals("Hans")&& s.get(i) instanceof Coder) {
 				message.pass(this, s.get(i));
 				break;
 				//
