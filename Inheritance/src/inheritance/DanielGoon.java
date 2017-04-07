@@ -2,21 +2,15 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class DanielGoon extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
+	private ArrayList<Student> sentList;
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof Hacker){
-//				fourChan.add((Hacker)s);
-//			}
-//		}
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof NetworkAdministrator){
-//				nwdm.add((NetworkAdministrator)s);
-//			}
-//		}
+
 	}
 	public void act(){
 //		System.out.println(getFirstName() +" "+ getLastName());
@@ -33,23 +27,23 @@ public class DanielGoon extends ClubMember implements Hacker{
 		}
 	}
 	public void run(){
-//		for(Hacker s: fourChan){
-//			s.mutate();
-//		}
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Hacker){
 				s.mutate();
 			}
-			else{
-				s.corrupt();
+		}
+	}
+	public void recieveMessage(Message message){
+		ArrayList<Student> stu = Main.getAllStudents();
+ 		for(Student s: stu){
+			if(this != s && s instanceof Soviet){
+<<<<<<< HEAD
+=======
+				sentList.add(s);
+>>>>>>> refs/remotes/origin/row3
+				message.pass(this, s);
+				break;
 			}
 		}
 	}
-//	public void shakeClubMember(){
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub())){
-//				shakeHandsWith(s);
-//			}
-//		}
-//	}
 }

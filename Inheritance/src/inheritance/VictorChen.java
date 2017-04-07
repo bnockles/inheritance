@@ -3,11 +3,15 @@
  */
 package inheritance;
 
+import java.util.ArrayList;
+
+import inheritance.Main.Message;
+
 /**
  * @author hotfir
  *
  */
-public class VictorChen extends ClubMember implements Hacker{
+public class VictorChen extends ClubMember implements American{
 
 	public VictorChen() {
 		super("Victor", "Chen", 2017, Main.COMP_SCI_MAJOR, "anime");
@@ -38,5 +42,16 @@ public class VictorChen extends ClubMember implements Hacker{
 //			if(s instanceof Hacker)
 //			s.mutate();
 //		}
+	}
+	
+	public void receiveMessage(Message m){
+		ArrayList<Student> studentList = Main.getAllStudents();
+		for(int i = studentList.size() - 1; i >= 0; i--){
+			if(studentList.get(i).getFirstName().equals("Mahin")){
+				m.pass(this, studentList.get(i));
+				break;
+			}
+		}
+		
 	}
 }

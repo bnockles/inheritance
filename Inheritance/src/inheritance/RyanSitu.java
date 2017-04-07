@@ -2,9 +2,11 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class RyanSitu extends ClubMember implements Hacker{
+import inheritance.Main.Message;
 
-	private ArrayList<Student> students;
+public class RyanSitu extends ClubMember implements Hacker,Soviet{
+
+	private ArrayList<Student> students = Main.getAllStudents();
 
 	public RyanSitu() {
 		super("Ryan", "Situ", 2017, Main.COMP_SCI_MAJOR,"pokemon");
@@ -31,5 +33,15 @@ public class RyanSitu extends ClubMember implements Hacker{
 			}
 		}
 	}
+	
+	public void receiveMessage(Message message){
+		for(Student s: students){
+			if(s instanceof Soviet && s.getFirstName()!="Ryan"){
+				message.pass(this, s);
+				break;
+			}
+		}
+	}
+	
 
 }

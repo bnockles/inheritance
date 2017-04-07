@@ -1,6 +1,8 @@
 package inheritance;
 
-public class IramShahed extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class IramShahed extends ClubMember implements Hacker, Soviet{
 
 	public IramShahed() {
 		super("Iram", "Shahed", 2017, Main.COMP_SCI_MAJOR, "runescape");
@@ -23,4 +25,12 @@ public class IramShahed extends ClubMember implements Hacker{
 			}
 		}
 	}
+	public void receiveMessage(Message message){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet && s.getFirstName() != this.getFirstName()){
+				message.pass(this, s);
+				break;
+			}
+		}
+	}//
 }

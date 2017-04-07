@@ -2,8 +2,10 @@ package inheritance;
 
 import java.util.ArrayList;
 
+import inheritance.Main.Message;
+
 public class MakinoonSami extends ClubMember 
-	implements NetworkAdministrator{
+	implements NetworkAdministrator, American{
 
 	public MakinoonSami() {
 		super("Makinoon", "Sami", 2017, Main.COMP_SCI_MAJOR, "batman");
@@ -38,13 +40,31 @@ public class MakinoonSami extends ClubMember
 			}
 			if(s instanceof Hacker && s != this){
 				if(s.isAlive()){
+			
 					s.createPatch();
 				}
 			}
 			
 		}
-	  }
 	}
+			
+	 }
 		
-		
+	
+
+	
+	
+	public void receiveMessage(Message message ){
+		ArrayList<Student> studentList = Main.getAllStudents();
+		for(Student s: studentList){
+			if (s instanceof American
+					&& s != this  ){
+				
+				
+				message.pass(this, s);
+				break;
+			}
+		}
+	}
+	
 }

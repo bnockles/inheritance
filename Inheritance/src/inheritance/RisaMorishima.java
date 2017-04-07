@@ -1,6 +1,6 @@
 package inheritance;
 
-public class RisaMorishima extends ClubMember implements Hacker{
+public class RisaMorishima extends ClubMember implements Soviet{
 
 	public RisaMorishima() {
 		super("Risa", "Morishima", 2017, Main.COMP_SCI_MAJOR, "anime");
@@ -23,6 +23,15 @@ public class RisaMorishima extends ClubMember implements Hacker{
 				mutate();
 			}catch(Exception e){
 				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void recieveMessage(Message message){
+		for(Student s : Main.getAllStudents()){
+			if(s.getFirstName.equals("Zhen"){
+				message.pass(this, s);
+				break;
 			}
 		}
 	}

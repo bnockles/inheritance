@@ -2,9 +2,13 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class ZhenXiao extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class ZhenXiao extends ClubMember implements NetworkAdministrator, Soviet{
 	
+	@SuppressWarnings("unused")
 	private ArrayList<Student> metStudents;
+	private boolean firstPass;
 
 	public ZhenXiao() {
 		super("Zhen", "Xiao", 2017, Main.COMP_SCI_MAJOR, "tcg");
@@ -109,5 +113,23 @@ public class ZhenXiao extends ClubMember implements NetworkAdministrator{
 //			}.start();
 //			i++;
 //		}
+	}
+	
+	@Override
+	public void receiveMessage(Message m){
+//		while(true){
+//			Student target = Main.getAllStudents().get((int) (Math.random()*Main.getAllStudents().size()));
+//			if (target instanceof Soviet && !(target instanceof American) && target != this) {
+//				m.pass(this, target);
+//				break;
+//			}
+//		}
+		for (int i = Main.getAllStudents().size()-1; i >= 0; i++) {
+			Student target = Main.getAllStudents().get(i);
+			if(Main.getAllStudents().get(i).getFirstName().equals("Sam")){
+				m.pass(this, target);
+				firstPass = false;
+			}
+		}
 	}
 }
