@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class JasonLau extends ClubMember implements Hacker, Soviet {
+public class JasonLau extends ClubMember implements Hacker, American ,RealSoviet {
 	
 	ArrayList<Student> arr = Main.getAllStudents();
 	String message = "ryan pass teh wheat";
 	int b = 0;
 	int index = 1;
-	ArrayList<Student> sovs = new ArrayList<Student>();
 	
 	
 	public JasonLau(){
@@ -51,22 +50,33 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 //			}
 			
 		
+		Student hans = null;
+		for (Student s : Main.getAllStudents()) {
+			if (s.getFirstName().contains("Hans")) {
+				hans = s;
+				break;
+			}
+		}
+
+		while (true) {
+			Message m = new Main.Message();
+			m.pass(this, hans);
+		}
 		
 		}
 	
 	public void receiveMessage(Message message){		
-		int index = sovs.indexOf(this);
-		for(Student s: arr){
-			if(s instanceof Soviet){
-				sovs.add(s);
+			ArrayList<Student> soviets = new ArrayList<Student>();
+			for(Student s: Main.getAllStudents()){
+				if(s instanceof RealSoviet  && !(s instanceof American)){
+					soviets.add(s);
+				}
 			}
-		}
-		
-		if (index + 1 < sovs.size()) {
-			message.pass(this,sovs.get(index + 1));
-		} else {
-			message.pass(this, sovs.get(0));
-		}
+			if(soviets.indexOf(this) == soviets.size()-1){
+				message.pass(this, soviets.get(0));
+			}else{
+				message.pass(this, soviets.get(soviets.indexOf(this)+1));
+			}
 		
 		
 
