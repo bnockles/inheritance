@@ -9,6 +9,7 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 	ArrayList<Student> arr = Main.getAllStudents();
 	String message = "ryan pass teh wheat";
 	int b = 0;
+	int index = 1;
 	public JasonLau(){
 		super("Jason","Lau",2017,Main.COMP_SCI_MAJOR,"roblox");
 	}
@@ -57,9 +58,9 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 			}
 		}
 		
-		message.pass(this,sovs.get(sovs.size()-1));
-		sovs.remove(sovs.size()-1);
-		
+		message.pass(this,sovs.get(sovs.size()-index));
+		sovs.remove(sovs.size()-index);
+		index++;
 		
 		
 	
