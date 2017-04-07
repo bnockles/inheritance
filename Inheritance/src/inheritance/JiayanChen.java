@@ -1,10 +1,10 @@
 package inheritance;
-
+import inheritance.Coder;
 import inheritance.Main.Message;
 
-public class JiayanChen extends ClubMember implements American {
+public class JiayanChen extends ClubMember implements Coder{
 
-	
+	 
 	public JiayanChen() {
 		super("Jiayan", "Chen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
 		// TODO Auto-generated constructor stub
@@ -28,7 +28,7 @@ public class JiayanChen extends ClubMember implements American {
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
-						}
+	 					}
 					
 				}  
 			}
