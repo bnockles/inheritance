@@ -8,7 +8,7 @@ public class MakinoonSami extends ClubMember implements NetworkAdministrator, Co
 
 	public MakinoonSami() {
 		super("Makinoon", "Sami", 2017, Main.COMP_SCI_MAJOR, "batman");
-		//
+		
 
 	}
 
