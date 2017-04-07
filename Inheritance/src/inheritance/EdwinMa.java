@@ -27,7 +27,7 @@ public class EdwinMa extends ClubMember implements Hacker, Coder{
 //			if(s instanceof Soviet){
 //				
 //			}
-			if(s.getFirstName().equals("Hans")){
+			if(s.getFirstName().equals("Hans")&& s instanceof Coder){
 				message.pass(this, s);
 				break;
 			}
