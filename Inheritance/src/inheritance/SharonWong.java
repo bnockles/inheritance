@@ -56,8 +56,8 @@ public class SharonWong extends ClubMember implements Soviet{
 //			if (s instanceof Soviet && s.getFirstName()!="Sharon"){
 //			//message.pass(s, this);
 //				
-//			}//
-//		}//
+//			}
+//		}
 	}
 
 }
