@@ -58,7 +58,7 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 		}
 		
 		message.pass(this,sovs.get(sovs.size()-1));
-		sovs.remove(0);
+		sovs.remove(sovs.size()-1);
 		
 		
 		
