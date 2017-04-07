@@ -33,20 +33,19 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 			}
 		}
 	}
-	public void receiveMessage(Message m){
-		/*
-		ArrayList<Student> students = Main.getAllStudents();
-		m.pass(this, students.get(0));
-		students.remove(0);
-		//(int)Math.random()*students.size()
-		 * 
-		*/
-		ArrayList<Student> students = Main.getAllStudents();
-		for (Student s : students) {
-			 if(s instanceof Soviet && !(s instanceof American) && !s.equals(this)){
-				 m.pass(this, s);
-				 break;
-			 }
+	public void receiveMessage(Message message){
+		ArrayList<Student> array = Main.getAllStudents();
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for (int i = 0; i < array.size(); i++) {
+			if (array.get(i) != this && array.get(i) instanceof Soviet) {
+				soviets.add(array.get(i));
+			}
 		}
+		int index = soviets.indexOf(this);
+		if (index + 1 > soviets.size()) {
+			message.pass(this, soviets.get(0));	
+		} else {
+			message.pass(this, soviets.get(index + 1));	
+		}		
 	} 
 }
