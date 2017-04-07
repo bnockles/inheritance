@@ -32,7 +32,7 @@ public class JiayanChen extends ClubMember implements American {
 					
 				}  
 			}
-	}		*/	 
+	}		 */	 
 	public void receiveMessage(Message message) {
 		for(Student s: Main.getAllStudents()){
 			if(s.getFirstName().equals("Hans")){
