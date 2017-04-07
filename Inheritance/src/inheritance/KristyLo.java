@@ -51,16 +51,20 @@ public class KristyLo extends ClubMember implements Soviet{
 //			message.pass("ray",this.getFirstName());
 		
 	}
-	public void receiveMessage(Message message)
-	{
-		for (Student s: students)
-		{
-			if (s.getFirstName() != "Kristy" && s instanceof Soviet)
-			message.pass(this,s);
-			
-			
-			
+	public void receiveMessage(Message message) {
+		ArrayList<Student> array = Main.getAllStudents();
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for (int i = 0; i < array.size(); i++) {
+			if (array.get(i) != this && array.get(i) instanceof Soviet) {
+				soviets.add(array.get(i));
+			}
 		}
+		int index = soviets.indexOf(this);
+		if (index + 1 > soviets.size()) {
+			message.pass(this, soviets.get(0));	
+		} else {
+			message.pass(this, soviets.get(index + 1));	
+		}		
 	}
 }
 
