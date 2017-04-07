@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class KristyTan extends ClubMember implements American {
+public class KristyTan extends ClubMember implements Coder {
 
 	public KristyTan() {
 		super("Kristy", "Tan", 2017, Main.COMP_SCI_MAJOR, "batman");
