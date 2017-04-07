@@ -38,7 +38,7 @@ public class SammyajitKapuria extends ClubMember implements Coder {
 			if(s.getFirstName().equals("Hans") ){
 				message.pass(this, s);
 			} 
-		} 
+		}  
 		
 	}  
 } 
