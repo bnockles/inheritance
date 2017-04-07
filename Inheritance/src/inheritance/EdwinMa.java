@@ -25,8 +25,9 @@ public class EdwinMa extends ClubMember implements Hacker, American{
 		for(Student s: Main.getAllStudents()){
 			if(s.getFirstName().equals("Hans")){
 				message.pass(this, s);
+				break;
 			}
-			break;
+			
 		}
 	}
 	
