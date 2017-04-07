@@ -51,7 +51,7 @@ public class MatthewNguyen extends ClubMember implements Soviet, RealSoviet{
 		*/
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Soviet  && !(s instanceof American)){
+			if(s instanceof RealSoviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
 			
