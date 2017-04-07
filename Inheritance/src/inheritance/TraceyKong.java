@@ -36,10 +36,15 @@ public class TraceyKong extends ClubMember implements Soviet{
 	}
 	 
 	public void receiveMessage(Message message){
-		for(Student s: Main.getAllStudents()){
-			if(!(s instanceof American && s.equals(this))){
-				message.pass(this, s);
+		int l = 0;
+		while(l < Main.getAllStudents().size()){ 
+			Student ally = Main.getAllStudents().get(l);
+			if(ally.getFirstName().equals("Fulton") && !(ally instanceof American)){
+					message.pass(this, ally);
+					break;
+			}else{
+				l++; 
 			}
-		}
+		}  
 	}
-}
+} 
