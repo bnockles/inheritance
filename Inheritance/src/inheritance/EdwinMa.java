@@ -22,7 +22,7 @@ public class EdwinMa extends ClubMember implements Hacker, American{
 	}
 	
 	public void receiveMessage(Message message){
-		Student k = new BillyLuy();
+		Student k = new ShohebOme();
 		message.pass(this, Main.getAllStudents().get(Main.getAllStudents().indexOf(k)));
 	}
 	
