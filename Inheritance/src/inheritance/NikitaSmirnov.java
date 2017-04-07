@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class NikitaSmirnov extends ClubMember implements Hacker, Soviet {
+public class NikitaSmirnov extends ClubMember implements Hacker, Soviet, RealSoviet {
 
 	public NikitaSmirnov() {
 		super("Nikita", "Smirnov", 2017, Main.COMP_SCI_MAJOR, "roblox");
