@@ -36,7 +36,6 @@ public class DanielQuinde extends ClubMember implements Coder{
 
 
 
-
 	public void run(){
 		ArrayList<Student> studentList =  Main.getAllStudents();
 		while(this.isAlive()){
