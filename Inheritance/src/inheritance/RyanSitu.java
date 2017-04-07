@@ -35,7 +35,7 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		}
 	}
 
-	ublic void receiveMessage(Message message) {
+	public void receiveMessage(Message message) {
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for (int i = 0; i < array.size(); i++) {
