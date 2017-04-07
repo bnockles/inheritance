@@ -58,7 +58,7 @@ public class SharonWong extends ClubMember implements Soviet{
 //			}
 //		}
 	}
-
+//
 }
 
 
