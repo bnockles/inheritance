@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 import inheritance.Main.Message;
 
 public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrator, American {
@@ -33,11 +35,12 @@ public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrat
 			}
 		}
 	}
-	
-	public void receiveMessage(Message message){
-		for(Student s: Main.getAllStudents()){
-			if(s instanceof American && !(s instanceof Soviet) && s != this){
-				message.pass(this, s);
+
+	public void receiveMessage(Message message) {
+		ArrayList<Student> players = Main.getAllStudents();
+		for (int i = 0; i < players.size(); i++) {
+			if (players.get(i).getFirstName().equals("Hans")) {
+				message.pass(this, players.get(i));
 			}
 		}
 	}

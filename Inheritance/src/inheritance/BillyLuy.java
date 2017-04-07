@@ -44,11 +44,16 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator, Soviet
 	
 	@Override
 	public void receiveMessage(Message message){
+		ArrayList<Student> soviets = new ArrayList<Student>();
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Soviet  && !(s instanceof American) && s != this){
-				message.pass(this, s);
-				break;
+			if(s instanceof Soviet  && !(s instanceof American)){
+				soviets.add(s);
 			}
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
 

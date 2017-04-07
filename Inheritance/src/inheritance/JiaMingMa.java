@@ -13,40 +13,45 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Sovie
 	}
 	
 	public void act() {
-		System.out.println("My name is " + getFirstName());
+//		System.out.println("My name is " + getFirstName());
 //		stateClub();
 //		shakeHandsWithClub();
 	}
 	
 	public void run() {
-		while(true) {
-			heal();
-		}
+//		while(true) {
+//			heal();
+//		}
 	}
 	
 	public void receiveMessage(Message message) {
-		for(Student s : stus) {
-			if(s instanceof Soviet && !(s instanceof American) && s != this) {
-				message.pass(this, s);
-				break;
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet  && !(s instanceof American)){
+				soviets.add(s);
 			}
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
 	
-	private void heal() {
-		for(Student s : stus) {
-			if(s instanceof NetworkAdministrator) {
-				s.restore();
-				System.out.println("Restored " + s.getFirstName());
-			}
-		}
-	}
-
-	private void shakeHandsWithClub() {
-		for(int i = 0; i < stus.size(); i ++) {
-			if(stus.get(i) instanceof ClubMember && stus.get(i) != this && ((ClubMember) stus.get(i)).getClub().equals("roblox")) {
-				shakeHandsWith(stus.get(i));
-			}
-		}
-	}
+//	private void heal() {
+//		for(Student s : stus) {
+//			if(s instanceof NetworkAdministrator) {
+//				s.restore();
+//				System.out.println("Restored " + s.getFirstName());
+//			}
+//		}
+//	}
+//
+//	private void shakeHandsWithClub() {
+//		for(int i = 0; i < stus.size(); i ++) {
+//			if(stus.get(i) instanceof ClubMember && stus.get(i) != this && ((ClubMember) stus.get(i)).getClub().equals("roblox")) {
+//				shakeHandsWith(stus.get(i));
+//			}
+//		}
+//	}
 }
