@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class AnnaHo extends ClubMember implements Soviet, RealSoviet{
-	
+	 
 	private ArrayList<Student> students;
 
 	public AnnaHo() {
