@@ -44,6 +44,7 @@ public class ShohebOme extends ClubMember implements American{
 		for(int i=0;i<players.size();i++){
 			if(players.get(i).getFirstName().equals("Hans")){
 				message.pass(this, players.get(i));
+				break;
 			} 
 		}
 		/*for(Student s: Main.getAllStudents()){
