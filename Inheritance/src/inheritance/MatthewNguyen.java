@@ -42,7 +42,7 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 			} 
 		}
 		int index = soviets.indexOf(this);
-		if (index + 1 == soviets.size()) {
+		if (index + 1 == soviets.size()) { 
 			message.pass(this, soviets.get(0));	
 		} else {
 			message.pass(this, soviets.get(index + 1));	 
