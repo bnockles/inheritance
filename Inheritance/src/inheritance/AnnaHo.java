@@ -49,7 +49,7 @@ public class AnnaHo extends ClubMember implements Soviet{
 //			
 //		}
 //	}
-	
+	 
 	public void receiveMessage(Message message) {
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
