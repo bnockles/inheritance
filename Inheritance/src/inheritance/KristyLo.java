@@ -64,6 +64,7 @@ public class KristyLo extends ClubMember implements Soviet{
 			message.pass(this, soviets.get(0));	
 		} else {
 			message.pass(this, soviets.get(index + 1));	
+			
 		}		
 	}
 }
