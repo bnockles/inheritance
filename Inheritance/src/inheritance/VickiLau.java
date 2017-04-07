@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class VickiLau extends ClubMember implements Hacker, Soviet {
-	private int idx = 0;
 	public VickiLau() {
 		super("Vicki", "Lau", 2021, Main.COMP_SCI_MAJOR, "coding for dummies");
 	}
@@ -42,8 +41,12 @@ public class VickiLau extends ClubMember implements Hacker, Soviet {
 				soviets.add(array.get(i));
 			}
 		}
-		message.pass(this, soviets.get(idx));
-		idx++;
+		int index = soviets.indexOf(this);
+		if (index + 1 > soviets.size()) {
+			message.pass(this, soviets.get(0));	
+		} else {
+			message.pass(this, soviets.get(index + 1));	
+		}		
 	}
 	
 	
