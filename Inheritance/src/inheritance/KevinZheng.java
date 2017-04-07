@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class KevinZheng extends ClubMember implements NetworkAdministrator, Soviet {
+public class KevinZheng extends ClubMember implements NetworkAdministrator, American {
 
 	public KevinZheng() {
 		super("Kevin", "Zheng", 2021, Main.COMP_SCI_MAJOR, "roblox");
@@ -26,35 +26,22 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator, Sovi
 				}
 			}
 		}
-	}
+	} 
 
 	@Override
 	public void run() {
-		new Thread(() -> {
-			
-			while (true) {
-				for (Student s : Main.getAllStudents()) {
-					if (s instanceof NetworkAdministrator) {
-						s.restore();
-					}
-
-					if (s instanceof Hacker) {
-						s.createPatch();
-					}
-				}
+		Student hans = null;
+		for (Student s : Main.getAllStudents()) {
+			if (s.getFirstName().equals("Hans")) {
+				hans = s;
+				break;
 			}
-		}).start();
+		}
 
-			for (Student s : Main.getAllStudents()) {
-				if (s instanceof NetworkAdministrator) {
-					System.out.println("you cant kill me. I subscribe with TWO ACCOUNTS.");
-					s.restore();
-				}
-
-				if (s instanceof Hacker) {
-					s.createPatch();
-				}
-			}
+		while (true) {
+			Message m = new Main.Message();
+			m.pass(this, hans);
+		}
 	}
 	
 	@Override
@@ -64,7 +51,6 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator, Sovi
 			if(s instanceof Soviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
-			
 		}
 		if(soviets.indexOf(this) == soviets.size()-1){
 			message.pass(this, soviets.get(0));
