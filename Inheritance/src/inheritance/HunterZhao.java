@@ -35,7 +35,7 @@ public class HunterZhao extends ClubMember implements Hacker, Soviet {
 	public void receiveMessage(Message message) {
 		for(int i = 0; i < Main.getAllStudents().size(); i++){
 			if(Main.getAllStudents().get(i).getFirstName().equals("Hunter")){
-				for(int k = i+1; k < Main.getAllStudents().size(); k++){
+				for(int k = i+1; k < Main.getAllStudents().size()-1; k++){
 					if(Main.getAllStudents().get(k) instanceof Soviet){
 						message.pass(this, Main.getAllStudents().get(k));
 						return;
