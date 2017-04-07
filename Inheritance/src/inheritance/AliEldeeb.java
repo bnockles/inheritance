@@ -32,9 +32,10 @@ public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 				soviets.add(allStudents.get(i));
 		}
 		int index = soviets.indexOf(this);
-		if(index == soviets.size()-1)
-			m.pass(this, soviets.get(0));
-		else
+		if(index + 1< soviets.size())
 			m.pass(this, soviets.get(index+1));
+		else
+			m.pass(this, soviets.get(0));
 	}
+	
 }//
