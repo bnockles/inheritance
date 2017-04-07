@@ -39,7 +39,7 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		for (int i = 0; i < array.size(); i++) {
 			if (array.get(i) instanceof Soviet) {
 				soviets.add(array.get(i));
-			}
+			} 
 		}
 		int index = soviets.indexOf(this);
 		if (index + 1 == soviets.size()) {
