@@ -29,7 +29,7 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 		while(!(players.get(rand) instanceof American) || players.get(rand)==this){
 			rand = (int)(Math.random()*players.size());
 		}
-		System.out.println("peep message");
+		//System.out.println("peep message");
 		m.pass(this,players.get(rand));
 	}
 	
