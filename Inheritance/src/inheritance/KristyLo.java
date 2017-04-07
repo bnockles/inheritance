@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class KristyLo extends ClubMember implements Soviet{
+public class KristyLo extends ClubMember implements Soviet,RealSoviet{
 	private ArrayList<Student> students;
 
 	public KristyLo() {
