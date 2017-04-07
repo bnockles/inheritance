@@ -45,7 +45,7 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		if (index + 1 == soviets.size()) {
 			message.pass(this, soviets.get(0));	
 		} else {
-			message.pass(this, soviets.get(index + 1));	
+			message.pass(this, soviets.get(index + 1));	 
 		}		
 	} 
 }
