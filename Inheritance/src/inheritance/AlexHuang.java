@@ -43,6 +43,7 @@ public class AlexHuang extends ClubMember implements American{
 				message.pass(this, s.get(i));
 			}
 			break;
+			//
 		}
 		
 	}
