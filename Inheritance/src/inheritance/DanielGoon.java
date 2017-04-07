@@ -8,6 +8,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
 	private ArrayList<Student> sentList;
+	private boolean uh;
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
 
@@ -37,10 +38,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 		ArrayList<Student> stu = Main.getAllStudents();
  		for(Student s: stu){
 			if(this != s && s instanceof Soviet){
-<<<<<<< HEAD
-=======
 				sentList.add(s);
->>>>>>> refs/remotes/origin/row3
 				message.pass(this, s);
 				break;
 			}
