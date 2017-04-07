@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class SammyajitKapuria extends ClubMember implements Hacker,American {
+public class SammyajitKapuria extends ClubMember implements Coder {
 	ArrayList<Student> allStudents = Main.getAllStudents();
 	public SammyajitKapuria() {
 		super("Sammy", "Kapuria",2017,Main.COMP_SCI_MAJOR,"pokemon");
@@ -29,7 +29,7 @@ public class SammyajitKapuria extends ClubMember implements Hacker,American {
 
 			else{
 				s.mutate();
-			} 
+			}  
 		}
 	}
 	
