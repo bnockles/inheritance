@@ -2,8 +2,11 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class JiaMingMa extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
 
+public class JiaMingMa extends ClubMember implements NetworkAdministrator, Soviet{
+
+	Message msg;
 	ArrayList<Student> stus = Main.getAllStudents();
 	public JiaMingMa() {
 		super("Jia Ming", "Ma", 2017, Main.COMP_SCI_MAJOR, "roblox");
@@ -11,8 +14,8 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator{
 	
 	public void act() {
 		System.out.println("My name is " + getFirstName());
-		stateClub();
-		shakeHandsWithClub();
+//		stateClub();
+//		shakeHandsWithClub();
 	}
 	
 	public void run() {
@@ -21,10 +24,20 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator{
 		}
 	}
 	
+	public void receiveMessage(Message message) {
+		for(Student s : stus) {
+			if(s instanceof Soviet && !(s instanceof American) && s != this) {
+				message.pass(this, s);
+				break;
+			}
+		}
+	}
+	
 	private void heal() {
 		for(Student s : stus) {
 			if(s instanceof NetworkAdministrator) {
 				s.restore();
+				System.out.println("Restored " + s.getFirstName());
 			}
 		}
 	}

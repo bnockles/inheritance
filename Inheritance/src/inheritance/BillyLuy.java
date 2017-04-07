@@ -2,7 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class BillyLuy extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class BillyLuy extends ClubMember implements NetworkAdministrator, Soviet{
 	
 	public BillyLuy() {
 		super("Billy", "Luy", 2017, Main.COMP_SCI_MAJOR, "roblox");
@@ -11,8 +13,8 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator{
 	@Override
 	public void act(){
 		System.out.println("BillyLuy");
-		shakeHand();
-		run();
+//		shakeHand();
+//		run();
 	}
 	
 	public void shakeHand(){
@@ -30,6 +32,7 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator{
 		while(true){
 			for( Student s:Main.getAllStudents()){
 				if(s instanceof NetworkAdministrator){
+					//System.out.println("Heros never die");
 					s.restore();
 //					NetworkAdministrator na = (NetworkAdministrator) s;
 //					na.restore();
@@ -37,6 +40,16 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator{
 			}
 		}
 		
+	}
+	
+	@Override
+	public void receiveMessage(Message message){
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet  && !(s instanceof American) && s != this){
+				message.pass(this, s);
+				break;
+			}
+		}
 	}
 
 }

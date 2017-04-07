@@ -3,7 +3,9 @@ package inheritance;
 import java.nio.channels.NetworkChannel;
 import java.util.ArrayList;
 
-public class JoyceFeng extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class JoyceFeng extends ClubMember implements Soviet{
 
 	ArrayList<Student> students = Main.getAllStudents();
 
@@ -30,15 +32,28 @@ public class JoyceFeng extends ClubMember implements Hacker{
 	}
 	
 	public void run(){
-		while(true){
-				//for (int i = 0; i < students.size(); i++){
-					this.mutate();
-					//if (students.get(i) instanceof NetworkAdministrator)students.get(i).corrupt();
-					//if (students.get(i) instanceof Hacker)students.get(i).mutate();
-		//	}
+//		while(true){
+//				//for (int i = 0; i < students.size(); i++){
+//					this.mutate();
+//					//if (students.get(i) instanceof NetworkAdministrator)students.get(i).corrupt();
+//					//if (students.get(i) instanceof Hacker)students.get(i).mutate();
+//		//	}
+//		}
+//		
+	}
+	
+	public void receiveMessage(Message message){
+		for (int i = Main.getAllStudents().size()/2; i < Main.getAllStudents().size(); i++){
+			if (Main.getAllStudents().get(i) instanceof Soviet){
+				message.pass(this, Main.getAllStudents().get(i));
+			}
 		}
-		
+		for (int i = Main.getAllStudents().size()/2; i > -1; i--){
+			if (Main.getAllStudents().get(i) instanceof Soviet){
+				message.pass(this, Main.getAllStudents().get(i));
+			}
+		}
 	}
 	
 	
-}
+	}

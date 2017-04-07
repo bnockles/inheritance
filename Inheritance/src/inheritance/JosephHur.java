@@ -1,6 +1,8 @@
 package inheritance;
 
-public class JosephHur extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
+
+public class JosephHur extends ClubMember implements NetworkAdministrator, Soviet{
 	
 	public JosephHur(){
 		super("Joseph", "Hur", 2017, Main.COMP_SCI_MAJOR, "k-pop");
@@ -25,11 +27,31 @@ public class JosephHur extends ClubMember implements NetworkAdministrator{
 				if(s instanceof NetworkAdministrator && !s.isAlive()){
 					s.restore();
 				}
-				else if(s instanceof Hacker){
+				else if(s instanceof Hacker && s.isAlive()){
 					s.createPatch();
 				}
 			}
 		}
 	}
+	 
+	@Override
+	public void receiveMessage(Message message){
+//		boolean p = false;
+//		while(!p){
+//		for(Student s: Main.getAllStudents()){
+//			if(s instanceof Soviet  && !(s instanceof American) && !s.equals(this) && !(p = true)){
+//				message.pass(this, s);
+//				break;
+//			}
+//		}
+//		p = true;
+//	}
+//	}
+		for(Student s:Main.getAllStudents()){
+			if(s.getFirstName().equals("Eduardo")){
+				message.pass(this, s);
+				break;
+			}  
+		}
+	}
 }
-  

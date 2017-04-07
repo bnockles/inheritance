@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class MatthewNguyen extends ClubMember {
+public class MatthewNguyen extends ClubMember implements Soviet{
 
 	public MatthewNguyen() {
 		super("Matthew", "Nguyen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
@@ -36,10 +36,10 @@ public class MatthewNguyen extends ClubMember {
 	public void receiveMessage(Message m){
 		ArrayList<Student> students = Main.getAllStudents();
 		int num = (int)Math.random()*students.size();
-		while(students.get(num) instanceof American || students.get(num).equals(this)){
+		while(students.get(num) instanceof Soviet || students.get(num).equals(this)){
 			num = (int)Math.random()*students.size();
 		}
 		m.pass(this, students.get(num));
 		//(int)Math.random()*students.size()
-	}
+	} 
 }

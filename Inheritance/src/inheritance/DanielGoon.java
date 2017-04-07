@@ -2,21 +2,18 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class DanielGoon extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
+	private ArrayList<Student> comrades;
+	private boolean uh;
+	
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof Hacker){
-//				fourChan.add((Hacker)s);
-//			}
-//		}
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof NetworkAdministrator){
-//				nwdm.add((NetworkAdministrator)s);
-//			}
-//		}
+		uh = false;
+		comrades = new ArrayList<Student>();
 	}
 	public void act(){
 //		System.out.println(getFirstName() +" "+ getLastName());
@@ -33,23 +30,24 @@ public class DanielGoon extends ClubMember implements Hacker{
 		}
 	}
 	public void run(){
-//		for(Hacker s: fourChan){
-//			s.mutate();
-//		}
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Hacker){
 				s.mutate();
 			}
-//			else{
-//				s.corrupt();
-//			}
 		}
 	}
-//	public void shakeClubMember(){
-//		for(Student s: Main.getAllStudents()){
-//			if(s instanceof ClubMember && ((ClubMember) s).getClub().equals(getClub())){
-//				shakeHandsWith(s);
-//			}
-//		}
-//	}
+	public void recieveMessage(Message message){
+		if(!uh){
+			for(Student s: Main.getAllStudents()){
+				if(this != s && s instanceof Soviet){
+					comrades.add(s);
+				}
+			}
+			uh = true;
+		}
+ 		if(comrades.size() != 0){
+ 			message.pass(this, comrades.get(0));
+ 			comrades.remove(0);
+ 		}
+	}
 }

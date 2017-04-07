@@ -2,10 +2,12 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class KaterynaSemenova extends ClubMember implements  Hacker{
+import inheritance.Main.Message;
+
+public class KaterynaSemenova extends ClubMember implements  American{
 
 	public KaterynaSemenova(){
-		super("Kat","Semenova", 2012, Main.COMP_SCI_MAJOR, "k-drama");
+		super("Kateryna","Semenova", 2012, Main.COMP_SCI_MAJOR, "k-drama");
 	}
 	
 	public void act(){
@@ -43,5 +45,17 @@ public class KaterynaSemenova extends ClubMember implements  Hacker{
 				System.out.print(studentList.get(i).getFirstName()+" "+studentList.get(i).getLastName()+", ");
 			}
 		}
+	}
+	
+	
+	public void receiveMessage(Message message){
+		ArrayList<Student> studentList =  Main.getAllStudents();
+		for(Student s: studentList){
+			if(s.getLastName().equals("Hussain"));
+				message.pass(this, s);
+				break;
+		}
+				
+		
 	}
 }

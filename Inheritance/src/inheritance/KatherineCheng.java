@@ -1,6 +1,8 @@
 package inheritance;
 
-public class KatherineCheng extends ClubMember implements Hacker{
+import inheritance.Main.Message;
+
+public class KatherineCheng extends ClubMember implements Soviet{
 
 	public KatherineCheng() {
 		super("Katherine", "Cheng", 2017, Main.COMP_SCI_MAJOR, "k-drama");
@@ -22,6 +24,15 @@ public class KatherineCheng extends ClubMember implements Hacker{
 				corrupt();
 			}catch(Exception e){
 				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void receiveMessage(Message message){
+		for(Student s : Main.getAllStudents()){
+			if(s.getFirstName().equals("Risa")){
+				message.pass(this, s);
+				break;
 			}
 		}
 	}

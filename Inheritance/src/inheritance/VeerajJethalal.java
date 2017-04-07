@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class VeerajJethalal extends ClubMember implements Spy{
+public class VeerajJethalal extends ClubMember implements Soviet{
 
 	public VeerajJethalal() {
 		super("Veeraj", "Jethalal", 2017, Main.COMP_SCI_MAJOR, 
@@ -18,11 +18,12 @@ public class VeerajJethalal extends ClubMember implements Spy{
 	
 	public void receiveMessage(Message message){
 		ArrayList<Student> studentList = Main.getAllStudents();
-		for(int i = 0; i < studentList.size(); i++){
-			Student s = studentList.get(i);
-			if((s instanceof Soviet) && (s instanceof American)){
-				message.pass(this, s);
+		for(Student s: studentList){
+			if(s.getFirstName().equals("Katherine") &&
+					s.getLastName().equals("Cheng")){
+				message.pass(this, s);				
 			}
+			break;	
 		}
 	}
 	

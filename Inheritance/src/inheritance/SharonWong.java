@@ -2,9 +2,11 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class SharonWong extends ClubMember implements NetworkAdministrator{
+import inheritance.Main.Message;
 
-	private ArrayList<Student> students;
+public class SharonWong extends ClubMember implements Soviet{
+
+	private ArrayList<Student> students = Main.getAllStudents();
 	
 	public SharonWong() {
 		super("Sharon", "Wong", 2017, Main.COMP_SCI_MAJOR,"pokemon");
@@ -23,13 +25,23 @@ public class SharonWong extends ClubMember implements NetworkAdministrator{
 	}
 	
 	public void run(){
+//		while(isAlive()){
+//		for(Student s: students){
+//			if(s instanceof Hacker){
+//				s.createPatch();
+//			}else{
+//				s.restore();
+//			}
+//		}
+//		}//
+		
+	}//end of run
+	public void receiveMessage(Message message){
 		for(Student s: students){
-			if(s instanceof Hacker){
-				s.createPatch();
-			}else{
-				s.restore();
+			if (s instanceof Soviet){
+			message.pass(s, this);
 			}
 		}
-	}//end of run
+	}
 
 }
