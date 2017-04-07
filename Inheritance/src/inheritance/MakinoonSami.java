@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class MakinoonSami extends ClubMember implements NetworkAdministrator, American {
+public class MakinoonSami extends ClubMember implements NetworkAdministrator, Coder{
 
 	public MakinoonSami() {
 		super("Makinoon", "Sami", 2017, Main.COMP_SCI_MAJOR, "batman");
