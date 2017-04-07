@@ -51,11 +51,12 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator, Sovie
 			if(s instanceof Soviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
-			if(soviets.indexOf(this) == soviets.size()-1){
-				message.pass(this, soviets.get(0));
-			}else{
-				message.pass(this, soviets.get(soviets.indexOf(this)+1));
-			}
+			
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
 }
