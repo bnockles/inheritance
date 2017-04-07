@@ -7,11 +7,13 @@ import inheritance.Main.Message;
 public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<Hacker> fourChan;
 	private ArrayList<NetworkAdministrator> nwdm;
-	private ArrayList<Student> sentList;
+	private ArrayList<Student> comrades;
 	private boolean uh;
+	
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
-
+		uh = false;
+		comrades = new ArrayList<Student>();
 	}
 	public void act(){
 //		System.out.println(getFirstName() +" "+ getLastName());
@@ -35,13 +37,17 @@ public class DanielGoon extends ClubMember implements Soviet{
 		}
 	}
 	public void recieveMessage(Message message){
-		ArrayList<Student> stu = Main.getAllStudents();
- 		for(Student s: stu){
-			if(this != s && s instanceof Soviet){
-				sentList.add(s);
-				message.pass(this, s);
-				break;
+		if(!uh){
+			for(Student s: Main.getAllStudents()){
+				if(this != s && s instanceof Soviet){
+					comrades.add(s);
+				}
 			}
+			uh = true;
 		}
+ 		if(comrades.size() != 0){
+ 			message.pass(this, comrades.get(0));
+ 			comrades.remove(0);
+ 		}
 	}
 }
