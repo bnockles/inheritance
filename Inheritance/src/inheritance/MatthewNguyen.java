@@ -34,6 +34,7 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		}
 	}
 	public void receiveMessage(Message message){
+		/*
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for (int i = 0; i < array.size(); i++) {
@@ -47,5 +48,18 @@ public class MatthewNguyen extends ClubMember implements Soviet{
 		} else {
 			message.pass(this, soviets.get(index + 1));	 
 		}		
+		*/
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet  && !(s instanceof American)){
+				soviets.add(s);
+			}
+			
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
+		}
 	} 
 }
