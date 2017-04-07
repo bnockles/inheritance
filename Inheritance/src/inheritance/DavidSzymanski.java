@@ -52,17 +52,30 @@ public class DavidSzymanski extends ClubMember implements NetworkAdministrator, 
 	}
 	
 	public void recieveMessage(Message message){
-		ArrayList<Student> people = Main.getAllStudents();
-		boolean sent = false;
-		while(!sent){
-			int randomPerson = (int) (Math.random() * people.size());
-			if(people.get(randomPerson) instanceof Soviet && people.get(randomPerson) != this){
-				message.pass(this,	people.get(randomPerson));
-				System.out.println("peep comments");
-				sent = true;
+		ArrayList<Student> everyone = Main.getAllStudents();
+//		boolean sent = false;
+//		while(!sent){
+//			int randomPerson = (int) (Math.random() * people.size());
+//			if(people.get(randomPerson) instanceof Soviet && people.get(randomPerson) != this){
+//				message.pass(this,	people.get(randomPerson));
+//				System.out.println("peep comments");
+//				sent = true;
+//			}
+//		}
+		int indexOfSelf = 0;
+		ArrayList<Student> people = new ArrayList<Student>();
+		for(int i = 0; i < everyone.size(); i++){
+			if(everyone.get(i) instanceof Soviet){
+				people.add(everyone.get(i));
+				if(everyone.get(i) == this){
+					indexOfSelf = i;
+				}
 			}
-			else randomPerson = (int) (Math.random() * people.size());
 		}
+		if(indexOfSelf == people.size()-1){
+			indexOfSelf = -1;
+		}
+		message.pass(this, people.get(indexOfSelf++));
 	}
 	
 }
