@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class JiaMingMa extends ClubMember implements NetworkAdministrator, Soviet{
+public class JiaMingMa extends ClubMember implements NetworkAdministrator, RealSoviet{
 
 	Message msg;
 	ArrayList<Student> stus = Main.getAllStudents();
@@ -27,7 +27,7 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Sovie
 	public void receiveMessage(Message message) {
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Soviet  && !(s instanceof American)){
+			if(s instanceof RealSoviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
 		}
