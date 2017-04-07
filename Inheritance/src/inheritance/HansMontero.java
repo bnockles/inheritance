@@ -28,7 +28,7 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 		ArrayList<Student> players = Main.getAllStudents();
 		for(int i=index;i<players.size();i++){
 			Student s = players.get(i);
-			if(s instanceof Meme && !(s instanceof Soviet) && s!=this){
+			if(s instanceof Coder && !(s instanceof Soviet) && s!=this){
 				index = i+1;
 				m.pass(this,s);
 				break;
