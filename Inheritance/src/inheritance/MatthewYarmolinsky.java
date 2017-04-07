@@ -35,12 +35,12 @@ public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrat
 			}
 		}
 	}
-	
-	public void receiveMessage(Message message){
+
+	public void receiveMessage(Message message) {
 		ArrayList<Student> players = Main.getAllStudents();
-		for(int i = 0; i < players.size(); i++){
-			if(players.get(i).getFirstName().equals("Hans")){
-				message.pass(this,  players.get(i));
+		for (int i = 0; i < players.size(); i++) {
+			if (players.get(i).getFirstName().equals("Hans")) {
+				message.pass(this, players.get(i));
 			}
 		}
 	}
