@@ -57,7 +57,7 @@ public class ShohebOme extends ClubMember implements American{
 					message.pass(currentStudent, Main.getAllStudents().get(i));
 					currentStudent = Main.getAllStudents().get(i);
 					index = i+1; 
-					break;
+					break; 
 				}
 			}
 		}
