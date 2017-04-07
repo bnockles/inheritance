@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 import inheritance.Main.Message;
 
 public class HunterZhao extends ClubMember implements Hacker, Soviet {
@@ -31,24 +33,20 @@ public class HunterZhao extends ClubMember implements Hacker, Soviet {
 			}
 		}
 	}
-	
+
 	public void receiveMessage(Message message) {
-		for(int i = 0; i < Main.getAllStudents().size(); i++){
-			if(Main.getAllStudents().get(i).getFirstName().equals("Hunter")){
-				for(int k = i+1; k < Main.getAllStudents().size(); k++){
-					if(Main.getAllStudents().get(k) instanceof Soviet){
-						message.pass(this, Main.getAllStudents().get(k));
-						return;
-					}else{
-						for(Student s: Main.getAllStudents()){
-							if(s instanceof Soviet){
-								message.pass(this, s);
-								return;
-							}
-						}
-					}
-				}
+		ArrayList<Student> array = Main.getAllStudents();
+		ArrayList<Student> soviets = new ArrayList<Student>();
+		for (int i = 0; i < array.size(); i++) {
+			if (array.get(i) != this && array.get(i) instanceof Soviet) {
+				soviets.add(array.get(i));
 			}
 		}
+		int index = soviets.indexOf(this);
+		if (index + 1 > soviets.size()) {
+			message.pass(this, soviets.get(0));	
+		} else {
+			message.pass(this, soviets.get(index + 1));	
+		}	
 	}
 }
