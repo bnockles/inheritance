@@ -9,7 +9,7 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Sovie
 	Message msg;
 	ArrayList<Student> stus = Main.getAllStudents();
 	public JiaMingMa() {
-		super("Jia Ming", "Ma", 2017, Main.COMP_SCI_MAJOR, "roblox");
+		super("Hans", "Ma", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
 	
 	public void act() {
