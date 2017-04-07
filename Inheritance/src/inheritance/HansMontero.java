@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class HansMontero extends ClubMember implements NetworkAdministrator,American{
-	private ArrayList<Student> players = Main.getAllStudents();
 	private int index = 0;
 
 	public HansMontero() {
@@ -26,9 +25,10 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 	}
 	
 	public void receiveMessage(Message m){
+		ArrayList<Student> players = Main.getAllStudents();
 		for(int i=index;i<players.size();i++){
 			Student s = players.get(i);
-			if(s instanceof American){
+			if(s instanceof Coder && !(s instanceof Soviet) && s!=this){
 				index = i+1;
 				m.pass(this,s);
 				break;
