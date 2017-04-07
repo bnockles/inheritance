@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class AriqZaman extends ClubMember implements NetworkAdministrator, Soviet {
+public class AriqZaman extends ClubMember implements NetworkAdministrator, RealSoviet {
 
 	public AriqZaman() {
 		super("Ariq", "Zaman", 2021, Main.COMP_SCI_MAJOR, "roblox");
@@ -48,7 +48,7 @@ public class AriqZaman extends ClubMember implements NetworkAdministrator, Sovie
 	public void receiveMessage(Message message){
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for(Student s: Main.getAllStudents()){
-			if(s instanceof Soviet  && !(s instanceof American)){
+			if(s instanceof RealSoviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
 			
