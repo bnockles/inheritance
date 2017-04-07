@@ -28,7 +28,7 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 	public void receiveMessage(Message m){
 		for(int i=index;i<players.size();i++){
 			Student s = players.get(i);
-			if(s instanceof American){
+			if(s instanceof American && s!=this){
 				index = i+1;
 				m.pass(this,s);
 				break;
