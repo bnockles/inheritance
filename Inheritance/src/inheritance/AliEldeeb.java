@@ -6,7 +6,7 @@ import inheritance.Main.Message;
 
 public class AliEldeeb extends ClubMember implements Hacker, Soviet {
 	public AliEldeeb() {
-		super("Ali", "Eldeeb", 2017, Main.COMP_SCI_MAJOR, "roblox");
+		super("Hans", "Eldeeb", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
 	public void act(){
 		System.out.println("Ali Eldeeb");
