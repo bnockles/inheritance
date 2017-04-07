@@ -33,13 +33,11 @@ public class KristyTan extends ClubMember implements American {
 	 }
 	 
 	 public void receiveMessage(Message message){
-		 int s = 0;
 		 for(int i = 0; i < Main.getAllStudents().size(); i++){
-			 if(Main.getAllStudents().get(i).getLastName() == "Lo"){
-				 s = i;
+			 if(Main.getAllStudents().get(i).getFirstName().equals("Hans")){
+				 message.pass(this, Main.getAllStudents().get(i));
 				 break;
 			 } 
 		 }
-		 message.pass(this, Main.getAllStudents().get(s));
 	 }
 } 
