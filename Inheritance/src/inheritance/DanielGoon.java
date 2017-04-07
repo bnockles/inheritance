@@ -9,6 +9,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 	private ArrayList<NetworkAdministrator> nwdm;
 	private ArrayList<Student> comrades;
 	private boolean uh;
+	private int idx;
 	
 	public DanielGoon(){
 		super("Daniel","Goon",2017,Main.COMP_SCI_MAJOR,"minecraft");
@@ -37,17 +38,20 @@ public class DanielGoon extends ClubMember implements Soviet{
 		}
 	}
 	public void recieveMessage(Message message){
-		if(!uh){
-			for(Student s: Main.getAllStudents()){
-				if(this != s && s instanceof Soviet){
-					comrades.add(s);
-				}
+		idx = Main.getAllStudents().indexOf(this);
+		comrades = Main.getAllStudents();
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof Soviet){
+				comrades.add(s);
 			}
-			uh = true;
 		}
- 		if(comrades.size() != 0){
- 			message.pass(this, comrades.get(0));
- 			comrades.remove(0);
- 		}
+		
+		if(idx + 1 < comrades.size()){
+			message.pass(this, comrades.get(idx + 1));
+		}
+		else{
+			message.pass(this, comrades.get(0));
+		}
+		
 	}
 }
