@@ -20,6 +20,7 @@ public class KristyLo extends ClubMember implements Soviet{
 //			{
 //				shakeHandsWith(s);
 //				System.out.println("Shook hands with"+s);
+		
 //			}
 //		}
 		
