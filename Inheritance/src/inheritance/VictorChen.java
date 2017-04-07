@@ -3,6 +3,8 @@
  */
 package inheritance;
 
+import java.util.ArrayList;
+
 import inheritance.Main.Message;
 
 /**
@@ -43,9 +45,10 @@ public class VictorChen extends ClubMember implements American{
 	}
 	
 	public void receiveMessage(Message m){
-		for(Student s: Main.getAllStudents()){
-			if(s instanceof American && !(s instanceof Soviet)){
-				m.pass(this,s);
+		for(int i = Main.getAllStudents().size() - 1; i >= 0; i--){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Mahin")){
+				m.pass(this, Main.getAllStudents().get(i));
+				break;
 			}
 		}
 		

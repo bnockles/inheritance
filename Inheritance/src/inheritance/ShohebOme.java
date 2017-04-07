@@ -49,15 +49,15 @@ public class ShohebOme extends ClubMember implements American{
 		}*/
 		int index = 0;
 		Student currentStudent = this;
-		while(index != Main.getAllStudents().size()-1){
+		while(index < Main.getAllStudents().size()){
 			for(int i = index; i < Main.getAllStudents().size(); i++){
 				if(Main.getAllStudents().get(i) instanceof American &&
 						!(Main.getAllStudents().get(i) instanceof Spy) && 
 						!(Main.getAllStudents().get(i).getFirstName().equals(this.getFirstName()))){
 					message.pass(currentStudent, Main.getAllStudents().get(i));
 					currentStudent = Main.getAllStudents().get(i);
-					index = i;
-					break;
+					index = i+1; 
+					break; 
 				}
 			}
 		}
