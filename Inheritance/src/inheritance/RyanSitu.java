@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class RyanSitu extends ClubMember implements Hacker,Soviet{
+public class RyanSitu extends ClubMember implements Hacker,Soviet,RealSoviet{
 
 	private ArrayList<Student> students = Main.getAllStudents();
 	private ArrayList<Soviet> soviets;
@@ -39,7 +39,7 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) instanceof Soviet) {
+			if (array.get(i) instanceof RealSoviet) {
 				soviets.add(array.get(i));
 			}
 		}
@@ -49,6 +49,6 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		} else {
 			message.pass(this, soviets.get(index + 1));	
 		}		
-	}	
-
+	}
+	
 }
