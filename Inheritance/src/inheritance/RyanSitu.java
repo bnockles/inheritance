@@ -50,6 +50,5 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 			message.pass(this, soviets.get(index + 1));	
 		}		
 	}
-
 	
 }
