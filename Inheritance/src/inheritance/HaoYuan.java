@@ -2,9 +2,10 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class HaoYuan extends ClubMember implements Hacker{
+import inheritance.Main;
+import inheritance.Main.Message;
 
-	private ArrayList<Student> metStudents;
+public class HaoYuan extends ClubMember implements Hacker, Soviet{
 	
 	public HaoYuan() {
 		super("Hao", "Yuan", 2017, Main.COMP_SCI_MAJOR, "music");
@@ -20,16 +21,26 @@ public class HaoYuan extends ClubMember implements Hacker{
 	
 	public void run() {
 		while(true){
-			for(Student s: Main.getAllStudents()) {
-				mutate();
-				if (s instanceof NetworkAdministrator){
-					s.corrupt();
-				}
-				else if (s != this){
-					s.mutate();
-				}
+//			for(Student s: Main.getAllStudents()) {
+//				mutate();
+//				if (s instanceof NetworkAdministrator){
+//					s.corrupt();
+//				}
+//				else if (s != this){
+//					s.mutate();
+//				}
+//			}
+		}	
+	}
+	
+	public void receiveMessage(Message message) {
+		for(int i = 0; i < Main.getAllStudents().size(); i++){
+			if(Main.getAllStudents().get(i).getFirstName().equals("Joey")){
+				message.pass(this,Main.getAllStudents().get(i));
+				break;
 			}
 		}
 	}
+	
 }
 
