@@ -57,6 +57,7 @@ public class DanielGoon extends ClubMember implements Soviet{
 		}
 		int index = soviets.indexOf(this);
 		
+		
 		if(index + 1 < soviets.size())
 			message.pass(this, soviets.get(index+1));
 		else
