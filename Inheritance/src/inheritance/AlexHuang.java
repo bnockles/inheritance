@@ -39,9 +39,10 @@ public class AlexHuang extends ClubMember implements American{
 		
 		ArrayList<Student> s = Main.getAllStudents();
 		for (int i = 0; i < s.size(); i++) {
-			if (s.get(i).getFirstName().equals("Edwin")) {
+			if (s.get(i).getFirstName().equals("Hans")) {
 				message.pass(this, s.get(i));
 			}
+			break;
 		}
 		
 	}
