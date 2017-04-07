@@ -217,6 +217,10 @@ public class Main {
 		private int totalSoviets;
 		private int totalSpies;
 		private Student lastSender;
+		
+		public Message() {
+			
+		}
 
 		private Message(long id, int countAmericans, int countSoviets, int countSpies){
 			this.serial = id;

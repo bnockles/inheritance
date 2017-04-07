@@ -32,7 +32,7 @@ public class KevinZheng extends ClubMember implements NetworkAdministrator, Amer
 	public void run() {
 		Student hans = null;
 		for (Student s : Main.getAllStudents()) {
-			if (s.getFirstName().equals("Hans")) {
+			if (s.getFirstName().contains("Hans")) {
 				hans = s;
 				break;
 			}
