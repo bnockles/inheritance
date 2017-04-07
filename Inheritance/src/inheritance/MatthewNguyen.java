@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class MatthewNguyen extends ClubMember implements Soviet{
+public class MatthewNguyen extends ClubMember implements Soviet, RealSoviet{
 
 	public MatthewNguyen() {
 		super("Matthew", "Nguyen", 2017, Main.COMP_SCI_MAJOR, "pokemon");
