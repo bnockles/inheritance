@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class MatthewYarmolinsky extends ClubMember implements NetworkAdministrator, American {
+public class MatthewYarmolinsky extends ClubMember implements meme {
 
 	public MatthewYarmolinsky() {
 		super("Matthew", "Yarmolinsky", 2017, Main.COMP_SCI_MAJOR, "pokemon");
