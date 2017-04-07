@@ -38,14 +38,13 @@ public class DanielGoon extends ClubMember implements Soviet{
 		}
 	}
 	public void recieveMessage(Message message){
-		idx = Main.getAllStudents().indexOf(this);
-		comrades = Main.getAllStudents();
+		comrades = new ArrayList<Student>();
 		for(Student s: Main.getAllStudents()){
 			if(s instanceof Soviet){
 				comrades.add(s);
 			}
 		}
-		
+		idx = comrades.indexOf(this);
 		if(idx + 1 < comrades.size()){
 			message.pass(this, comrades.get(idx + 1));
 		}
