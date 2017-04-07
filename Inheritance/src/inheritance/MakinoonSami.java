@@ -53,9 +53,8 @@ public class MakinoonSami extends ClubMember implements NetworkAdministrator, Am
 		ArrayList<Student> studentList = Main.getAllStudents();
 		for (Student s : studentList) {
 			if (s.getFirstName().equals("Hans")) {
-
 				message.pass(this, s);
-				break;
+				
 				
 			}
 		}
