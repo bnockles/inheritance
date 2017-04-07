@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class KristyLo extends ClubMember implements Hacker{
+public class KristyLo extends ClubMember implements Soviet{
 	private ArrayList<Student> students;
 
 	public KristyLo() {
@@ -20,6 +20,7 @@ public class KristyLo extends ClubMember implements Hacker{
 //			{
 //				shakeHandsWith(s);
 //				System.out.println("Shook hands with"+s);
+		
 //			}
 //		}
 		
