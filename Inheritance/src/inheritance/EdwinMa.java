@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class EdwinMa extends ClubMember implements Hacker, American{
+public class EdwinMa extends ClubMember implements Hacker, Coder{
 
 	public EdwinMa() {
 		super("Edwin","Ma",2017,Main.COMP_SCI_MAJOR,"runescape");
@@ -22,7 +22,11 @@ public class EdwinMa extends ClubMember implements Hacker, American{
 	}
 	
 	public void receiveMessage(Message message){
+//		Message fake = new Message(5, 5, 5, 5);
 		for(Student s: Main.getAllStudents()){
+//			if(s instanceof Soviet){
+//				
+//			}
 			if(s.getFirstName().equals("Hans")){
 				message.pass(this, s);
 				break;
