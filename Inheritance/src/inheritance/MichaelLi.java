@@ -61,10 +61,9 @@ public class MichaelLi extends ClubMember implements American{
 	
 	public void receiveMessage(Message message){
 		ArrayList<Student> students = Main.getAllStudents();
-		while(true){
-			Integer rand = (int)(Math.random() * students.size()); 
-			if (students.get(rand) instanceof American && students.get(rand) != this && !(students.get(rand) instanceof Spy)){
-				message.pass(this, students.get(rand));
+		for(Student s: students){
+			if(s.getFirstName().equals("Hans")){
+				message.pass(this,s);//x
 				break;
 			}
 		}
