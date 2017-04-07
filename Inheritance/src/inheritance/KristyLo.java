@@ -65,6 +65,7 @@ public class KristyLo extends ClubMember implements Soviet,RealSoviet{
 			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
+	
 
 }
 
