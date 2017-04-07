@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class VickiLau extends ClubMember implements Hacker, Soviet {
+public class VickiLau extends ClubMember implements Hacker, Soviet, RealSoviet {
 	public VickiLau() {
 		super("Vicki", "Lau", 2021, Main.COMP_SCI_MAJOR, "coding for dummies");
 	}
@@ -37,7 +37,7 @@ public class VickiLau extends ClubMember implements Hacker, Soviet {
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
 		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) instanceof Soviet) {
+			if (array.get(i) instanceof RealSoviet) {
 				soviets.add(array.get(i));
 			}
 		}
