@@ -40,13 +40,19 @@ public class ShohebOme extends ClubMember implements American{
 	}*/
 	
 	public void receiveMessage(Message message) {
+		ArrayList<Student> players = Main.getAllStudents();
+		for(int i=0;i<players.size();i++){
+			if(players.get(i).getFirstName().equals("Hans")){
+				message.pass(this, players.get(i));
+			} 
+		}
 		/*for(Student s: Main.getAllStudents()){
 			if(s instanceof American && !(s instanceof Spy) && !(s.getFirstName().equals(this.getFirstName()))){
 				message.pass(this, s);
 				
 				break;
 			}
-		}*/
+		}
 		int index = 0;
 		Student currentStudent = this;
 		while(index < Main.getAllStudents().size()){
@@ -60,7 +66,8 @@ public class ShohebOme extends ClubMember implements American{
 					break; 
 				}
 			}
-		}
+		}*/
+		
 	}
  
 }
