@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import inheritance.Main.Message;
 
-public class KristyLo extends ClubMember implements Soviet{
+public class KristyLo extends ClubMember implements Soviet,RealSoviet{
 	private ArrayList<Student> students;
 
 	public KristyLo() {
@@ -51,22 +51,23 @@ public class KristyLo extends ClubMember implements Soviet{
 //			message.pass("ray",this.getFirstName());
 		
 	}
-	public void receiveMessage(Message message) {
-		ArrayList<Student> array = Main.getAllStudents();
+	@Override
+	public void receiveMessage(Message message){
 		ArrayList<Student> soviets = new ArrayList<Student>();
-		for (int i = 0; i < array.size(); i++) {
-			if (array.get(i) instanceof Soviet) {
-				soviets.add(array.get(i));
+		for(Student s: Main.getAllStudents()){
+			if(s instanceof RealSoviet  && !(s instanceof American)){
+				soviets.add(s);
 			}
 		}
-		int index = soviets.indexOf(this);
-		if (index + 1 > soviets.size()) {
-			message.pass(this, soviets.get(0));	
-		} else {
-			message.pass(this, soviets.get(index + 1));	
-			
-		}		
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
+		}
 	}
+	
+	
+
 }
 
 
