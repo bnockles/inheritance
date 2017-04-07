@@ -9,7 +9,7 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Sovie
 	Message msg;
 	ArrayList<Student> stus = Main.getAllStudents();
 	public JiaMingMa() {
-		super("Jia Ming", "Ma", 2017, Main.COMP_SCI_MAJOR, "roblox");
+		super("Hans", "Ma", 2017, Main.COMP_SCI_MAJOR, "roblox");
 	}
 	
 	public void act() {
@@ -30,11 +30,11 @@ public class JiaMingMa extends ClubMember implements NetworkAdministrator, Sovie
 			if(s instanceof Soviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
-			if(soviets.indexOf(this) == soviets.size()-1){
-				message.pass(this, soviets.get(0));
-			}else{
-				message.pass(this, soviets.get(soviets.indexOf(this)+1));
-			}
+		}
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
 	
