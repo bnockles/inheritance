@@ -49,11 +49,13 @@ public class BillyLuy extends ClubMember implements NetworkAdministrator, Soviet
 			if(s instanceof Soviet  && !(s instanceof American)){
 				soviets.add(s);
 			}
-			if(soviets.indexOf(this) == soviets.size()-1){
-				message.pass(this, soviets.get(0));
-			}else{
-				message.pass(this, soviets.get(soviets.indexOf(this)+1));
-			}
+			
+		}
+		
+		if(soviets.indexOf(this) == soviets.size()-1){
+			message.pass(this, soviets.get(0));
+		}else{
+			message.pass(this, soviets.get(soviets.indexOf(this)+1));
 		}
 	}
 
