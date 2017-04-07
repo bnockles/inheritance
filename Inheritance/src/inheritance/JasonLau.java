@@ -59,9 +59,9 @@ public class JasonLau extends ClubMember implements Hacker, Soviet {
 		}
 	
 	public void receiveMessage(Message message){		
-		index = sovs.indexOf(this);
+		int index = sovs.indexOf(this);
 		
-		if (index < sovs.size()) {
+		if (index + 1 < sovs.size()) {
 			message.pass(this,sovs.get(index + 1));
 		} else {
 			message.pass(this, sovs.get(0));
