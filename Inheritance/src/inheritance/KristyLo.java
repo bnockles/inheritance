@@ -66,6 +66,7 @@ public class KristyLo extends ClubMember implements Soviet,RealSoviet{
 		}
 	}
 	
+	
 
 }
 
