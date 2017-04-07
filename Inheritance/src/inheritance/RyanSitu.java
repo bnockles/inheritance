@@ -7,6 +7,7 @@ import inheritance.Main.Message;
 public class RyanSitu extends ClubMember implements Hacker,Soviet{
 
 	private ArrayList<Student> students = Main.getAllStudents();
+	private ArrayList<Soviet> soviets;
 
 	public RyanSitu() {
 		super("Ryan", "Situ", 2017, Main.COMP_SCI_MAJOR,"pokemon");
@@ -23,7 +24,7 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 			}
 		}
 	}
-	
+
 	public void run(){
 		for(Student s: students){
 			if(s instanceof NetworkAdministrator){
@@ -33,7 +34,11 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 			}
 		}
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> refs/remotes/origin/row4
 	public void receiveMessage(Message message) {
 		ArrayList<Student> array = Main.getAllStudents();
 		ArrayList<Student> soviets = new ArrayList<Student>();
@@ -48,7 +53,11 @@ public class RyanSitu extends ClubMember implements Hacker,Soviet{
 		} else {
 			message.pass(this, soviets.get(index + 1));	
 		}		
+<<<<<<< HEAD
 	}
 	
+=======
+	}	
+>>>>>>> refs/remotes/origin/row4
 
 }
