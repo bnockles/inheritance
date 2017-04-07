@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import inheritance.Main.Message;
 
 public class HansMontero extends ClubMember implements NetworkAdministrator,American{
+	private ArrayList<Student> players = Main.getAllStudents();
+	private int index = 0;
 
 	public HansMontero() {
 		super("Hans", "Montero", 2017, Main.COMP_SCI_MAJOR, "minecraft");
@@ -24,13 +26,14 @@ public class HansMontero extends ClubMember implements NetworkAdministrator,Amer
 	}
 	
 	public void receiveMessage(Message m){
-		ArrayList<Student> players = Main.getAllStudents();
-		int rand = (int)(Math.random()*players.size());
-		while(!(players.get(rand) instanceof American) || players.get(rand)==this){
-			rand = (int)(Math.random()*players.size());
+		for(int i=index;i<players.size();i++){
+			Student s = players.get(i);
+			if(s instanceof American){
+				index = i+1;
+				m.pass(this,s);
+				break;
+			}
 		}
-		System.out.println("peep message");
-		m.pass(this,players.get(rand));
 	}
 	
 	public void run(){
